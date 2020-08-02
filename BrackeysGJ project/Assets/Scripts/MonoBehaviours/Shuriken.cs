@@ -39,6 +39,7 @@ public class Shuriken : MonoBehaviour
     private void FixedUpdate()
     {
 
-        rbody.velocity = moveDirection * speed * Time.fixedDeltaTime;
+        rbody.velocity = speed * (rbody.velocity.normalized) * Time.fixedDeltaTime;
+        //rbody.velocity = moveDirection * speed * Time.fixedDeltaTime;
     }
 }
