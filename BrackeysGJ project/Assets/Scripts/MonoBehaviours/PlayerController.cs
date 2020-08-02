@@ -127,7 +127,7 @@ namespace BrackeysGJ.MonoBehaviours
             
             //Jumps
             if (!Input.GetButtonDown("Jump")) return;
-            
+
             //Ground Jump
             if (_advCol.IsGrounded())
             {
