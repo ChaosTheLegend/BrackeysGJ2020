@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,9 +9,7 @@ public class Shuriken : MonoBehaviour
     private Vector2 initMousePos;
     private Vector2 mousePosWorld;
 
-    [SerializeField] private float speed = 10f;
-
-    [SerializeField] private float maxTravelDistance = 100f;
+    [SerializeField] private float speed = 300f;
 
     private Rigidbody2D rbody;
 
@@ -27,15 +26,14 @@ public class Shuriken : MonoBehaviour
 
         moveDirection = initMousePos - new Vector2(transform.position.x, transform.position.y);
         moveDirection.Normalize();
+
+        rbody.velocity = moveDirection * speed * Time.fixedDeltaTime;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //float step = speed * Time.deltaTime;
 
-        //Vector2.MoveTowards(transform.position, new Vector2(40f, 0f), step);        
-        //transform.Translate(transform.forward * Time.deltaTime * speed);
     }
 
     private void FixedUpdate()
