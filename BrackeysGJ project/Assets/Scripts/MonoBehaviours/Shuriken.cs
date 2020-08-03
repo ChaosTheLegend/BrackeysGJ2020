@@ -10,7 +10,9 @@ public class Shuriken : MonoBehaviour
 {
     private Vector2 initMousePos;
     private Vector2 mousePosWorld;
-
+    private Vector2 velocity;
+    private Animator _anim;
+    
     [SerializeField] private float throwSpeed = 300f;
     [SerializeField] private float returnSpeed = 300f;
 
@@ -53,48 +55,74 @@ public class Shuriken : MonoBehaviour
 
         // Set initial velocity
         rbody.velocity = moveDirection * throwSpeed * Time.fixedDeltaTime;
+        velocity = Vector2.one;
+        
+        //Animation
+        _anim = GetComponent<Animator>();
     }
 
     private void FixedUpdate()
     {
+        var currentVelocity = rbody.velocity;
         if (!isRewinding)
         {
             if (collisionCount < maxCollisions)
             {
                 // Maintain velocity in the speed the object is currently traveling in
-                rbody.velocity = throwSpeed * (rbody.velocity.normalized) * Time.fixedDeltaTime;
+                rbody.velocity = (currentVelocity.normalized) * (throwSpeed * Time.fixedDeltaTime);
             }
             else
             {
                 rbody.velocity = Vector2.zero;
+                _anim.SetInteger($"State",1);
             }
         }
         else
         {
-            transform.position = Vector2.MoveTowards(transform.position, playerShurikenScript.transform.position, (returnSpeed / 25) * Time.deltaTime);
+            rbody.velocity = Vector2.zero;
+            transform.position = Vector2.MoveTowards(transform.position, playerShurikenScript.transform.position, (returnSpeed) * Time.deltaTime);
+            
+            //Chaos has been here
+            //and changed to smoothDamp instead of MoveTowards  
+            //transform.position =  Vector2.SmoothDamp(transform.position, playerShurikenScript.transform.position, ref velocity,returnTime);
+            if((transform.position - playerShurikenScript.transform.position).sqrMagnitude < 0.7f*0.7f) ReturnToPlayer();
             //rbody.velocity = speed * (rbody.velocity.normalized) * Time.fixedDeltaTime;
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag != "Player")
+        //-Chaos
+        //What a hell is this?
+        //Why not just disable shuriken-player collisions?
+        //if (collision.gameObject.tag != "Player")
+        //{
+        if (isRewinding) return;
+        
+        collisionCount++;
+        //-Chaos
+        //This is done to stop shuriken immediately after collision
+        //and prevent visual glitches
+        //they still exist though :(
+        if (collisionCount >= maxCollisions)
         {
-            if (collisionCount < maxCollisions &&
-                isRewinding == false)
-            {
-                collisionCount++;
-
-                if (collision.gameObject.tag == "Enemy")
-                {
-                    #warning Chaos, blindspot's script needs a TakeDamage(float damageDealt) method
-                    //EnemyController enemy = collision.gameObject.GetComponent<EnemyController>();
-                    //enemy.TakeDamage(damageDealt);
-                }
-            }
+            rbody.velocity = Vector2.zero;
         }
+            
+            
+        if (collision.gameObject.CompareTag($"Enemy"))
+        {
+#warning Chaos, blindspot's script needs a TakeDamage(float damageDealt) method
+            //EnemyController enemy = collision.gameObject.GetComponent<EnemyController>();
+            //enemy.TakeDamage(damageDealt);
+        }
+        //}
     }
 
+    
+    //-Chaos
+    //Since collision with player is disabled, this is useless
+    /*
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Player")
@@ -103,14 +131,26 @@ public class Shuriken : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    */
+    //I moved it to another function
+    private void ReturnToPlayer()
+    {
+        playerShurikenScript.ReturnShuriken();
+        Destroy(gameObject);
+    }
 
     public void Rewind()
     {
         // Tell code we're rewinding
         isRewinding = true;
 
+        //-Chaos
+        //We will use animator for this
+        _anim.SetInteger($"State",2);
+        
         // Fade the shuriken's alpha
-        Fade(fadeAlpha);
+        
+        //Fade(fadeAlpha);
 
         // Make the collider a trigger so it can pass through walls
         collider.isTrigger = true;
@@ -123,7 +163,7 @@ public class Shuriken : MonoBehaviour
     private void Fade(float alphaValue)
     {
         Renderer renderer = transform.GetComponentInChildren<Renderer>();
-        renderer.material.color = new Color(1f, 1f, 1f, fadeAlpha);
+        renderer.material.color = new Color(1f, 1f, 1f, alphaValue);
     }
 
 }

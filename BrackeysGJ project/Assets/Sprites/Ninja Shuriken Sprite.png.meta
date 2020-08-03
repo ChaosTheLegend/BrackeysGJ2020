@@ -1,73 +1,67 @@
 fileFormatVersion: 2
-guid: 0c35490f5f44d3a4e9d10101d160b57a
+guid: 621d3aee33aa92e4790edb0c3a6b06dc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6493317653493158245
-    second: Ninja Sprite_0
+      213: -834209781571106693
+    second: Ninja Shuriken Sprite_0
   - first:
-      213: -3577348306632656423
-    second: Ninja Sprite_1
+      213: 6462064691822772753
+    second: Ninja Shuriken Sprite_1
   - first:
-      213: -438072194980673993
-    second: Ninja Sprite_2
+      213: -4659785197324344139
+    second: Ninja Shuriken Sprite_2
   - first:
-      213: 9182293135274095049
-    second: Ninja Sprite_3
+      213: -8172870310636400759
+    second: Ninja Shuriken Sprite_3
   - first:
-      213: -7437635096362658264
-    second: Ninja Sprite_4
+      213: 1798903579473858381
+    second: Ninja Shuriken Sprite_4
   - first:
-      213: -6827646235664139913
-    second: Ninja Sprite_5
+      213: 8543645274770586400
+    second: Ninja Shuriken Sprite_5
   - first:
-      213: 5573889187735845755
-    second: Ninja Sprite_6
+      213: -3635147405534185739
+    second: Ninja Shuriken Sprite_6
   - first:
-      213: -7650866679368933639
-    second: Ninja Sprite_7
+      213: 6736024643489669344
+    second: Ninja Shuriken Sprite_7
   - first:
-      213: 1524323925944233980
-    second: Ninja Sprite_8
+      213: -7582289627025374003
+    second: Ninja Shuriken Sprite_8
   - first:
-      213: 1858809716322730893
-    second: Ninja Sprite_9
+      213: 5281961711651814041
+    second: Ninja Shuriken Sprite_9
   - first:
-      213: 5854836838237633321
-    second: Ninja Sprite_10
+      213: 1389575656637392292
+    second: Ninja Shuriken Sprite_10
   - first:
-      213: -8806581375237917728
-    second: Ninja Sprite_11
+      213: -7146450315230358519
+    second: Ninja Shuriken Sprite_11
   - first:
-      213: -1711746873262187268
-    second: Ninja Sprite_12
+      213: 2394594428039979683
+    second: Ninja Shuriken Sprite_12
   - first:
-      213: 4615194266614045291
-    second: Ninja Sprite_13
+      213: 5856683685181838518
+    second: Ninja Shuriken Sprite_13
   - first:
-      213: 7267830665583361925
-    second: Ninja Sprite_14
+      213: 2585791310272162086
+    second: Ninja Shuriken Sprite_14
   - first:
-      213: 6974552379079065701
-    second: Ninja Sprite_15
+      213: 1686362743158306514
+    second: Ninja Shuriken Sprite_15
   - first:
-      213: 1073034456138102026
-    second: Ninja Sprite_16
+      213: 7698572054170100655
+    second: Ninja Shuriken Sprite_16
   - first:
-      213: -6220665390671645804
-    second: Ninja Sprite_17
+      213: 2392118473547932124
+    second: Ninja Shuriken Sprite_17
   - first:
-      213: -1413173359446662664
-    second: Ninja Sprite_18
+      213: 8995270821539207182
+    second: Ninja Shuriken Sprite_18
   - first:
-      213: -6056704081904252781
-    second: Ninja Sprite_19
-  - first:
-      213: 4582391692677668667
-    second: Ninja Sprite_20
-  - first:
-      213: -4647138587727172351
-    second: Ninja Sprite_21
+      213: 1908723728664520309
+    second: Ninja Shuriken Sprite_19
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -112,7 +106,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 60
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -179,7 +173,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ninja Sprite_0
+      name: Ninja Shuriken Sprite_0
       rect:
         serializedVersion: 2
         x: 0
@@ -187,20 +181,104 @@ TextureImporter:
         width: 60
         height: 60
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 3, z: 0, w: 0}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5619b36b006ec1a50800000000000000
-      internalID: 6493317653493158245
+      spriteID: b784c4d9f9a4c64f0800000000000000
+      internalID: -834209781571106693
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ninja Sprite_1
+      name: Ninja Shuriken Sprite_1
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 480
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 112c0b7899ddda950800000000000000
+      internalID: 6462064691822772753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja Shuriken Sprite_2
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 480
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b4ebd73d0e155fb0800000000000000
+      internalID: -4659785197324344139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja Shuriken Sprite_3
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 480
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98f4e2311c1249e80800000000000000
+      internalID: -8172870310636400759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja Shuriken Sprite_4
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 480
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4fc7b7464df6f810800000000000000
+      internalID: 1798903579473858381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja Shuriken Sprite_5
       rect:
         serializedVersion: 2
         x: 0
@@ -208,20 +286,20 @@ TextureImporter:
         width: 60
         height: 60
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d9b0513ba4ba5ec0800000000000000
-      internalID: -3577348306632656423
+      spriteID: 02b35a97c10219670800000000000000
+      internalID: 8543645274770586400
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ninja Sprite_2
+      name: Ninja Shuriken Sprite_6
       rect:
         serializedVersion: 2
         x: 60
@@ -229,20 +307,20 @@ TextureImporter:
         width: 60
         height: 60
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7368330e8a7abe9f0800000000000000
-      internalID: -438072194980673993
+      spriteID: 5f6b3fac1bc5d8dc0800000000000000
+      internalID: -3635147405534185739
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ninja Sprite_3
+      name: Ninja Shuriken Sprite_7
       rect:
         serializedVersion: 2
         x: 120
@@ -250,20 +328,62 @@ TextureImporter:
         width: 60
         height: 60
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c13587e4fe0e6f70800000000000000
-      internalID: 9182293135274095049
+      spriteID: 0e0aa7969ba2b7d50800000000000000
+      internalID: 6736024643489669344
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ninja Sprite_4
+      name: Ninja Shuriken Sprite_8
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 420
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc40605c1cb46c690800000000000000
+      internalID: -7582289627025374003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja Shuriken Sprite_9
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 420
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99a7834113c4d4940800000000000000
+      internalID: 5281961711651814041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja Shuriken Sprite_10
       rect:
         serializedVersion: 2
         x: 0
@@ -271,20 +391,20 @@ TextureImporter:
         width: 60
         height: 60
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8265350494638c890800000000000000
-      internalID: -7437635096362658264
+      spriteID: 4a5e66a82b3c84310800000000000000
+      internalID: 1389575656637392292
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ninja Sprite_5
+      name: Ninja Shuriken Sprite_11
       rect:
         serializedVersion: 2
         x: 60
@@ -292,20 +412,20 @@ TextureImporter:
         width: 60
         height: 60
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 779b43f4ce35f31a0800000000000000
-      internalID: -6827646235664139913
+      spriteID: 90457b34d45b2dc90800000000000000
+      internalID: -7146450315230358519
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ninja Sprite_6
+      name: Ninja Shuriken Sprite_12
       rect:
         serializedVersion: 2
         x: 120
@@ -313,20 +433,20 @@ TextureImporter:
         width: 60
         height: 60
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7bb26c3fae6a5d40800000000000000
-      internalID: 5573889187735845755
+      spriteID: 3a2e378f1fe4b3120800000000000000
+      internalID: 2394594428039979683
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ninja Sprite_7
+      name: Ninja Shuriken Sprite_13
       rect:
         serializedVersion: 2
         x: 180
@@ -334,41 +454,20 @@ TextureImporter:
         width: 60
         height: 60
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9fe97588a49a2d590800000000000000
-      internalID: -7650866679368933639
+      spriteID: 6b4d61918ce174150800000000000000
+      internalID: 5856683685181838518
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ninja Sprite_8
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 360
-        width: 60
-        height: 60
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cffe880d88c772510800000000000000
-      internalID: 1524323925944233980
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ninja Sprite_9
+      name: Ninja Shuriken Sprite_14
       rect:
         serializedVersion: 2
         x: 0
@@ -376,20 +475,20 @@ TextureImporter:
         width: 60
         height: 60
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d83067ea691dbc910800000000000000
-      internalID: 1858809716322730893
+      spriteID: 62960102f7392e320800000000000000
+      internalID: 2585791310272162086
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ninja Sprite_10
+      name: Ninja Shuriken Sprite_15
       rect:
         serializedVersion: 2
         x: 60
@@ -397,203 +496,98 @@ TextureImporter:
         width: 60
         height: 60
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92b7609851f804150800000000000000
-      internalID: 5854836838237633321
+      spriteID: 2d6776ceaf9276710800000000000000
+      internalID: 1686362743158306514
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ninja Sprite_11
+      name: Ninja Shuriken Sprite_16
       rect:
         serializedVersion: 2
-        x: 0
+        x: 180
+        y: 300
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa3ee869e72d6da60800000000000000
+      internalID: 7698572054170100655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja Shuriken Sprite_17
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 300
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd16974e313823120800000000000000
+      internalID: 2392118473547932124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja Shuriken Sprite_18
+      rect:
+        serializedVersion: 2
+        x: 180
         y: 240
         width: 60
         height: 60
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 3, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0e37f5306ecb8c580800000000000000
-      internalID: -8806581375237917728
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ninja Sprite_12
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 180
-        width: 60
-        height: 60
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cfc52d9b947ae38e0800000000000000
-      internalID: -1711746873262187268
+      spriteID: e08d748372f95dc70800000000000000
+      internalID: 8995270821539207182
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ninja Sprite_13
+      name: Ninja Shuriken Sprite_19
       rect:
         serializedVersion: 2
-        x: 60
-        y: 180
+        x: 240
+        y: 240
         width: 60
         height: 60
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6a13feabb67c0040800000000000000
-      internalID: 4615194266614045291
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ninja Sprite_14
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 180
-        width: 60
-        height: 60
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 58f79c5db758cd460800000000000000
-      internalID: 7267830665583361925
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ninja Sprite_15
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 120
-        width: 60
-        height: 60
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5600d5e9f669ac060800000000000000
-      internalID: 6974552379079065701
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ninja Sprite_18
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 60
-        width: 60
-        height: 60
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8f1e2202156636ce0800000000000000
-      internalID: -1413173359446662664
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ninja Sprite_19
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 60
-        width: 60
-        height: 60
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 39840703ab342fba0800000000000000
-      internalID: -6056704081904252781
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ninja Sprite_20
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 60
-        height: 60
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b3fd0c747fce79f30800000000000000
-      internalID: 4582391692677668667
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ninja Sprite_21
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 0
-        width: 60
-        height: 60
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 10de288731c028fb0800000000000000
-      internalID: -4647138587727172351
+      spriteID: 576686d4e162d7a10800000000000000
+      internalID: 1908723728664520309
       vertices: []
       indices: 
       edges: []

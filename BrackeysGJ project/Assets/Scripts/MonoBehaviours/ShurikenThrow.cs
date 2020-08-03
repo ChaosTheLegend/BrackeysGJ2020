@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ShurikenThrow : MonoBehaviour
 {
@@ -17,9 +18,13 @@ public class ShurikenThrow : MonoBehaviour
     [SerializeField] private GameObject shurikenSpawnPoint;
     [SerializeField] private GameObject shurikenSpawnParent;
 
+    public UnityEvent onShoot;
+    
     private Vector2 mousePos;
     private Vector2 mouseDirection;
-
+    [HideInInspector]
+    public bool dir;
+    
     [SerializeField] private Shuriken[] shurikenInstances;
         
     // Start is called before the first frame update
@@ -51,16 +56,10 @@ public class ShurikenThrow : MonoBehaviour
 
         // Get the direction to the mouse
         mouseDirection = mousePos - new Vector2(transform.position.x, transform.position.y);
-
+        dir = mouseDirection.x >= 0;
         // Flip spawner to face x direction of mouse
-        if (mouseDirection.x >= 0)
-        {
-            shurikenSpawnParent.transform.rotation = Quaternion.Euler(0, 180, 0);
-        }
-        else
-        {
-            shurikenSpawnParent.transform.rotation = Quaternion.Euler(0, 0, 0);
-        }
+        shurikenSpawnParent.transform.rotation = Quaternion.Euler(0, dir? 180 : 0, 0);
+
         #endregion
     }
 
@@ -70,6 +69,7 @@ public class ShurikenThrow : MonoBehaviour
         shurikenInstances[shurikenCount] = shuriken;
 
         shurikenCount++;
+        onShoot?.Invoke();
     }
 
     private void RewindShuriken()
@@ -84,7 +84,7 @@ public class ShurikenThrow : MonoBehaviour
     }
 
     /// <summary>
-    /// Gives the player +1 shuriken
+    /// Gives the player +1 shuriken(duh)
     /// </summary>
     public void ReturnShuriken()
     {

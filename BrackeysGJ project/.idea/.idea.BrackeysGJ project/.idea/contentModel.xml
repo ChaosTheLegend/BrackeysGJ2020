@@ -7,6 +7,42 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="2D Pixel Perfect" t="Include">
+          <e p="2.0.4" t="Include">
+            <e p="Sample Scenes and Extras" t="Include">
+              <e p="Extras" t="Include">
+                <e p="Custom Canvas Scaler" t="Include">
+                  <e p="CustomCanvasScaler.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Scenes" t="Include">
+                <e p="Fonts" t="Include">
+                  <e p="LICENSE.txt" t="Include" />
+                </e>
+                <e p="RoboHero" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="Hero.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="Rule Tiles" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="Editor" t="Include">
+                      <e p="RuleTileEditor.cs" t="Include" />
+                      <e p="Unity.2D.PixelPerfect.Samples.Editor.asmdef" t="Include" />
+                    </e>
+                    <e p="RuleTile.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="Scripts" t="Include">
+                  <e p="BasicCameraFollow.cs" t="Include" />
+                  <e p="CameraManager.cs" t="Include" />
+                  <e p="HeroMover.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Unity.2D.PixelPerfect.Samples.asmdef" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="ChaosUtils" t="Include">
           <e p="Scripts" t="Include">
             <e p="AdvPlayerCollider.cs" t="Include" />
@@ -32,50 +68,15 @@
             <e p="SmoothFollow.cs" t="Include" />
           </e>
         </e>
-        <e p="Samples" t="Include">
-          <e p="2D Pixel Perfect" t="Include">
-            <e p="2.0.4" t="Include">
-              <e p="Sample Scenes and Extras" t="Include">
-                <e p="Extras" t="Include">
-                  <e p="Custom Canvas Scaler" t="Include">
-                    <e p="CustomCanvasScaler.cs" t="Include" />
-                  </e>
-                </e>
-                <e p="Scenes" t="Include">
-                  <e p="Fonts" t="Include">
-                    <e p="LICENSE.txt" t="Include" />
-                  </e>
-                  <e p="RoboHero" t="Include">
-                    <e p="Scripts" t="Include">
-                      <e p="Hero.cs" t="Include" />
-                    </e>
-                  </e>
-                  <e p="Rule Tiles" t="Include">
-                    <e p="Scripts" t="Include">
-                      <e p="Editor" t="Include">
-                        <e p="RuleTileEditor.cs" t="Include" />
-                        <e p="Unity.2D.PixelPerfect.Samples.Editor.asmdef" t="Include" />
-                      </e>
-                      <e p="RuleTile.cs" t="Include" />
-                    </e>
-                  </e>
-                  <e p="Scripts" t="Include">
-                    <e p="BasicCameraFollow.cs" t="Include" />
-                    <e p="CameraManager.cs" t="Include" />
-                    <e p="HeroMover.cs" t="Include" />
-                  </e>
-                </e>
-                <e p="Unity.2D.PixelPerfect.Samples.asmdef" t="Include" />
-              </e>
-            </e>
-          </e>
-        </e>
         <e p="Scripts" t="Include">
           <e p="MonoBehaviours" t="Include">
+            <e p="AmmoUI.cs" t="Include" />
             <e p="EnemyController.cs" t="Include" />
             <e p="PlayerAnimationController.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
+            <e p="Shuriken.cs" t="Include" />
             <e p="ShurikenController.cs" t="Include" />
+            <e p="ShurikenThrow.cs" t="Include" />
           </e>
         </e>
         <e p="TextMesh Pro" t="Include">
