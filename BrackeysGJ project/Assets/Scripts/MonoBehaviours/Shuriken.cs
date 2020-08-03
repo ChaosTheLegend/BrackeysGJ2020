@@ -31,7 +31,7 @@ public class Shuriken : MonoBehaviour
     private ShurikenThrow playerShurikenScript;
 
     private bool isRewinding = false;
-
+    private bool Stuck = false;
     [SerializeField] private float fadeAlpha = 0.5f;
 
     // Start is called before the first frame update
@@ -73,15 +73,14 @@ public class Shuriken : MonoBehaviour
             }
             else
             {
-                rbody.velocity = Vector2.zero;
                 _anim.SetInteger($"State",1);
             }
         }
         else
         {
-            rbody.velocity = Vector2.zero;
+            transform.SetParent(null);
             transform.position = Vector2.MoveTowards(transform.position, playerShurikenScript.transform.position, (returnSpeed) * Time.deltaTime);
-            
+            rbody.velocity = Vector2.zero;
             //Chaos has been here
             //and changed to smoothDamp instead of MoveTowards  
             //transform.position =  Vector2.SmoothDamp(transform.position, playerShurikenScript.transform.position, ref velocity,returnTime);
@@ -98,24 +97,31 @@ public class Shuriken : MonoBehaviour
         //if (collision.gameObject.tag != "Player")
         //{
         if (isRewinding) return;
+        if(Stuck) return;
         
         collisionCount++;
+
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            collisionCount = maxCollisions;
+            EnemyController enemy = collision.gameObject.GetComponent<EnemyController>();
+            transform.SetParent(enemy.sticker,true);
+            enemy.TakeDamage(damageDealt);
+        }
+        
         //-Chaos
         //This is done to stop shuriken immediately after collision
         //and prevent visual glitches
         //they still exist though :(
         if (collisionCount >= maxCollisions)
         {
+            Stuck = true;
             rbody.velocity = Vector2.zero;
+            rbody.simulated = false;
         }
             
             
-        if (collision.gameObject.CompareTag($"Enemy"))
-        {
-#warning Chaos, blindspot's script needs a TakeDamage(float damageDealt) method
-            //EnemyController enemy = collision.gameObject.GetComponent<EnemyController>();
-            //enemy.TakeDamage(damageDealt);
-        }
+        
         //}
     }
 
@@ -142,6 +148,7 @@ public class Shuriken : MonoBehaviour
     public void Rewind()
     {
         // Tell code we're rewinding
+        Stuck = true;
         isRewinding = true;
 
         //-Chaos
@@ -153,7 +160,6 @@ public class Shuriken : MonoBehaviour
         //Fade(fadeAlpha);
 
         // Make the collider a trigger so it can pass through walls
-        collider.isTrigger = true;
 
         // Tell the shuriken to move towards the player
         //moveDirection = (Vector2)playerShurikenScript.transform.position - (Vector2)transform.position;

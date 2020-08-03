@@ -49,7 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   throwSpeed: 700
   returnSpeed: 20
-  damageDealt: 10
+  damageDealt: 40
   maxCollisions: 2
   fadeAlpha: 0.4
 --- !u!50 &1446643230

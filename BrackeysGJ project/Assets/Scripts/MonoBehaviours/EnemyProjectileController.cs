@@ -17,7 +17,7 @@ public class EnemyProjectileController : MonoBehaviour
         player = FindObjectOfType<PlayerController>();
         rb = GetComponent<Rigidbody2D>();
         // direction = FindObjectOfType<EnemyController>().GetDirection();
-        direction = (player.transform.position - transform.position) * projectileSpeed; 
+        direction = (player.transform.position - transform.position).normalized * projectileSpeed; 
         // Vector2 changeInVelocity = new Vector2(direction * shurikenSpeed, 0f);
         Vector2 changeInVelocity = new Vector2(direction.x, direction.y);
         rb.velocity = changeInVelocity;
