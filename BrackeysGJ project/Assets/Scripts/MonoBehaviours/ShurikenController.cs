@@ -29,6 +29,7 @@ public class ShurikenController : MonoBehaviour
         if (other.tag == "Player")
         {
             player.TakeDamage(damage);
+            Destroy(gameObject);
         }
     }
 }
