@@ -9,6 +9,7 @@ public class EnemyController : MonoBehaviour
     // Objects
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private GameObject projectilePosition;
+    [SerializeField] private HealthBar healthBarPrefab;
     private GameObject player;
     private Animator animator;
     
@@ -41,6 +42,7 @@ public class EnemyController : MonoBehaviour
     
     void Start()
     {
+        healthBarPrefab.SetMaxHealth(health);
         state = EnemyState.running;
         player = GameObject.FindGameObjectWithTag("Player");
         capsuleCollider = GetComponent<CapsuleCollider2D>();
@@ -54,6 +56,7 @@ public class EnemyController : MonoBehaviour
     // For spawning shurikens
     void Update()
     {
+        
         if (distanceBetweenPlayerAndEnemy < maxDistance && fire)
         {
             GameObject throwable = Instantiate(projectilePrefab, projectilePosition.transform.position, transform.rotation);
@@ -82,6 +85,7 @@ public class EnemyController : MonoBehaviour
         distanceBetweenPlayerAndEnemy = Vector2.Distance(player.transform.position, transform.position);
         if (distanceBetweenPlayerAndEnemy < maxDistance)
         {
+            rb.velocity = Vector2.zero;
             // Get the Player Direction
             float x = player.transform.position.x - transform.position.x;
             FlipSpriteOnPlayerSight(x);
@@ -121,16 +125,11 @@ public class EnemyController : MonoBehaviour
         transform.localScale = newScale;
     }
 
-    // Used to get the direction the shuriken must be thrown
-    // public float GetDirection()
-    // {
-    //     return transform.localScale.x;
-    // }
-
     // For taking Damage
     public void TakeDamage(float damage)
     {
         health -= damage;
+        healthBarPrefab.SetHealth(health);
         if (health <= 0)
         {
             StartCoroutine(EnemyDeath());
@@ -159,14 +158,4 @@ public class EnemyController : MonoBehaviour
             animator.SetTrigger("Death");
         }
     }
-
-    // private float GetPlayerPosition()
-    // {
-    //     if (Mathf.Abs(player.transform.position.y - transform.position.y) <= 2)
-    //     {
-    //         return Mathf.Abs(transform.position.x - player.transform.position.x);
-    //     }
-    //
-    //     return maxDistance;
-    // }
 }
