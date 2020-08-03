@@ -46,6 +46,11 @@ namespace BrackeysGJ.MonoBehaviours
             _rb = GetComponent<Rigidbody2D>();
         }
 
+        public bool OnLadder()
+        {
+            return _onLadder;
+        }
+        
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (!other.CompareTag($"Ladder")) return;
@@ -58,7 +63,7 @@ namespace BrackeysGJ.MonoBehaviours
             _onLadder = false;
         }
 
-        private bool OnWall()
+        public bool OnWall()
         {
             return (_advCol.CheckCollision(AdvPlayerCollider.Side.Left) || _advCol.CheckCollision(AdvPlayerCollider.Side.Right));
         }
