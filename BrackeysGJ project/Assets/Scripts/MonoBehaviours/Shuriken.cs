@@ -2,7 +2,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -11,48 +10,49 @@ public class Shuriken : MonoBehaviour
     private Vector2 initMousePos;
     private Vector2 mousePosWorld;
 
-    [SerializeField] private float throwSpeed = 300f;
-    [SerializeField] private float returnSpeed = 300f;
-
+    [SerializeField] private float speed = 300f;
 
     [SerializeField] private float damageDealt = 10f;
 
     private Rigidbody2D rbody;
-
-    private Collider2D collider;
 
     private Vector2 moveDirection;
 
     [SerializeField] private int maxCollisions = 3;
     private int collisionCount = 0;
 
+    // used to store contact points for rewind
+    [SerializeField] Vector2[] rewindPoints;
+
     private ShurikenThrow playerShurikenScript;
 
     private bool isRewinding = false;
-
-    [SerializeField] private float fadeAlpha = 0.5f;
+    private int rewindIndex = 0;
+    [SerializeField] private float fadeTime = 1f;
 
     // Start is called before the first frame update
     void Start()
     {
+        // Initialize collision points array
+        rewindPoints = new Vector2[maxCollisions + 1];
+
+        // Set initial rewind point
+        rewindPoints[0] = transform.position;
+
         // Get a reference to the player
         playerShurikenScript = GameObject.FindObjectOfType<ShurikenThrow>();
 
-        // Get a reference to the shuriken collider
-        collider = GetComponent<Collider2D>();
-
         // Mouse's position during shuriken initialization
         initMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        //mousePosWorld = Camera.main.ScreenToWorldPoint(initMousePos);
 
-        // Rigidbody2D
         rbody = GetComponent<Rigidbody2D>();
 
-        // Direction for Shuriken to move
         moveDirection = initMousePos - new Vector2(transform.position.x, transform.position.y);
         moveDirection.Normalize();
 
         // Set initial velocity
-        rbody.velocity = moveDirection * throwSpeed * Time.fixedDeltaTime;
+        rbody.velocity = moveDirection * speed * Time.fixedDeltaTime;
     }
 
     private void FixedUpdate()
@@ -62,7 +62,7 @@ public class Shuriken : MonoBehaviour
             if (collisionCount < maxCollisions)
             {
                 // Maintain velocity in the speed the object is currently traveling in
-                rbody.velocity = throwSpeed * (rbody.velocity.normalized) * Time.fixedDeltaTime;
+                rbody.velocity = speed * (rbody.velocity.normalized) * Time.fixedDeltaTime;
             }
             else
             {
@@ -71,59 +71,81 @@ public class Shuriken : MonoBehaviour
         }
         else
         {
-            transform.position = Vector2.MoveTowards(transform.position, playerShurikenScript.transform.position, (returnSpeed / 25) * Time.deltaTime);
-            //rbody.velocity = speed * (rbody.velocity.normalized) * Time.fixedDeltaTime;
+            RewindLogic();
+            rbody.velocity = speed * (rbody.velocity.normalized) * Time.fixedDeltaTime;
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag != "Player")
+        if (collisionCount < maxCollisions &&
+            isRewinding == false)
         {
-            if (collisionCount < maxCollisions &&
-                isRewinding == false)
+            rewindPoints[collisionCount + 1] = transform.position;
+
+            collisionCount++;
+            rewindIndex++;
+
+            if (collision.gameObject.tag == "Enemy")
             {
-                collisionCount++;
-
-                if (collision.gameObject.tag == "Enemy")
-                {
-                    #warning Chaos, blindspot's script needs a TakeDamage(float damageDealt) method
-                    //EnemyController enemy = collision.gameObject.GetComponent<EnemyController>();
-                    //enemy.TakeDamage(damageDealt);
-                }
+#warning Chaos, blindspot's script needs a TakeDamage(float damageDealt) method
+                //EnemyController enemy = collision.gameObject.GetComponent<EnemyController>();
+                //enemy.TakeDamage(damageDealt);
             }
-        }
-    }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.tag == "Player")
-        {
-            playerShurikenScript.ReturnShuriken();
-            Destroy(gameObject);
+            Debug.Log(collisionCount);
         }
     }
 
     public void Rewind()
     {
-        // Tell code we're rewinding
         isRewinding = true;
-
-        // Fade the shuriken's alpha
-        Fade(fadeAlpha);
-
-        // Make the collider a trigger so it can pass through walls
-        collider.isTrigger = true;
-
-        // Tell the shuriken to move towards the player
-        //moveDirection = (Vector2)playerShurikenScript.transform.position - (Vector2)transform.position;
-        //rbody.velocity = moveDirection * speed * Time.fixedDeltaTime;
     }
 
-    private void Fade(float alphaValue)
+    private void RewindLogic()
     {
-        Renderer renderer = transform.GetComponentInChildren<Renderer>();
-        renderer.material.color = new Color(1f, 1f, 1f, fadeAlpha);
-    }
+        moveDirection = rewindPoints[rewindIndex] - new Vector2(transform.position.x, transform.position.y);
+        rbody.velocity = moveDirection * speed * Time.fixedDeltaTime;
 
+        float distanceToRewindPoint = Vector2.Distance(transform.position, rewindPoints[rewindIndex]);
+        if (distanceToRewindPoint <= 0.2)
+        {
+            rbody.velocity = Vector2.zero;
+
+            // If we're not at our initial rewind point
+            if (rewindIndex != 0)
+            {
+                // Move onto the next rewind point
+                rewindIndex--;
+            }
+            // If we're at our initial rewind point
+            else
+            {
+                // Our rewind is complete
+                isRewinding = false;
+
+                // Fade the shuriken out of existence
+                StartCoroutine(FadeAway(fadeTime));
+            }
+            Debug.Log("DISTANCE REACHED");
+        }
+
+        IEnumerator FadeAway(float time)
+        {
+            Renderer renderer = transform.GetComponentInChildren<Renderer>();
+            float alpha = renderer.material.color.a;
+            for (float t = 0.0f; t < fadeTime; t += Time.deltaTime / time)
+            {
+                Color newColor = new Color(1, 1, 1, Mathf.Lerp(alpha, 0f, t));
+                renderer.material.color = newColor;
+                yield return null;
+            }
+
+            // Give the player the shuriken back
+            playerShurikenScript.ReturnShuriken();
+
+            // Destroy the shuriken
+            Destroy(gameObject);
+        }
+    }
 }

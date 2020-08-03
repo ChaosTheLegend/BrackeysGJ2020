@@ -46,11 +46,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5c6fec8450b81f4aa610cae1aecc7f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throwSpeed: 400
-  returnSpeed: 400
+  speed: 300
   damageDealt: 10
   maxCollisions: 3
-  fadeAlpha: 0.4
+  rewindPoints: []
+  fadeTime: 1
 --- !u!50 &1446643230
 Rigidbody2D:
   serializedVersion: 4
