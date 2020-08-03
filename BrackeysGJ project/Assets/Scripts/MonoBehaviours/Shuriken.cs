@@ -87,9 +87,8 @@ public class Shuriken : MonoBehaviour
 
                 if (collision.gameObject.tag == "Enemy")
                 {
-                    #warning Chaos, blindspot's script needs a TakeDamage(float damageDealt) method
-                    //EnemyController enemy = collision.gameObject.GetComponent<EnemyController>();
-                    //enemy.TakeDamage(damageDealt);
+                    EnemyController enemy = collision.gameObject.GetComponent<EnemyController>();
+                    enemy.TakeDamage(damageDealt);
                 }
             }
         }
