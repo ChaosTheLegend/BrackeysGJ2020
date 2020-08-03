@@ -83,6 +83,9 @@ public class ShurikenThrow : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Gives the player +1 shuriken
+    /// </summary>
     public void ReturnShuriken()
     {
         // Remove one shuriken from the scene
