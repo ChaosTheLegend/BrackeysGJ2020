@@ -7,34 +7,46 @@ using UnityEngine.SocialPlatforms;
 public class EnemyController : MonoBehaviour
 {
     // Objects
-    [SerializeField] private GameObject shurikenPrefab;
-    [SerializeField] private GameObject shurikenPosition;
+    [SerializeField] private GameObject projectilePrefab;
+    [SerializeField] private GameObject projectilePosition;
     private GameObject player;
+    private Animator animator;
     
     // Configurations
     [SerializeField] private float health = 100f;  
     [SerializeField] private float movementSpeed = 1f;
+    [SerializeField] private float delayDeathTime = 1f;
     [SerializeField] private float maxDistance = 5f;
     [SerializeField] private float waitTime = 1f;
     private bool fire = true;
     private float speedHolder;
     private float waitTimeHolder;
     private float distanceBetweenPlayerAndEnemy;
-    
+
+    // Animation States
+    enum EnemyState
+    {
+        shooting,
+        running,
+        death
+    };
+    private EnemyState state;
     
     // Colliders
-    private Collider2D boxCollider;
-    private Collider2D capsuleCollider; // Never used but Collider helps in in-game OnTriggerExit2D
+    private Collider2D boxCollider; // Never used but Collider helps in in-game Collision
+    private Collider2D capsuleCollider; 
 
     // Rigibody
     private Rigidbody2D rb;
     
     void Start()
     {
+        state = EnemyState.running;
         player = GameObject.FindGameObjectWithTag("Player");
         capsuleCollider = GetComponent<CapsuleCollider2D>();
         boxCollider = GetComponent<BoxCollider2D>();
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         waitTimeHolder = waitTime;
         distanceBetweenPlayerAndEnemy = Vector2.Distance(player.transform.position, transform.position);
     }
@@ -44,7 +56,7 @@ public class EnemyController : MonoBehaviour
     {
         if (distanceBetweenPlayerAndEnemy < maxDistance && fire)
         {
-            GameObject throwable = Instantiate(shurikenPrefab, shurikenPosition.transform.position, transform.rotation);
+            GameObject throwable = Instantiate(projectilePrefab, projectilePosition.transform.position, transform.rotation);
             fire = false;
         }
         else
@@ -59,6 +71,9 @@ public class EnemyController : MonoBehaviour
                 waitTime = waitTimeHolder;
             }
         }
+        
+        // To Switch animation based on enemy state 
+        SwitchAnimations();
     }
     
     // For enemy movements
@@ -67,21 +82,26 @@ public class EnemyController : MonoBehaviour
         distanceBetweenPlayerAndEnemy = Vector2.Distance(player.transform.position, transform.position);
         if (distanceBetweenPlayerAndEnemy < maxDistance)
         {
+            // Get the Player Direction
             float x = player.transform.position.x - transform.position.x;
             FlipSpriteOnPlayerSight(x);
+            state = EnemyState.shooting;
             return;
         }
         
+        // Check if enemy is still touching the ground
         if (!capsuleCollider.IsTouchingLayers(LayerMask.GetMask("Walls")))
         {
             rb.velocity = new Vector2(-movementSpeed, 0f);
+            state = EnemyState.shooting;
             return;
         }
 
+        state = EnemyState.running;
         rb.velocity = new Vector2(movementSpeed, 0f);
     }
 
-    // For checking if player has come to the edge of the ground
+    // For checking if enemy has come to the edge of the ground
     private void OnTriggerExit2D(Collider2D other)
     {
         movementSpeed = -1 * movementSpeed;
@@ -102,10 +122,10 @@ public class EnemyController : MonoBehaviour
     }
 
     // Used to get the direction the shuriken must be thrown
-    public float GetDirection()
-    {
-        return transform.localScale.x;
-    }
+    // public float GetDirection()
+    // {
+    //     return transform.localScale.x;
+    // }
 
     // For taking Damage
     public void TakeDamage(float damage)
@@ -113,7 +133,30 @@ public class EnemyController : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
-            Destroy(gameObject);
+            StartCoroutine(EnemyDeath());
+        }
+    }
+
+    IEnumerator EnemyDeath()
+    {
+        state = EnemyState.death;
+        yield return new WaitForSeconds(delayDeathTime);
+        Destroy(gameObject);
+    }
+
+    void SwitchAnimations()
+    {
+        if (state == EnemyState.shooting)
+        {
+            animator.SetBool("Shooting", true);
+        }
+        else if (state == EnemyState.running)
+        {
+            animator.SetBool("Shooting", false);
+        }
+        else
+        {
+            animator.SetTrigger("Death");
         }
     }
 
