@@ -72,7 +72,10 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="MonoBehaviours" t="Include">
+            <e p="EnemyController.cs" t="Include" />
+            <e p="PlayerAnimationController.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
+            <e p="ShurikenController.cs" t="Include" />
           </e>
         </e>
         <e p="TextMesh Pro" t="Include">
