@@ -29,12 +29,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PlayerAnimationController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/ShurikenThrow.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/EnemyProjectileController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/EnemyController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/Shuriken.cs" />
         <option value="$PROJECT_DIR$/Assets/EnemyAnimator.cs" />
         <option value="$PROJECT_DIR$/Assets/ChaosUtils/Scripts/Paths/PathFolower.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/EnemyController2.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/EnemyProjectileController.cs" />
       </list>
     </option>
   </component>
