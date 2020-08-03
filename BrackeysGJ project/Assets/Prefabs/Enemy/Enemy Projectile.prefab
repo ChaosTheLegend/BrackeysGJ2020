@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 2145021970865767890}
   - component: {fileID: 829235345885284597}
   - component: {fileID: 7709143225336388147}
-  - component: {fileID: 3969964564723512522}
+  - component: {fileID: -3265244288214568070}
   m_Layer: 0
-  m_Name: Shuriken
+  m_Name: Enemy Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121,7 +121,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.49999997
---- !u!114 &3969964564723512522
+--- !u!114 &-3265244288214568070
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,4 +133,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bdf067e020a92645be27a3f9955ab30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shurikenSpeed: 5
+  shurikenSpeed: 2
+  damage: 20
