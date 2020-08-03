@@ -29,6 +29,7 @@ public class Shuriken : MonoBehaviour
     private int collisionCount = 0;
 
     private ShurikenThrow playerShurikenScript;
+    private LineRenderer _line;
 
     private bool isRewinding = false;
     private bool Stuck = false;
@@ -56,7 +57,9 @@ public class Shuriken : MonoBehaviour
         // Set initial velocity
         rbody.velocity = moveDirection * throwSpeed * Time.fixedDeltaTime;
         velocity = Vector2.one;
-        
+     
+        //Line effect
+        _line = GetComponent<LineRenderer>();
         //Animation
         _anim = GetComponent<Animator>();
     }
@@ -87,6 +90,13 @@ public class Shuriken : MonoBehaviour
             if((transform.position - playerShurikenScript.transform.position).sqrMagnitude < 0.7f*0.7f) ReturnToPlayer();
             //rbody.velocity = speed * (rbody.velocity.normalized) * Time.fixedDeltaTime;
         }
+    }
+
+    private void Update()
+    {
+        _line.enabled = isRewinding;
+        _line.SetPosition(0,transform.position);
+        _line.SetPosition(1,playerShurikenScript.transform.position);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

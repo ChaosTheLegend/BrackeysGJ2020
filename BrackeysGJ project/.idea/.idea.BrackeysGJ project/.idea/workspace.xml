@@ -27,8 +27,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PlayerAnimationController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/ShurikenThrow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/EnemyProjectileController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/Shuriken.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/EnemyController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/Shuriken.cs" />
       </list>
     </option>
   </component>
