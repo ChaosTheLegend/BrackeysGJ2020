@@ -47,6 +47,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 300
+  damageDealt: 10
+  maxCollisions: 3
+  rewindPoints: []
+  fadeTime: 1
 --- !u!50 &1446643230
 Rigidbody2D:
   serializedVersion: 4

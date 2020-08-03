@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BrackeysGJ.MonoBehaviours;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,9 +21,27 @@ public class Shuriken : MonoBehaviour
     [SerializeField] private int maxCollisions = 3;
     private int collisionCount = 0;
 
+    // used to store contact points for rewind
+    [SerializeField] Vector2[] rewindPoints;
+
+    private ShurikenThrow playerShurikenScript;
+
+    private bool isRewinding = false;
+    private int rewindIndex = 0;
+    [SerializeField] private float fadeTime = 1f;
+
     // Start is called before the first frame update
     void Start()
     {
+        // Initialize collision points array
+        rewindPoints = new Vector2[maxCollisions + 1];
+
+        // Set initial rewind point
+        rewindPoints[0] = transform.position;
+
+        // Get a reference to the player
+        playerShurikenScript = GameObject.FindObjectOfType<ShurikenThrow>();
+
         // Mouse's position during shuriken initialization
         initMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         //mousePosWorld = Camera.main.ScreenToWorldPoint(initMousePos);
@@ -36,35 +55,97 @@ public class Shuriken : MonoBehaviour
         rbody.velocity = moveDirection * speed * Time.fixedDeltaTime;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     private void FixedUpdate()
     {
-        if(collisionCount < maxCollisions)
+        if (!isRewinding)
         {
-            // Maintain velocity in the speed the object is currently traveling in
-            rbody.velocity = speed * (rbody.velocity.normalized) * Time.fixedDeltaTime;
+            if (collisionCount < maxCollisions)
+            {
+                // Maintain velocity in the speed the object is currently traveling in
+                rbody.velocity = speed * (rbody.velocity.normalized) * Time.fixedDeltaTime;
+            }
+            else
+            {
+                rbody.velocity = Vector2.zero;
+            }
         }
         else
         {
-            rbody.velocity = Vector2.zero;
+            RewindLogic();
+            rbody.velocity = speed * (rbody.velocity.normalized) * Time.fixedDeltaTime;
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        collisionCount = collisionCount < maxCollisions ? collisionCount + 1 : maxCollisions;
-        Debug.Log(collisionCount);
-
-        if (collision.gameObject.tag == "Enemy")
+        if (collisionCount < maxCollisions &&
+            isRewinding == false)
         {
-#warning Chaos, this section needs the enemy's script name and damage method
-            //EnemyScript enemy = collision.gameObject.GetComponent<EnemyScript>();
-            //enemy.TakeDamage(damageDealt);
+            rewindPoints[collisionCount + 1] = transform.position;
+
+            collisionCount++;
+            rewindIndex++;
+
+            if (collision.gameObject.tag == "Enemy")
+            {
+#warning Chaos, blindspot's script needs a TakeDamage(float damageDealt) method
+                //EnemyController enemy = collision.gameObject.GetComponent<EnemyController>();
+                //enemy.TakeDamage(damageDealt);
+            }
+
+            Debug.Log(collisionCount);
+        }
+    }
+
+    public void Rewind()
+    {
+        isRewinding = true;
+    }
+
+    private void RewindLogic()
+    {
+        moveDirection = rewindPoints[rewindIndex] - new Vector2(transform.position.x, transform.position.y);
+        rbody.velocity = moveDirection * speed * Time.fixedDeltaTime;
+
+        float distanceToRewindPoint = Vector2.Distance(transform.position, rewindPoints[rewindIndex]);
+        if (distanceToRewindPoint <= 0.2)
+        {
+            rbody.velocity = Vector2.zero;
+
+            // If we're not at our initial rewind point
+            if (rewindIndex != 0)
+            {
+                // Move onto the next rewind point
+                rewindIndex--;
+            }
+            // If we're at our initial rewind point
+            else
+            {
+                // Our rewind is complete
+                isRewinding = false;
+
+                // Fade the shuriken out of existence
+                StartCoroutine(FadeAway(fadeTime));
+            }
+            Debug.Log("DISTANCE REACHED");
+        }
+
+        IEnumerator FadeAway(float time)
+        {
+            Renderer renderer = transform.GetComponentInChildren<Renderer>();
+            float alpha = renderer.material.color.a;
+            for (float t = 0.0f; t < fadeTime; t += Time.deltaTime / time)
+            {
+                Color newColor = new Color(1, 1, 1, Mathf.Lerp(alpha, 0f, t));
+                renderer.material.color = newColor;
+                yield return null;
+            }
+
+            // Give the player the shuriken back
+            playerShurikenScript.ReturnShuriken();
+
+            // Destroy the shuriken
+            Destroy(gameObject);
         }
     }
 }

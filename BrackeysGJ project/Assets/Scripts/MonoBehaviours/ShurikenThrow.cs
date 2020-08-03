@@ -6,6 +6,12 @@ using UnityEngine;
 public class ShurikenThrow : MonoBehaviour
 {
     [SerializeField] private KeyCode shootButton = KeyCode.Mouse0;
+    [SerializeField] private KeyCode rewindButton = KeyCode.Mouse1;
+
+    [SerializeField] private int maxShuriken = 3;
+
+    // Number of shuriken that have been thrown
+    private int shurikenCount = 0;
 
     [SerializeField] private GameObject shurikenPrefab;
     [SerializeField] private GameObject shurikenSpawnPoint;
@@ -14,20 +20,29 @@ public class ShurikenThrow : MonoBehaviour
     private Vector2 mousePos;
     private Vector2 mouseDirection;
 
+    [SerializeField] private Shuriken[] shurikenInstances;
         
     // Start is called before the first frame update
     void Start()
     {
+        shurikenInstances = new Shuriken[maxShuriken];
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Throw a shuriken
-        if (Input.GetKeyDown(shootButton))
+        if(Input.GetKeyDown(rewindButton) &&
+            shurikenCount != 0)
         {
-            Instantiate(shurikenPrefab, shurikenSpawnPoint.transform.position, Quaternion.identity);
+            RewindShuriken();
+        }
+
+        // Shuriken Throw check
+        if (Input.GetKeyDown(shootButton) && 
+            shurikenCount < maxShuriken)
+        {
+            ThrowShuriken();
         }
 
         #region Spawner Flipping
@@ -47,5 +62,35 @@ public class ShurikenThrow : MonoBehaviour
             shurikenSpawnParent.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         #endregion
+    }
+
+    private void ThrowShuriken()
+    {
+        Shuriken shuriken = Instantiate(shurikenPrefab, shurikenSpawnPoint.transform.position, Quaternion.identity).GetComponent<Shuriken>();
+        shurikenInstances[shurikenCount] = shuriken;
+
+        shurikenCount++;
+    }
+
+    private void RewindShuriken()
+    {
+        foreach (Shuriken shuriken in shurikenInstances)
+        {
+            if (shuriken != null)
+            {
+                shuriken.Rewind();
+            }
+        }
+    }
+
+    public void ReturnShuriken()
+    {
+        // Remove one shuriken from the scene
+        shurikenCount--;
+    }
+
+    public int GetAmmoLeft()
+    {
+        return maxShuriken - shurikenCount;
     }
 }

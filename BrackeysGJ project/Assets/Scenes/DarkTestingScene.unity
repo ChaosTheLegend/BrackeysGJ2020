@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 96079151}
   - component: {fileID: 96079153}
   - component: {fileID: 96079152}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 120105174}
   - component: {fileID: 120105179}
   - component: {fileID: 120105180}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -239,8 +239,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   castPoints:
-  - {x: 0.5956644, y: 0.49055922, z: 0}
-  - {x: 0.5956644, y: -0.49213275, z: 0}
+  - {x: 0.578043, y: 0.49055922, z: 0}
+  - {x: 0.578043, y: -0.49213275, z: 0}
   - {x: -0.48797888, y: 0.52353984, z: 0}
   - {x: 0.48948148, y: 0.52353984, z: 0}
   - {x: -0.5878734, y: 0.48948142, z: 0}
@@ -248,7 +248,7 @@ MonoBehaviour:
   - {x: 0.48741236, y: -0.5193355, z: 0}
   - {x: -0.4874124, y: -0.5193355, z: 0}
   pointExtents:
-  - {x: 0.5956644, y: 0, z: 0}
+  - {x: 0.578043, y: 0, z: 0}
   - {x: 0, y: 0.52353984, z: 0}
   - {x: -0.5878734, y: 0, z: 0}
   - {x: 0, y: -0.5193355, z: 0}
@@ -261,7 +261,7 @@ MonoBehaviour:
   - {x: 0, y: -0.48797885, z: 0}
   - {x: 0.48741236, y: 0, z: 0}
   - {x: -0.4874124, y: 0, z: 0}
-  edit: 1
+  edit: 0
   showLabels: 0
   showCollision: 0
   castLayer:
@@ -412,10 +412,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootButton: 323
+  maxShuriken: 3
   shurikenPrefab: {fileID: 887548515493171774, guid: 4d52016a81949f74ebca759a3b67f785,
     type: 3}
   shurikenSpawnPoint: {fileID: 882204039}
   shurikenSpawnParent: {fileID: 1555602887}
+  shurikenInstances: []
 --- !u!1 &424167464
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,7 +471,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -508,7 +510,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 882204040}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Spawn Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -801,7 +803,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1555602888}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShurikenSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
