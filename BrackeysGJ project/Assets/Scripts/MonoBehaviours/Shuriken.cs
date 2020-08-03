@@ -114,7 +114,7 @@ public class Shuriken : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             collisionCount = maxCollisions;
-            EnemyController enemy = collision.gameObject.GetComponent<EnemyController>();
+            EnemyController2 enemy = collision.gameObject.GetComponent<EnemyController2>();
             transform.SetParent(enemy.sticker,true);
             enemy.TakeDamage(damageDealt);
         }

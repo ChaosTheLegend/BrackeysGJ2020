@@ -34,6 +34,14 @@ public class EnemyController : MonoBehaviour
     };
     private EnemyState state;
     
+    
+    //-Chaos
+    //I'm changing the movement to path system
+    //It should work better than what it is now
+    //Will revert back it it fails
+    //I'm gonna be writing another enemy script
+
+
     // Colliders
     private Collider2D boxCollider; // Never used but Collider helps in in-game Collision
     private Collider2D capsuleCollider; 
