@@ -10,11 +10,11 @@ public class EnemyProjectileController : MonoBehaviour
     private Rigidbody2D rb;
     // private float direction;
     private Vector2 direction;
-    private PlayerController player;
+    private PlayerHealth player;
     
     void Start()
     {
-        player = FindObjectOfType<PlayerController>();
+        player = FindObjectOfType<PlayerHealth>();
         rb = GetComponent<Rigidbody2D>();
         // direction = FindObjectOfType<EnemyController>().GetDirection();
         direction = (player.transform.position - transform.position) * projectileSpeed; 
@@ -27,7 +27,8 @@ public class EnemyProjectileController : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            // player.TakerDamage(damage);
+            player.TakeDamage(damage);
+            Destroy(gameObject);
         }
     }
 }

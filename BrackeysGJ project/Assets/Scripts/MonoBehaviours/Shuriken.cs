@@ -107,6 +107,17 @@ public class Shuriken : MonoBehaviour
         if (collisionCount >= maxCollisions)
         {
             rbody.velocity = Vector2.zero;
+            if (collisionCount < maxCollisions &&
+                isRewinding == false)
+            {
+                collisionCount++;
+
+                if (collision.gameObject.tag == "Enemy")
+                {
+                    EnemyController enemy = collision.gameObject.GetComponent<EnemyController>();
+                    enemy.TakeDamage(damageDealt);
+                }
+            }
         }
             
             

@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+
 guid: 621d3aee33aa92e4790edb0c3a6b06dc
 TextureImporter:
   internalIDToNameTable:
@@ -62,6 +63,7 @@ TextureImporter:
   - first:
       213: 1908723728664520309
     second: Ninja Shuriken Sprite_19
+
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -92,6 +94,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
+
     filterMode: 0
     aniso: -1
     mipBias: -100
