@@ -75,8 +75,10 @@
             <e p="EnemyController.cs" t="Include" />
             <e p="EnemyController2.cs" t="Include" />
             <e p="EnemyProjectileController.cs" t="Include" />
+            <e p="HealthBar.cs" t="Include" />
             <e p="PlayerAnimationController.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
+            <e p="PlayerHealth.cs" t="Include" />
             <e p="Shuriken.cs" t="Include" />
             <e p="ShurikenThrow.cs" t="Include" />
           </e>

@@ -17,12 +17,14 @@ namespace BrackeysGJ.MonoBehaviours
         private SpriteRenderer _sprite;
         private PathFolower _follower;
         private Transform _player;
+        private PlayerHealth _playerHealth;
         private Rigidbody2D _rb;
         [HideInInspector]public bool canSee;
         private float _tm;
         private void Start()
         {
             _player = GameObject.FindGameObjectWithTag("Player").transform;
+            _playerHealth = _player.GetComponent<PlayerHealth>();
             _rb = GetComponent<Rigidbody2D>();
             _sprite = GetComponent<SpriteRenderer>();
             _follower = GetComponent<PathFolower>();
@@ -32,6 +34,11 @@ namespace BrackeysGJ.MonoBehaviours
         
         private void CheckEyesight()
         {
+            if (_playerHealth.CheckIfDead())
+            {
+                canSee = false;
+                return;
+            }
             var cast = Physics2D.Linecast(transform.position, _player.position, wallLayer);
             if (cast) return;
             canSee = true;
@@ -59,11 +66,11 @@ namespace BrackeysGJ.MonoBehaviours
             var dis = transform.position - _player.position;
             if (dis.sqrMagnitude < detectionRadius * detectionRadius)
                 CheckEyesight();
-            else
-            {
+            else canSee = false;
+
+            if(!canSee){
                 _follower.speed = speed;
                 _follower.UpdateSpeed();
-                canSee = false;
             }
             
             if (health <= 0)
