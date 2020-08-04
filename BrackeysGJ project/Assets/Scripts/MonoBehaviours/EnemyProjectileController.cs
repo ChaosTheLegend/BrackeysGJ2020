@@ -9,11 +9,11 @@ public class EnemyProjectileController : MonoBehaviour
     [SerializeField] private float damage = 20f;
     private Rigidbody2D rb;
     private Vector2 direction;
-    private PlayerController player;
+    private PlayerHealth player;
     
     void Start()
     {
-        player = FindObjectOfType<PlayerController>();
+        player = FindObjectOfType<PlayerHealth>();
         rb = GetComponent<Rigidbody2D>();
         direction = (player.transform.position - transform.position) * projectileSpeed; 
         Vector2 changeInVelocity = new Vector2(direction.x, direction.y);
