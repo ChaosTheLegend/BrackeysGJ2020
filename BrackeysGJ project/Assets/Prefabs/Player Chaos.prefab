@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7099022288327960568}
   - component: {fileID: 7099022288327960571}
+
+  - component: {fileID: 7099022288327960570}
   - component: {fileID: 7099022288327960565}
   - component: {fileID: 7099022288327960564}
   - component: {fileID: 7099022288327960569}

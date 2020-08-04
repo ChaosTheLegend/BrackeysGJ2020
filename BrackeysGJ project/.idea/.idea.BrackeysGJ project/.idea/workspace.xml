@@ -1,7 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c703d93-926a-4bd4-8794-fd95c5d5c718" name="Default Changelist" comment="" />
+    <list default="true" id="4c703d93-926a-4bd4-8794-fd95c5d5c718" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BrackeysGJ project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BrackeysGJ project/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BrackeysGJ project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BrackeysGJ project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Pixel Perfect/2.0.4/Sample Scenes and Extras/Scenes/Rule Tiles/Animated Ocean Tile/Atlas/Ocean.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2D Pixel Perfect/2.0.4/Sample Scenes and Extras/Scenes/Rule Tiles/Animated Ocean Tile/Atlas/Ocean.spriteatlas" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Pixel Perfect/2.0.4/Sample Scenes and Extras/Scenes/Rule Tiles/Dungeon Tile/Atlas/Dungeon.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2D Pixel Perfect/2.0.4/Sample Scenes and Extras/Scenes/Rule Tiles/Dungeon Tile/Atlas/Dungeon.spriteatlas" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player Chaos.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player Chaos.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/GUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/GUI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/GUI.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/GUI.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/BlindsSampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/BlindsSampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editors.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/EnemyController2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/EnemyController2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/HealthBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/HealthBar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PlayerHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PlayerHealth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,6 +46,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ChaosUtils/Scripts/AdvPlayerCollider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/EnemyController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ChaosUtils/Scripts/Paths/PathFolower.cs" root0="FORCE_HIGHLIGHTING" />
@@ -39,6 +76,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PlayerAnimationController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/ShurikenThrow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/Shuriken.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PlayerAnimationController.cs" />
       </list>
     </option>
   </component>
@@ -52,6 +90,7 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
@@ -67,8 +106,36 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4c703d93-926a-4bd4-8794-fd95c5d5c718" name="Default Changelist" comment="" />
+      <created>1596530974680</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1596530974680</updated>
+      <workItem from="1596531219405" duration="11205000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
@@ -77,9 +144,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="824" y="383" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1596314342352" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1596344814632">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1596540610889">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1596344814632" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1596540610889" />
   </component>
 </project>

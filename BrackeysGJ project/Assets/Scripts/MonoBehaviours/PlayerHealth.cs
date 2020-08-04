@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private float maxHealth = 100f;
+    [SerializeField] private HealthBar healthBar;
 
     // Initial max health (in case a health powerup runs out)
     private float initMaxHealth = 100f; 
@@ -17,6 +18,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private bool isDead = false;
 
     private PlayerController _controller;
+
     private bool hasHealthPowerup = false;
 
     /// <summary>
@@ -29,6 +31,8 @@ public class PlayerHealth : MonoBehaviour
     {
         _controller = GetComponent<PlayerController>();
         initMaxHealth = maxHealth;
+        initMaxHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     // Update is called once per frame
@@ -70,7 +74,6 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
-
         if(currentHealth <= 0)
         {
             isDead = true;

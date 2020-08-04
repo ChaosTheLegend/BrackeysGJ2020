@@ -12,6 +12,7 @@ namespace BrackeysGJ.MonoBehaviours
         [SerializeField] private GameObject bullet;
         [SerializeField] private Transform shootingPoint;
         [SerializeField] private Transform shotFlipper;
+        [SerializeField] private HealthBar healthBar;
         public float health;
         public Transform sticker;
         private SpriteRenderer _sprite;
@@ -25,6 +26,7 @@ namespace BrackeysGJ.MonoBehaviours
         {
             _player = GameObject.FindGameObjectWithTag("Player").transform;
             _playerHealth = _player.GetComponent<PlayerHealth>();
+            healthBar.SetMaxHealth(health);
             _rb = GetComponent<Rigidbody2D>();
             _sprite = GetComponent<SpriteRenderer>();
             _follower = GetComponent<PathFolower>();
@@ -50,6 +52,7 @@ namespace BrackeysGJ.MonoBehaviours
         public void TakeDamage(float damage)
         {
             health -= damage;
+            healthBar.SetHealth(health);
             if (!(health <= 0)) return;
             for(var i=0;i<sticker.childCount;i++)
             {

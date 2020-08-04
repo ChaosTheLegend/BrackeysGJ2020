@@ -81,6 +81,8 @@
             <e p="PlayerHealth.cs" t="Include" />
             <e p="Shuriken.cs" t="Include" />
             <e p="ShurikenThrow.cs" t="Include" />
+
+            <e p="ShurikenUI.cs" t="Include" />
           </e>
         </e>
         <e p="TextMesh Pro" t="Include">
