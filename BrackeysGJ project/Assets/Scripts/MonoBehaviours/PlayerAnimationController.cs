@@ -46,9 +46,13 @@ namespace BrackeysGJ.MonoBehaviours
         {
             var move = Mathf.Abs(Input.GetAxis("Horizontal")) > 0.5f;
 
-            _dir = _rb.velocity.x < 0f;
-            if(!move || _shooting) _dir = !_throw.dir;
-            if (_playerController.OnWall()) _dir = _advCol.CheckCollision(AdvPlayerCollider.Side.Right);
+            if (!_playerController.IsDead())
+            {
+                _dir = _rb.velocity.x < 0f;
+                if (!move || _shooting) _dir = !_throw.dir;
+                if (_playerController.OnWall()) _dir = _advCol.CheckCollision(AdvPlayerCollider.Side.Right);
+            }
+
             _renderer.flipX = _dir;
 
             _anim.SetBool($"Dead",_health.CheckIfDead());

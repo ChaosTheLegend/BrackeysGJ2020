@@ -15,7 +15,7 @@ public class Shuriken : MonoBehaviour
     
     [SerializeField] private float throwSpeed = 300f;
     [SerializeField] private float returnSpeed = 300f;
-
+    [SerializeField] private float maxDistanceFromPlayer = 1f;
 
     [SerializeField] private float damageDealt = 10f;
 
@@ -90,6 +90,9 @@ public class Shuriken : MonoBehaviour
             if((transform.position - playerShurikenScript.transform.position).sqrMagnitude < 0.7f*0.7f) ReturnToPlayer();
             //rbody.velocity = speed * (rbody.velocity.normalized) * Time.fixedDeltaTime;
         }
+
+        if ((transform.position - playerShurikenScript.transform.position).sqrMagnitude >
+            maxDistanceFromPlayer * maxDistanceFromPlayer && !Stuck) isRewinding = true;
     }
 
     private void Update()
@@ -152,7 +155,7 @@ public class Shuriken : MonoBehaviour
     //I moved it to another function
     private void ReturnToPlayer()
     {
-        playerShurikenScript.ReturnShuriken();
+        playerShurikenScript.ReturnShuriken(this);
         Destroy(gameObject);
     }
 

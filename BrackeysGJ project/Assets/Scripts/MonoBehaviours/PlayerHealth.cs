@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using BrackeysGJ.MonoBehaviours;
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
@@ -15,7 +16,7 @@ public class PlayerHealth : MonoBehaviour
     /// </summary>
     [SerializeField] private bool isDead = false;
 
-
+    private PlayerController _controller;
     private bool hasHealthPowerup = false;
 
     /// <summary>
@@ -26,6 +27,7 @@ public class PlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _controller = GetComponent<PlayerController>();
         initMaxHealth = maxHealth;
     }
 
@@ -72,6 +74,7 @@ public class PlayerHealth : MonoBehaviour
         if(currentHealth <= 0)
         {
             isDead = true;
+            _controller.Die();
             Die();
         }
     }
