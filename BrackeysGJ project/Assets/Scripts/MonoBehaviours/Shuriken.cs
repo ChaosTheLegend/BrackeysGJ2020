@@ -81,6 +81,7 @@ public class Shuriken : MonoBehaviour
         }
         else
         {
+            rbody.simulated = false;
             transform.SetParent(null);
             transform.position = Vector2.MoveTowards(transform.position, playerShurikenScript.transform.position, (returnSpeed) * Time.deltaTime);
             rbody.velocity = Vector2.zero;

@@ -38,6 +38,7 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        healthBar.SetHealth(currentHealth);
         // If for some reason the player has no health but isn't dead yet
         if (currentHealth <= 0)
         {

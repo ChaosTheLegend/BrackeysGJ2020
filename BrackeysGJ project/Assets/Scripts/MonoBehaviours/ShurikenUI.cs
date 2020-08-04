@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class ShurikenUI : MonoBehaviour
 {
     [SerializeField] private Image[] shurikens;
-    [SerializeField] private Image shurikenUIPrefab;
-    [SerializeField] private Image shurikenUIBGPrefab;
+    [SerializeField] private Sprite shurikenSprite;
+    [SerializeField] private Sprite shurikenBGSprite;
     private ShurikenThrow shurikenThrow;
     private int shurikenCount;
     private int currCount = 0;
@@ -16,6 +16,7 @@ public class ShurikenUI : MonoBehaviour
         shurikenThrow = GameObject.FindObjectOfType<ShurikenThrow>();
         shurikenCount = shurikenThrow.GetAmmoLeft();
         DisplayAvailableShurikens(shurikenCount);
+        foreach (var shuriken in shurikens) {shuriken.sprite = shurikenSprite;}
     }
 
     // Update is called once per frame
@@ -35,7 +36,7 @@ public class ShurikenUI : MonoBehaviour
         {
             while(currCount < shurikenCount)
             {
-                shurikens[currCount++].sprite = shurikenUIPrefab.sprite;
+                shurikens[currCount++].sprite = shurikenSprite;
             }   
         }
 
@@ -44,7 +45,7 @@ public class ShurikenUI : MonoBehaviour
         {
             while(currCount >= shurikenCount)
             {
-                shurikens[currCount--].sprite = shurikenUIBGPrefab.sprite;
+                shurikens[currCount--].sprite = shurikenBGSprite;
             }
 
             if (currCount < 0) currCount = 0;

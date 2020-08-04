@@ -10,8 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7099022288327960568}
   - component: {fileID: 7099022288327960571}
-
-  - component: {fileID: 7099022288327960570}
   - component: {fileID: 7099022288327960565}
   - component: {fileID: 7099022288327960564}
   - component: {fileID: 7099022288327960569}
@@ -128,28 +126,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   castPoints:
-  - {x: 0.51148033, y: 0.34676707, z: 0}
+  - {x: 0.51148033, y: 0.34676695, z: 0}
   - {x: 0.51148033, y: -0.20549703, z: 0}
   - {x: -0.44910574, y: 0.44963956, z: 0}
-  - {x: 0.46836925, y: 0.44963956, z: 0}
-  - {x: -0.5109827, y: 0.33376908, z: 0}
-  - {x: -0.5109827, y: -0.23123741, z: 0}
-  - {x: 0.46414512, y: -0.51166594, z: 0}
-  - {x: -0.46066183, y: -0.51166594, z: 0}
+  - {x: 0.46836948, y: 0.44963956, z: 0}
+  - {x: -0.5109825, y: 0.33376908, z: 0}
+  - {x: -0.5109825, y: -0.23123741, z: 0}
+  - {x: 0.4641447, y: -0.5116658, z: 0}
+  - {x: -0.4606619, y: -0.5116658, z: 0}
   pointExtents:
   - {x: 0.51148033, y: 0, z: 0}
   - {x: 0, y: 0.44963956, z: 0}
-  - {x: -0.5109827, y: 0, z: 0}
-  - {x: 0, y: -0.51166594, z: 0}
+  - {x: -0.5109825, y: 0, z: 0}
+  - {x: 0, y: -0.5116658, z: 0}
   pointSize:
-  - {x: 0, y: 0.34676707, z: 0}
+  - {x: 0, y: 0.34676695, z: 0}
   - {x: 0, y: -0.20549703, z: 0}
   - {x: -0.44910574, y: 0, z: 0}
-  - {x: 0.46836925, y: 0, z: 0}
+  - {x: 0.46836948, y: 0, z: 0}
   - {x: 0, y: 0.33376908, z: 0}
   - {x: 0, y: -0.23123741, z: 0}
-  - {x: 0.46414512, y: 0, z: 0}
-  - {x: -0.46066183, y: 0, z: 0}
+  - {x: 0.4641447, y: 0, z: 0}
+  - {x: -0.4606619, y: 0, z: 0}
   edit: 1
   showLabels: 0
   showCollision: 0
@@ -168,8 +166,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cf7be6391c9f1344bcffd9634baf6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  healthBarPrefab: {fileID: 0}
   speed: 5
   climbingSpeed: 4.5
   maxFallingSpeed: 16
@@ -253,7 +249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootButton: 323
   rewindButton: 324
-  maxShuriken: 3
+  maxShuriken: 5
   shurikenPrefab: {fileID: 887548515493171774, guid: 4d52016a81949f74ebca759a3b67f785,
     type: 3}
   shurikenSpawnPoint: {fileID: 7099022288713862404}
@@ -289,6 +285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  healthBar: {fileID: 0}
   currentHealth: 100
   isDead: 0
 --- !u!60 &8232987222771530644
