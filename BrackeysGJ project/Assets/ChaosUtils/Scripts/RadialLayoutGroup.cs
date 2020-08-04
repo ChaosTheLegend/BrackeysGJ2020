@@ -37,9 +37,10 @@ public class RadialLayoutGroup : MonoBehaviour
     }
     private void DisableGroups()
     {
-        EditorGUI.BeginDisabledGroup(autoDistribute);
+        //temporal fix
+        //EditorGUI.BeginDisabledGroup(autoDistribute);
         
-        EditorGUI.EndDisabledGroup();
+        //EditorGUI.EndDisabledGroup();
 
     }
 

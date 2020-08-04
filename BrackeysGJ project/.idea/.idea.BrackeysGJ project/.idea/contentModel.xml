@@ -68,14 +68,16 @@
             <e p="SmoothFollow.cs" t="Include" />
           </e>
         </e>
+        <e p="EnemyAnimator.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="MonoBehaviours" t="Include">
             <e p="AmmoUI.cs" t="Include" />
             <e p="EnemyController.cs" t="Include" />
+            <e p="EnemyController2.cs" t="Include" />
+            <e p="EnemyProjectileController.cs" t="Include" />
             <e p="PlayerAnimationController.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
             <e p="Shuriken.cs" t="Include" />
-            <e p="ShurikenController.cs" t="Include" />
             <e p="ShurikenThrow.cs" t="Include" />
           </e>
         </e>

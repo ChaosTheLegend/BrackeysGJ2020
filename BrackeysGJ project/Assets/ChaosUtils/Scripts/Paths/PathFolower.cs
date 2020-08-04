@@ -14,20 +14,36 @@ public class PathFolower : MonoBehaviour
     private float Tstart;
     private float Tend;
     private float deltaT;
+    private float _dir;
     private bool allowCorutine = true;
     private bool isFolowing = false;
 
     public UnityEvent onPathEnd;
 
+    public void UpdateSpeed()
+    {
+        deltaT = speed*_dir;
+    }
+
+    public void SetT(float t)
+    {
+        tParam = t;
+    }
+
+    public float GetDir()
+    {
+        return _dir;
+    }
     public void StartFollow()
     {
+        _dir = 1f;
         Tstart = 0f;
         Tend = 1f;
         tParam = Tstart;
         deltaT = speed;
         isFolowing = true;
     }
-
+    
     private void EndAction()
     {
         if ((int)onEnd == 0)
@@ -48,7 +64,8 @@ public class PathFolower : MonoBehaviour
             float placeholder = Tstart;
             Tstart = Tend;
             Tend = placeholder;
-            deltaT *= -1f;
+            _dir *= -1f;
+            deltaT = speed*_dir;
             return;
         }
     }
