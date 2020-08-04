@@ -1,6 +1,5 @@
 fileFormatVersion: 2
-
-guid: 621d3aee33aa92e4790edb0c3a6b06dc
+guid: d014ed89bc7e7a442a187243b67e68b5
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -63,7 +62,6 @@ TextureImporter:
   - first:
       213: 1908723728664520309
     second: Ninja Shuriken Sprite_19
-
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -94,8 +92,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -129,7 +126,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -141,31 +138,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -452,8 +425,8 @@ TextureImporter:
       name: Ninja Shuriken Sprite_13
       rect:
         serializedVersion: 2
-        x: 180
-        y: 360
+        x: 179
+        y: 359
         width: 60
         height: 60
       alignment: 0
