@@ -13,7 +13,7 @@ namespace BrackeysGJ.MonoBehaviours
         [SerializeField] private Transform shootingPoint;
         [SerializeField] private Transform shotFlipper;
         [SerializeField] private HealthBar healthBar;
-        public float health;
+        public float health = 100f;
         public Transform sticker;
         private SpriteRenderer _sprite;
         private PathFolower _follower;
@@ -45,7 +45,7 @@ namespace BrackeysGJ.MonoBehaviours
             if (cast) return;
             canSee = true;
             _follower.speed = 0f;
-            // _follower.UpdateSpeed();
+            _follower.UpdateSpeed();
         }
 
         
@@ -73,19 +73,19 @@ namespace BrackeysGJ.MonoBehaviours
 
             if(!canSee){
                 _follower.speed = speed;
-                // _follower.UpdateSpeed();
+                _follower.UpdateSpeed();
             }
             
             if (health <= 0)
             {
                 _follower.speed = 0f;
-                // _follower.UpdateSpeed();
+                _follower.UpdateSpeed();
                 _rb.simulated = false;
                 canSee = false;
                 return;
             }
             
-            // _sprite.flipX = _follower.GetDir() > 0f;
+            _sprite.flipX = _follower.GetDir() > 0f;
             if (canSee)
             {
                 if (_tm <= 0f)

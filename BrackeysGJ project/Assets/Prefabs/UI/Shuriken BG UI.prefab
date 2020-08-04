@@ -25,7 +25,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8597320860434927021}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.7675, y: 0.7675, z: 0.7675}
   m_Children: []
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6907917629755840059, guid: ff0feb00c34bf1e49b184563226fbd9f,
+  m_Sprite: {fileID: -6907917629755840059, guid: 825e1557a281ab34d8972ed93ab57164,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0

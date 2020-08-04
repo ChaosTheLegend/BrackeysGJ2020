@@ -31,7 +31,7 @@ public class PlayerHealth : MonoBehaviour
     {
         _controller = GetComponent<PlayerController>();
         initMaxHealth = maxHealth;
-        initMaxHealth = maxHealth;
+        currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
 
