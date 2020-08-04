@@ -116,6 +116,5 @@ public class PlayerHealth : MonoBehaviour
     private void Die()
     {
         isDead = true;
-        gameObject.SetActive(false);
     }
 }

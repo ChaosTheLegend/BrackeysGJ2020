@@ -12,10 +12,12 @@ namespace BrackeysGJ.MonoBehaviours
         private Animator _anim;
         private Rigidbody2D _rb;
         private SpriteRenderer _renderer;
+        private PlayerHealth _health;
         private bool _dir;
         private bool _shooting;
         private void Start()
         {
+            _health = GetComponent<PlayerHealth>();
             _throw = GetComponent<ShurikenThrow>();
             _advCol = GetComponent<AdvPlayerCollider>();
             _playerController = GetComponent<PlayerController>();
@@ -49,6 +51,7 @@ namespace BrackeysGJ.MonoBehaviours
             if (_playerController.OnWall()) _dir = _advCol.CheckCollision(AdvPlayerCollider.Side.Right);
             _renderer.flipX = _dir;
 
+            _anim.SetBool($"Dead",_health.CheckIfDead());
             _anim.SetBool($"Shooting",_shooting);
             _anim.SetBool($"Grounded",_advCol.IsGrounded());
             _anim.SetBool($"OnWall",_playerController.OnWall());
