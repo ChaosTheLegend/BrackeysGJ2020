@@ -1,7 +1,16 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: c7c9ea0dd2276cd408d7eb98f8e77794
 TextureImporter:
   internalIDToNameTable: []
+=======
+guid: 5fc9efa7ff68cd2449e9c76d9e70e9c4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8010415291668385061
+    second: UI healthback_0
+>>>>>>> b811c8d173e4fc5497d03e21f81427ece112eb2d
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +50,11 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
+<<<<<<< HEAD
   spriteMode: 1
+=======
+  spriteMode: 2
+>>>>>>> b811c8d173e4fc5497d03e21f81427ece112eb2d
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +86,72 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD
   spriteSheet:
     serializedVersion: 2
     sprites: []
+=======
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: UI healthback_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 210
+        width: 280
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd2bfb4bbb945d090800000000000000
+      internalID: -8010415291668385061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+>>>>>>> b811c8d173e4fc5497d03e21f81427ece112eb2d
     outline: []
     physicsShape: []
     bones: []

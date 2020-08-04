@@ -10,14 +10,14 @@ GameObject:
   m_Component:
   - component: {fileID: 7099022288327960568}
   - component: {fileID: 7099022288327960571}
-  - component: {fileID: 7099022288327960570}
   - component: {fileID: 7099022288327960565}
   - component: {fileID: 7099022288327960564}
   - component: {fileID: 7099022288327960569}
   - component: {fileID: 7099022288327960574}
   - component: {fileID: 7099022288327960575}
   - component: {fileID: 7099022288327960572}
-  - component: {fileID: 899789046}
+  - component: {fileID: 120105183}
+  - component: {fileID: 8232987222771530644}
   m_Layer: 10
   m_Name: Player Chaos
   m_TagString: Player
@@ -92,32 +92,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &7099022288327960570
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7099022288327960567}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.0024447143, y: -0.014514625}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 0.93333334}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.9756337, y: 0.889166}
-  m_EdgeRadius: 0
 --- !u!50 &7099022288327960565
 Rigidbody2D:
   serializedVersion: 4
@@ -153,30 +127,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   castPoints:
   - {x: 0.51148033, y: 0.34676695, z: 0}
-  - {x: 0.51148033, y: -0.3648529, z: 0}
+  - {x: 0.51148033, y: -0.20549703, z: 0}
   - {x: -0.44910574, y: 0.44963956, z: 0}
   - {x: 0.46836948, y: 0.44963956, z: 0}
   - {x: -0.5109825, y: 0.33376908, z: 0}
-  - {x: -0.5109825, y: -0.3640561, z: 0}
-  - {x: 0.4641447, y: -0.4814067, z: 0}
-  - {x: -0.4606619, y: -0.4814067, z: 0}
+  - {x: -0.5109825, y: -0.23123741, z: 0}
+  - {x: 0.4641447, y: -0.5116658, z: 0}
+  - {x: -0.4606619, y: -0.5116658, z: 0}
   pointExtents:
   - {x: 0.51148033, y: 0, z: 0}
   - {x: 0, y: 0.44963956, z: 0}
   - {x: -0.5109825, y: 0, z: 0}
-  - {x: 0, y: -0.4814067, z: 0}
+  - {x: 0, y: -0.5116658, z: 0}
   pointSize:
   - {x: 0, y: 0.34676695, z: 0}
-  - {x: 0, y: -0.3648529, z: 0}
+  - {x: 0, y: -0.20549703, z: 0}
   - {x: -0.44910574, y: 0, z: 0}
   - {x: 0.46836948, y: 0, z: 0}
   - {x: 0, y: 0.33376908, z: 0}
-  - {x: 0, y: -0.3640561, z: 0}
+  - {x: 0, y: -0.23123741, z: 0}
   - {x: 0.4641447, y: 0, z: 0}
   - {x: -0.4606619, y: 0, z: 0}
   edit: 1
   showLabels: 0
-  showCollision: 1
+  showCollision: 0
   castLayer:
     serializedVersion: 2
     m_Bits: 256
@@ -298,7 +272,7 @@ MonoBehaviour:
         m_CallState: 2
   dir: 0
   shurikenInstances: []
---- !u!114 &899789046
+--- !u!114 &120105183
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -314,6 +288,40 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   currentHealth: 100
   isDead: 0
+--- !u!60 &8232987222771530644
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7099022288327960567}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 0.93333334}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.32452703, y: -0.46794176}
+      - {x: 0.23238099, y: -0.4679674}
+      - {x: 0.49185157, y: -0.2856456}
+      - {x: 0.49052054, y: 0.4314857}
+      - {x: -0.48661584, y: 0.430618}
+      - {x: -0.48876607, y: -0.2856456}
+    - - {x: -0.06389165, y: -0.19936848}
+      - {x: -0.06389165, y: -0.19936848}
+      - {x: -0.06389165, y: -0.19936848}
 --- !u!1 &7099022288713862404
 GameObject:
   m_ObjectHideFlags: 0

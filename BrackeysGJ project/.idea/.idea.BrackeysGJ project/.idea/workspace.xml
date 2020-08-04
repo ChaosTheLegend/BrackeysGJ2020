@@ -46,48 +46,37 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-<<<<<<< Updated upstream
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ChaosUtils/Scripts/AdvPlayerCollider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/EnemyController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PlayerAnimationController.cs" root0="FORCE_HIGHLIGHTING" />
-=======
     <setting file="file://$PROJECT_DIR$/Assets/ChaosUtils/Scripts/Paths/PathFolower.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PlayerAnimationController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/EnemyController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ChaosUtils/Scripts/RadialLayoutGroup.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ChaosUtils/Scripts/SmoothFollow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ChaosUtils/Scripts/AdvPlayerCollider.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/HealthBar.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/EnemyAnimator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/Shuriken.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/EnemyController2.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/EnemyProjectileController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/EnemyController2.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PlayerAnimationController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/Shuriken.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/ShurikenThrow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PlayerHealth.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/HealthBar.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/ShurikenUI.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
->>>>>>> Stashed changes
+    <setting file="file://$PROJECT_DIR$/Assets/ChaosUtils/Scripts/SmoothFollow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/EnemyAnimator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ChaosUtils/Scripts/RadialLayoutGroup.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PlayerAnimationController.cs" />
-<<<<<<< Updated upstream
-=======
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/EnemyController.cs" />
         <option value="$PROJECT_DIR$/Assets/EnemyAnimator.cs" />
         <option value="$PROJECT_DIR$/Assets/ChaosUtils/Scripts/Paths/PathFolower.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/EnemyProjectileController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PlayerController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/HealthBar.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PlayerHealth.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/Shuriken.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/ShurikenThrow.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/EnemyHealth.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/EnemyController2.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PlayerAnimationController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/ShurikenThrow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/Shuriken.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PlayerAnimationController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/ShurikenUI.cs" />
->>>>>>> Stashed changes
+        <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PlayerHealth.cs" />
       </list>
     </option>
   </component>
@@ -146,6 +135,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

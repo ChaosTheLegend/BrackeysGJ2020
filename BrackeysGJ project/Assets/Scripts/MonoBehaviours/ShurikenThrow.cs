@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ShurikenThrow : MonoBehaviour
 {
@@ -17,15 +18,22 @@ public class ShurikenThrow : MonoBehaviour
     [SerializeField] private GameObject shurikenSpawnPoint;
     [SerializeField] private GameObject shurikenSpawnParent;
 
+    public UnityEvent onShoot;
+    
     private Vector2 mousePos;
     private Vector2 mouseDirection;
+    [HideInInspector]
+    public bool dir;
+    
+    [SerializeField] private List<Shuriken> shurikenInstances;
 
-    [SerializeField] private Shuriken[] shurikenInstances;
-        
+    private PlayerHealth _health;
+    
     // Start is called before the first frame update
     void Start()
     {
-        shurikenInstances = new Shuriken[maxShuriken];
+        _health = GetComponent<PlayerHealth>();
+        shurikenInstances = new List<Shuriken>();
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
@@ -51,27 +59,23 @@ public class ShurikenThrow : MonoBehaviour
 
         // Get the direction to the mouse
         mouseDirection = mousePos - new Vector2(transform.position.x, transform.position.y);
-
+        dir = mouseDirection.x >= 0;
         // Flip spawner to face x direction of mouse
-        if (mouseDirection.x >= 0)
-        {
-            shurikenSpawnParent.transform.rotation = Quaternion.Euler(0, 180, 0);
-        }
-        else
-        {
-            shurikenSpawnParent.transform.rotation = Quaternion.Euler(0, 0, 0);
-        }
+        shurikenSpawnParent.transform.rotation = Quaternion.Euler(0, dir? 180 : 0, 0);
+
         #endregion
     }
 
     private void ThrowShuriken()
     {
+        if(_health.CheckIfDead()) return;
         Shuriken shuriken = Instantiate(shurikenPrefab, shurikenSpawnPoint.transform.position, Quaternion.identity).GetComponent<Shuriken>();
-        shurikenInstances[shurikenCount] = shuriken;
+        shurikenInstances.Add(shuriken);
 
         shurikenCount++;
+        onShoot?.Invoke();
     }
-
+    
     private void RewindShuriken()
     {
         foreach (Shuriken shuriken in shurikenInstances)
@@ -84,12 +88,13 @@ public class ShurikenThrow : MonoBehaviour
     }
 
     /// <summary>
-    /// Gives the player +1 shuriken
+    /// Gives the player +1 shuriken(duh)
     /// </summary>
-    public void ReturnShuriken()
+    public void ReturnShuriken(Shuriken shuriken)
     {
         // Remove one shuriken from the scene
         shurikenCount--;
+        shurikenInstances.Remove(shuriken);
     }
 
     public int GetAmmoLeft()
