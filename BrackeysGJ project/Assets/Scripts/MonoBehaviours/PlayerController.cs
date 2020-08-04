@@ -7,9 +7,6 @@ namespace BrackeysGJ.MonoBehaviours
     public class PlayerController : MonoBehaviour
     {
         private Rigidbody2D _rb;
-        [Header("Health")] 
-        [SerializeField] private float health = 100f;
-        [SerializeField] private HealthBar healthBarPrefab;
         [Header("Speed")]
         [SerializeField] private float speed = 1f;
         [SerializeField] private float climbingSpeed = 1f;
@@ -47,7 +44,6 @@ namespace BrackeysGJ.MonoBehaviours
         {
             _advCol = GetComponent<AdvPlayerCollider>();
             _rb = GetComponent<Rigidbody2D>();
-            healthBarPrefab.SetMaxHealth(health);
         }
 
         public bool OnLadder()
@@ -163,14 +159,14 @@ namespace BrackeysGJ.MonoBehaviours
         }
 
         // Written by blindspot, edit it how you want chaos;
-        public void TakeDamage(float damage)
-        {
-            health -= damage;
-            healthBarPrefab.SetHealth(health);
-            if (health <= 0)
-            {
-                Destroy(gameObject);
-            }
-        }
+        // public void TakeDamage(float damage)
+        // {
+        //     health -= damage;
+        //     healthBarPrefab.SetHealth(health);
+        //     if (health <= 0)
+        //     {
+        //         Destroy(gameObject);
+        //     }
+        // }
     }
 }
