@@ -43,6 +43,8 @@ namespace BrackeysGJ.MonoBehaviours
         private bool _canDoubleJump;
         private bool _canDash;
         private bool _onLadder;
+        private bool _nearLadder;
+        private bool _dead;
         private void Start()
         {
             _advCol = GetComponent<AdvPlayerCollider>();
@@ -54,17 +56,28 @@ namespace BrackeysGJ.MonoBehaviours
         {
             return _onLadder;
         }
-        
+
+        public void Die()
+        {
+            _dead = true;
+            _rb.velocity = Vector2.zero;
+        }
+
+        public bool IsDead()
+        {
+            return _dead;
+        }
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (!other.CompareTag($"Ladder")) return;
-            _onLadder = true;
+            _nearLadder = true;
         }
 
         private void OnTriggerExit2D(Collider2D other)
         {
             if (!other.CompareTag($"Ladder")) return;
             _onLadder = false;
+            _nearLadder = false;
         }
 
         public bool OnWall()
@@ -73,6 +86,10 @@ namespace BrackeysGJ.MonoBehaviours
         }
         private void Update()
         {
+            if (_dead)
+            {
+                return;
+            }
             //Movement
             _rb.velocity = new Vector2(Input.GetAxis("Horizontal")*speed,_rb.velocity.y);
             if (_advCol.CheckCollision(AdvPlayerCollider.Side.Left))
@@ -86,7 +103,8 @@ namespace BrackeysGJ.MonoBehaviours
                 _reboundTm -= Time.deltaTime;
                 _rb.velocity = new Vector2(_reboundDir * speed * wallJumpRebound, _rb.velocity.y);
             }
-            
+
+            if (_nearLadder && Mathf.Abs(Input.GetAxis("Vertical")) > 0f) _onLadder = true;
             
             //Dashing
             if (_dashTm > 0)

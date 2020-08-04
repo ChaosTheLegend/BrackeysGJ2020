@@ -50,6 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   throwSpeed: 700
   returnSpeed: 20
+  maxDistanceFromPlayer: 20
   damageDealt: 40
   maxCollisions: 2
   fadeAlpha: 0.4

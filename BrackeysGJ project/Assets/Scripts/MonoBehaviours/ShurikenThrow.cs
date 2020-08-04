@@ -25,12 +25,15 @@ public class ShurikenThrow : MonoBehaviour
     [HideInInspector]
     public bool dir;
     
-    [SerializeField] private Shuriken[] shurikenInstances;
-        
+    [SerializeField] private List<Shuriken> shurikenInstances;
+
+    private PlayerHealth _health;
+    
     // Start is called before the first frame update
     void Start()
     {
-        shurikenInstances = new Shuriken[maxShuriken];
+        _health = GetComponent<PlayerHealth>();
+        shurikenInstances = new List<Shuriken>();
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
@@ -65,13 +68,14 @@ public class ShurikenThrow : MonoBehaviour
 
     private void ThrowShuriken()
     {
+        if(_health.CheckIfDead()) return;
         Shuriken shuriken = Instantiate(shurikenPrefab, shurikenSpawnPoint.transform.position, Quaternion.identity).GetComponent<Shuriken>();
-        shurikenInstances[shurikenCount] = shuriken;
+        shurikenInstances.Add(shuriken);
 
         shurikenCount++;
         onShoot?.Invoke();
     }
-
+    
     private void RewindShuriken()
     {
         foreach (Shuriken shuriken in shurikenInstances)
@@ -86,10 +90,11 @@ public class ShurikenThrow : MonoBehaviour
     /// <summary>
     /// Gives the player +1 shuriken(duh)
     /// </summary>
-    public void ReturnShuriken()
+    public void ReturnShuriken(Shuriken shuriken)
     {
         // Remove one shuriken from the scene
         shurikenCount--;
+        shurikenInstances.Remove(shuriken);
     }
 
     public int GetAmmoLeft()
