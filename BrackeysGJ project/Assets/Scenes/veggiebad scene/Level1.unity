@@ -149297,10 +149297,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 275880, guid: a58c9b46d05265a44a508866eb8a3e39, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 519420032}
     - target: {fileID: 120105183, guid: a58c9b46d05265a44a508866eb8a3e39, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1732675122}
+    - target: {fileID: 120105183, guid: a58c9b46d05265a44a508866eb8a3e39, type: 3}
+      propertyPath: maxHealth
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 7099022288327960567, guid: a58c9b46d05265a44a508866eb8a3e39,
         type: 3}
       propertyPath: m_Name
