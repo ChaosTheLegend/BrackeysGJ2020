@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Walls
   - AudioManager
+  - Checkpoint Holder
   layers:
   - Default
   - TransparentFX

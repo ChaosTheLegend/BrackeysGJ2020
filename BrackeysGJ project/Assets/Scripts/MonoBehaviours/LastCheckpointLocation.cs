@@ -13,7 +13,7 @@ public class LastCheckpointLocation : MonoBehaviour
     {
         if(instance == null) {
             instance = this;
-            DontDestroyOnLoad(instance);
+            DontDestroyOnLoad(this);
         }
         else
         {
@@ -22,12 +22,12 @@ public class LastCheckpointLocation : MonoBehaviour
         
     }
 
-    public void UpdateCheckpoint(Vector2 location)
+    public void UpdateCheckpointPosition(Vector2 position)
     {
-        lastCheckpointPosition = location;
+        lastCheckpointPosition = position;
     }
 
-    public Vector2 GetCheckpoint()
+    public Vector2 GetLastCheckpointPosition()
     {
         return lastCheckpointPosition;
     }
