@@ -1592,6 +1592,11 @@ PrefabInstance:
       propertyPath: LastCheckpointPosition.y
       value: -2.7
       objectReference: {fileID: 0}
+    - target: {fileID: 1096792679725872220, guid: bc4e8ea1f1e93ba4d94f94bebb0b2358,
+        type: 3}
+      propertyPath: lastCheckpointPosition.x
+      value: 0.83
+      objectReference: {fileID: 0}
     - target: {fileID: 1096792679725872221, guid: bc4e8ea1f1e93ba4d94f94bebb0b2358,
         type: 3}
       propertyPath: m_Name

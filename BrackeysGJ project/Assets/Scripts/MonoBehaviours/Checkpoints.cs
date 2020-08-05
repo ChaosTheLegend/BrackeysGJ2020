@@ -9,15 +9,15 @@ public class Checkpoints : MonoBehaviour
     
     void Start()
     {
-        lCL = GameObject.FindObjectOfType<LastCheckpointLocation>();
+        lCL = GameObject.FindGameObjectWithTag("Checkpoint Holder").GetComponent<LastCheckpointLocation>();
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         // Update current checkPoint location;
         if (other.CompareTag("Player"))
         {
-            lCL.LastCheckpointPosition = transform.position;
+            lCL.UpdateCheckpoint(transform.position);
         }
     }
 }

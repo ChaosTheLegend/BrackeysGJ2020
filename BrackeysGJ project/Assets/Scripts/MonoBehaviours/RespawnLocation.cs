@@ -8,9 +8,7 @@ public class RespawnLocation : MonoBehaviour
     
     void Start()
     {
-        lCL = GameObject.FindObjectOfType<LastCheckpointLocation>();
-        
-        // Spawn the player at the last checkpoint Location 
-        transform.position = lCL.LastCheckpointPosition;
+        lCL = GameObject.FindGameObjectWithTag("Checkpoint Holder").GetComponent<LastCheckpointLocation>();
+        transform.position = lCL.GetCheckpoint();
     }
 }
