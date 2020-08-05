@@ -1,48 +1,49 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using BrackeysGJ.MonoBehaviours;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class OptionsController : MonoBehaviour
 {
     [SerializeField] private Slider musicVolumeSlider;
-    private float defaultMusicVolume = 0.5f;
+    private float defaultMusicVolume = 0f;
 
     [SerializeField] private Slider soundEffectsVolumeSlider;
-    private float defaultSoundEffectsVolume = 0.5f;
+    private float defaultSoundEffectsVolume = 0f;
     
-    
-    void Start()
+    private void Start()
     {
-        musicVolumeSlider.value = PlayerPrefsController.GetMusicVolume();
-        if (musicVolumeSlider.value <= 0) musicVolumeSlider.value = defaultMusicVolume;
-
-        soundEffectsVolumeSlider.value = PlayerPrefsController.GetSoundEffectsVolume();
-        if (soundEffectsVolumeSlider.value <= 0) soundEffectsVolumeSlider.value = defaultMusicVolume;
+        if (!PlayerPrefs.HasKey("MusicVolume"))
+        {
+            PlayerPrefs.SetFloat("MusicVolume",defaultMusicVolume);
+        }
+        
+        if (!PlayerPrefs.HasKey("SoundVolume"))
+        {
+            PlayerPrefs.SetFloat("SoundVolume",defaultSoundEffectsVolume);
+        }
+        
+        
+        musicVolumeSlider.value = PlayerPrefs.GetFloat("MusicVolume");
+        soundEffectsVolumeSlider.value = PlayerPrefs.GetFloat("SoundVolume");
     }
 
     // Update is called once per frame
-    void Update()
+
+    public void OnMusicChange()
     {
-        // Run these codes when sripts with music and sound effects are present;
-        // Write a function SetVolume in both of them; 
-        
-        // var musicPlayer = FindObjectOfType<MusicPlayer>();
-        // if (musicPlayer)
-        // {
-        //     musicPlayer.SetVolume(musicVolumeSlider.value);
-        // }
-
-        // var soundEffects = FindObjectOfType<SoundEffects>();
-        // if (soundEffects)
-        // {
-        //     soundEffects.SetVolume(soundEffects)
-        // }
+        PlayerPrefs.SetFloat("MusicVolume",musicVolumeSlider.value);
     }
-
+    
+    public void OnSfxChange()
+    {
+        PlayerPrefs.SetFloat("SoundVolume",soundEffectsVolumeSlider.value);
+    }
+    
     public void SaveAndExit()
     {
-        PlayerPrefsController.SetMusicVolume(musicVolumeSlider.value);
+        PlayerPrefs.Save();
         FindObjectOfType<LevelLoader>().LoadNextScene();
     }
 

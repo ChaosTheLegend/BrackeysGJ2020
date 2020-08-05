@@ -14,13 +14,24 @@ namespace BrackeysGJ.MonoBehaviours
         private bool pause;
         [Header("Volume")] 
         [SerializeField] private AudioMixer mixer;
+
         public enum SoundType
         {
             Music=0,
             Sfx=1,
             Ambient=2
         }
-        public void SetVolume(SoundType type, float volume)
+
+
+        private void Update()
+        {
+            mixer.GetFloat("MusicVolume", out var muse);
+            mixer.GetFloat("SFXVolume", out var sfx);
+            if (Math.Abs(muse - PlayerPrefs.GetFloat("MusicVolume")) > 0.01f) SetVolume(SoundType.Music,PlayerPrefs.GetFloat("MusicVolume"));
+            if (Math.Abs(sfx - PlayerPrefs.GetFloat("SoundVolume")) > 0.01f) SetVolume(SoundType.Sfx,PlayerPrefs.GetFloat("SoundVolume"));
+        }
+
+        private void SetVolume(SoundType type, float volume)
         {
             switch (type)
             {
