@@ -84,9 +84,11 @@
             <e p="LevelLoader.cs" t="Include" />
             <e p="LevelManager.cs" t="Include" />
             <e p="MixerManager.cs" t="Include" />
+            <e p="OptionsController.cs" t="Include" />
             <e p="PlayerAnimationController.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
             <e p="PlayerHealth.cs" t="Include" />
+            <e p="PlayerPrefsController.cs" t="Include" />
             <e p="RespawnLocation.cs" t="Include" />
             <e p="Shuriken.cs" t="Include" />
             <e p="ShurikenThrow.cs" t="Include" />

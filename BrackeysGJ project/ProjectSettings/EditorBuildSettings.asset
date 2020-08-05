@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BlindsSampleScene.unity
     guid: 76d9fcdb3ed22bf40b384d6d268eb060
+  - enabled: 1
+    path: Assets/Scenes/OptionsScene.unity
+    guid: 3def99c07cf108244ae58ad1441af64b
   m_configObjects: {}
