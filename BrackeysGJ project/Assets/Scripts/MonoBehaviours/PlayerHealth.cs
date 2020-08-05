@@ -124,4 +124,9 @@ public class PlayerHealth : MonoBehaviour
     {
         isDead = true;
     }
+
+    public float health()
+    {
+        return currentHealth;
+    }
 }

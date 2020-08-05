@@ -228,6 +228,7 @@ MonoBehaviour:
   bullet: {fileID: 1113736297171602677, guid: 73e024968b87bd04485d49d7f0389a53, type: 3}
   shootingPoint: {fileID: 7399125753041155671}
   shotFlipper: {fileID: 7399125754737126144}
+  healthBar: {fileID: 0}
   health: 100
   sticker: {fileID: 7399125753133990896}
   canSee: 0
@@ -341,6 +342,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2420315384784799839}
     m_Modifications:
+    - target: {fileID: 7564795017867466992, guid: 672a877886abe054a99329fae4bf75a3,
+        type: 3}
+      propertyPath: m_Value
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 7564795017975089206, guid: 672a877886abe054a99329fae4bf75a3,
         type: 3}
       propertyPath: m_Name
@@ -459,6 +465,26 @@ PrefabInstance:
     - target: {fileID: 7564795019187782052, guid: 672a877886abe054a99329fae4bf75a3,
         type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7564795019187782053, guid: 672a877886abe054a99329fae4bf75a3,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7564795019187782053, guid: 672a877886abe054a99329fae4bf75a3,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7564795019187782053, guid: 672a877886abe054a99329fae4bf75a3,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7564795019187782053, guid: 672a877886abe054a99329fae4bf75a3,
+        type: 3}
+      propertyPath: m_Color.b
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
