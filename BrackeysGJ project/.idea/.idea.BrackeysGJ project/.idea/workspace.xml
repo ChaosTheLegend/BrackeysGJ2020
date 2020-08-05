@@ -47,6 +47,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Serializable/SaveData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/EnemyProjectileController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ClassFiles/SaveSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/MixerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/EnemyController2.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PlayerAnimationController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/Shuriken.cs" root0="FORCE_HIGHLIGHTING" />
@@ -56,7 +57,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/HealthBar.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/ShurikenUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ChaosUtils/Scripts/SmoothFollow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/EnemyAnimator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ChaosUtils/Scripts/RadialLayoutGroup.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -77,6 +77,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/HealthBar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClassFiles/SaveSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Serializable/SaveData.cs" />
+        <option value="$PROJECT_DIR$/Assets/BackgorundMusicManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/MixerManager.cs" />
       </list>
     </option>
   </component>
@@ -146,9 +148,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="824" y="383" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1596314342352" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1596540610889">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1596626169854">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1596540610889" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1596626169854" />
   </component>
 </project>
