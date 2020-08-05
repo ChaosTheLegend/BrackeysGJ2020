@@ -8,7 +8,7 @@ public class LastCheckpointLocation : MonoBehaviour
     private static LastCheckpointLocation instance;
     
     // Holds the last checkpoint location;
-    public Vector2 LastCheckpointPosition;
+    public Vector2 lastCheckpointPosition;
     void Awake()
     {
         if(instance == null) {
@@ -20,5 +20,15 @@ public class LastCheckpointLocation : MonoBehaviour
             Destroy(this);
         }
         
+    }
+
+    public void UpdateCheckpointPosition(Vector2 position)
+    {
+        lastCheckpointPosition = position;
+    }
+
+    public Vector2 GetLastCheckpointPosition()
+    {
+        return lastCheckpointPosition;
     }
 }

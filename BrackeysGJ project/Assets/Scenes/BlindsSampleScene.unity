@@ -715,6 +715,10 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 665395525, guid: a58c9b46d05265a44a508866eb8a3e39, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7099022288327960567, guid: a58c9b46d05265a44a508866eb8a3e39,
         type: 3}
       propertyPath: m_Name
@@ -723,7 +727,7 @@ PrefabInstance:
     - target: {fileID: 7099022288327960568, guid: a58c9b46d05265a44a508866eb8a3e39,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.07
+      value: -20.38
       objectReference: {fileID: 0}
     - target: {fileID: 7099022288327960568, guid: a58c9b46d05265a44a508866eb8a3e39,
         type: 3}
@@ -1220,8 +1224,8 @@ GameObject:
   m_Component:
   - component: {fileID: 873041482}
   - component: {fileID: 873041485}
-  - component: {fileID: 873041484}
   - component: {fileID: 873041483}
+  - component: {fileID: 873041484}
   m_Layer: 0
   m_Name: Checkpoints (2)
   m_TagString: Untagged
@@ -1237,7 +1241,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 873041481}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.5482683, y: -5.0821857, z: 250.63127}
+  m_LocalPosition: {x: 7.5482683, y: -4.7000003, z: 250.63127}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 576558424}
@@ -1268,10 +1272,10 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.5, y: -0.5}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 1}
     oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -1321,7 +1325,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 293392773991598977, guid: 9f0864bce5ae47644bfea64ba6d74348, type: 3}
+  m_Sprite: {fileID: 5663061954668274717, guid: 73b58cf76fd513d43861e6db9c03807b,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1375,8 +1380,8 @@ GameObject:
   m_Component:
   - component: {fileID: 971790521}
   - component: {fileID: 971790524}
-  - component: {fileID: 971790523}
   - component: {fileID: 971790522}
+  - component: {fileID: 971790523}
   m_Layer: 0
   m_Name: Checkpoints
   m_TagString: Untagged
@@ -1392,7 +1397,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 971790520}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -23.93173, y: -4.892185, z: 250.63127}
+  m_LocalPosition: {x: -23.6, y: -4.58, z: 250.63127}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 576558424}
@@ -1423,10 +1428,10 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.5, y: -0.5}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 1}
     oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -1476,7 +1481,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 293392773991598977, guid: 9f0864bce5ae47644bfea64ba6d74348, type: 3}
+  m_Sprite: {fileID: 5663061954668274717, guid: 73b58cf76fd513d43861e6db9c03807b,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1584,13 +1590,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1096792679725872220, guid: bc4e8ea1f1e93ba4d94f94bebb0b2358,
         type: 3}
-      propertyPath: LastCheckpointPosition.x
-      value: -22.9
+      propertyPath: lastCheckpointPosition.x
+      value: -23.93173
       objectReference: {fileID: 0}
     - target: {fileID: 1096792679725872220, guid: bc4e8ea1f1e93ba4d94f94bebb0b2358,
         type: 3}
-      propertyPath: LastCheckpointPosition.y
-      value: -2.7
+      propertyPath: lastCheckpointPosition.y
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 1096792679725872221, guid: bc4e8ea1f1e93ba4d94f94bebb0b2358,
         type: 3}
@@ -2048,8 +2054,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1747946842}
   - component: {fileID: 1747946845}
-  - component: {fileID: 1747946844}
   - component: {fileID: 1747946843}
+  - component: {fileID: 1747946844}
   m_Layer: 0
   m_Name: Checkpoints (1)
   m_TagString: Untagged
@@ -2065,7 +2071,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1747946841}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.931731, y: -4.892185, z: 250.63127}
+  m_LocalPosition: {x: -9.931731, y: -4.5099998, z: 250.63127}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 576558424}
@@ -2096,10 +2102,10 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.5, y: -0.5}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 1}
     oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -2149,7 +2155,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 293392773991598977, guid: 9f0864bce5ae47644bfea64ba6d74348, type: 3}
+  m_Sprite: {fileID: 5663061954668274717, guid: 73b58cf76fd513d43861e6db9c03807b,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

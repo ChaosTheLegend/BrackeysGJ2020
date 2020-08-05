@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1096792679725872220}
   m_Layer: 0
   m_Name: Checkpoint Holder
-  m_TagString: Untagged
+  m_TagString: Checkpoint Holder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43,4 +43,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcdd7baebc01279488b0b02a0bb363eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LastCheckpointPosition: {x: -32.23, y: -2.91}
+  lastCheckpointPosition: {x: 0, y: 0}
