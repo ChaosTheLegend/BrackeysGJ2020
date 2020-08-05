@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 7099022288327960572}
   - component: {fileID: 120105183}
   - component: {fileID: 8232987222771530644}
+  - component: {fileID: 275880}
   m_Layer: 10
   m_Name: Player Chaos
   m_TagString: Player
@@ -357,7 +358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdf77e27c76778545a241e9fa966215f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 200
   healthBar: {fileID: 0}
   currentHealth: 100
   isDead: 0
@@ -396,6 +397,19 @@ PolygonCollider2D:
     - - {x: -0.06389165, y: -0.19936848}
       - {x: -0.06389165, y: -0.19936848}
       - {x: -0.06389165, y: -0.19936848}
+--- !u!114 &275880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7099022288327960567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25e342332b91485449ecd21c61da0925, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
 --- !u!1 &7099022288713862404
 GameObject:
   m_ObjectHideFlags: 0

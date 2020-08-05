@@ -1,14 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using BrackeysGJ.ClassFiles;
 using UnityEngine;
 
-public class RespawnLocation : MonoBehaviour
+namespace BrackeysGJ.MonoBehaviours
 {
-    private LastCheckpointLocation lCL;
-    
-    void Start()
+    public class RespawnLocation : MonoBehaviour
     {
-        lCL = GameObject.FindGameObjectWithTag("Checkpoint Holder").GetComponent<LastCheckpointLocation>();
-        transform.position = lCL.GetCheckpoint();
+        [SerializeField] private Transform cam; 
+        private void Start()
+        {
+            var save = SaveSystem.Load();
+            transform.position = save.GetPlayerPosition();
+            cam.position = save.GetCameraPosition();
+        }
     }
 }

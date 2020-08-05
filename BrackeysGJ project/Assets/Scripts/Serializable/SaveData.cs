@@ -20,9 +20,9 @@ namespace BrackeysGJ.Serializable
             return new Vector2(_position[0],_position[1]);
         }
 
-        public Vector2 GetCameraPosition()
+        public Vector3 GetCameraPosition()
         {
-            return new Vector2(_camPosition[0],_camPosition[1]);
+            return new Vector3(_camPosition[0],_camPosition[1],-100f);
         }
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace BrackeysGJ.ClassFiles
 {
-    public class SaveSystem
+    public static class SaveSystem
     {
         private const string Format = "savedata.ninj";
         

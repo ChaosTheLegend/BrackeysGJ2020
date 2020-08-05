@@ -74,15 +74,20 @@
           </e>
           <e p="MonoBehaviours" t="Include">
             <e p="BackgorundMusicManager.cs" t="Include" />
+            <e p="Checkpoints.cs" t="Include" />
             <e p="EnemyAnimator.cs" t="Include" />
             <e p="EnemyController.cs" t="Include" />
             <e p="EnemyController2.cs" t="Include" />
             <e p="EnemyProjectileController.cs" t="Include" />
             <e p="HealthBar.cs" t="Include" />
+            <e p="LastCheckpointLocation.cs" t="Include" />
+            <e p="LevelLoader.cs" t="Include" />
+            <e p="LevelManager.cs" t="Include" />
             <e p="MixerManager.cs" t="Include" />
             <e p="PlayerAnimationController.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
             <e p="PlayerHealth.cs" t="Include" />
+            <e p="RespawnLocation.cs" t="Include" />
             <e p="Shuriken.cs" t="Include" />
             <e p="ShurikenThrow.cs" t="Include" />
             <e p="ShurikenUI.cs" t="Include" />
