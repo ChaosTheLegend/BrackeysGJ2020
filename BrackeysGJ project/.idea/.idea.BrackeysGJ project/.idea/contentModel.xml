@@ -68,16 +68,18 @@
             <e p="SmoothFollow.cs" t="Include" />
           </e>
         </e>
-        <e p="EnemyAnimator.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="ClassFiles" t="Include">
             <e p="SaveSystem.cs" t="Include" />
           </e>
           <e p="MonoBehaviours" t="Include">
+            <e p="BackgorundMusicManager.cs" t="Include" />
+            <e p="EnemyAnimator.cs" t="Include" />
             <e p="EnemyController.cs" t="Include" />
             <e p="EnemyController2.cs" t="Include" />
             <e p="EnemyProjectileController.cs" t="Include" />
             <e p="HealthBar.cs" t="Include" />
+            <e p="MixerManager.cs" t="Include" />
             <e p="PlayerAnimationController.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
             <e p="PlayerHealth.cs" t="Include" />

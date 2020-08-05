@@ -7,7 +7,7 @@ TagManager:
   - Ladder
   - Enemy
   - Walls
-  - Checkpoint Holder
+  - AudioManager
   layers:
   - Default
   - TransparentFX
@@ -44,4 +44,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 1177873175
+    locked: 0
+  - name: Middle
+    uniqueID: 2275984759
+    locked: 0
+  - name: Player
+    uniqueID: 803805773
+    locked: 0
+  - name: Foregraound
+    uniqueID: 2761947229
     locked: 0
