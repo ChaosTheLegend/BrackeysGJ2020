@@ -70,8 +70,10 @@
         </e>
         <e p="EnemyAnimator.cs" t="Include" />
         <e p="Scripts" t="Include">
+          <e p="ClassFiles" t="Include">
+            <e p="SaveSystem.cs" t="Include" />
+          </e>
           <e p="MonoBehaviours" t="Include">
-            <e p="AmmoUI.cs" t="Include" />
             <e p="EnemyController.cs" t="Include" />
             <e p="EnemyController2.cs" t="Include" />
             <e p="EnemyProjectileController.cs" t="Include" />
@@ -82,6 +84,9 @@
             <e p="Shuriken.cs" t="Include" />
             <e p="ShurikenThrow.cs" t="Include" />
             <e p="ShurikenUI.cs" t="Include" />
+          </e>
+          <e p="Serializable" t="Include">
+            <e p="SaveData.cs" t="Include" />
           </e>
         </e>
         <e p="TextMesh Pro" t="Include">
