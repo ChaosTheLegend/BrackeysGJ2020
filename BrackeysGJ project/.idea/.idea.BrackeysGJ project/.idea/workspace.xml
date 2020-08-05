@@ -20,24 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c703d93-926a-4bd4-8794-fd95c5d5c718" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BrackeysGJ project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BrackeysGJ project/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BrackeysGJ project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BrackeysGJ project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Enemy Anim states.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Enemy Anim states/Enemy Death.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Enemy Anim states/Enemy Death.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Enemy Anim states/Enemy Idle Shooting.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Enemy Anim states/Enemy Idle Shooting.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Enemy Anim states/Enemy Running.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Enemy Anim states/Enemy Running.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/EnemyAnimator.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/EnemyAnimator.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Shuriken Animator.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Shuriken Animator.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/november SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/november SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/Shuriken.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/Shuriken.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestStartScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestStartScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/veggiebad scene/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/veggiebad scene/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/EnemyProjectileController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/EnemyProjectileController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/MixerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/MixerManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,8 +78,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/LevelLoader.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/RespawnLocation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/EnemyProjectileController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/MixerManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PauseManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/MixerManager.cs" />
       </list>
     </option>
   </component>
