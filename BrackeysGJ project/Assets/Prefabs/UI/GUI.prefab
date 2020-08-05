@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 113.9, y: -28.2}
+  m_AnchoredPosition: {x: 113.8999, y: -28.199951}
   m_SizeDelta: {x: 200, y: 36.94275}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1381401360
@@ -350,7 +350,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 113.6, y: -62.1}
+  m_AnchoredPosition: {x: 113.6001, y: -62.099976}
   m_SizeDelta: {x: 200.6028, y: 21.296484}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3059379688182011060
@@ -399,7 +399,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 500
   m_WholeNumbers: 0
-  m_Value: 500
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -504,7 +504,7 @@ GameObject:
   - component: {fileID: 4713071822575266978}
   - component: {fileID: 4713071822575266979}
   m_Layer: 5
-  m_Name: Shuriken (7)
+  m_Name: Shuriken (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -601,7 +601,7 @@ GameObject:
   - component: {fileID: 4713071822656729251}
   - component: {fileID: 4713071822656729248}
   m_Layer: 5
-  m_Name: Shuriken (1)
+  m_Name: Shuriken (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -698,7 +698,7 @@ GameObject:
   - component: {fileID: 4713071822921514044}
   - component: {fileID: 4713071822921514045}
   m_Layer: 5
-  m_Name: Shuriken (6)
+  m_Name: Shuriken (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -795,7 +795,7 @@ GameObject:
   - component: {fileID: 4713071822938539432}
   - component: {fileID: 4713071822938539433}
   m_Layer: 5
-  m_Name: Shuriken
+  m_Name: Shuriken (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -892,7 +892,7 @@ GameObject:
   - component: {fileID: 4713071822973817588}
   - component: {fileID: 4713071822973817589}
   m_Layer: 5
-  m_Name: Shuriken (4)
+  m_Name: Shuriken (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -989,7 +989,7 @@ GameObject:
   - component: {fileID: 4713071823071206642}
   - component: {fileID: 4713071823071206643}
   m_Layer: 5
-  m_Name: Shuriken (3)
+  m_Name: Shuriken (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1086,7 +1086,7 @@ GameObject:
   - component: {fileID: 4713071823096309743}
   - component: {fileID: 4713071823096309740}
   m_Layer: 5
-  m_Name: Shuriken (5)
+  m_Name: Shuriken (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1183,7 +1183,7 @@ GameObject:
   - component: {fileID: 4713071823185971991}
   - component: {fileID: 4713071823185971988}
   m_Layer: 5
-  m_Name: Shuriken (9)
+  m_Name: Shuriken (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1312,7 +1312,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 17.400024, y: 10.600006}
+  m_AnchoredPosition: {x: 17.400146, y: 10.600098}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &4713071823414851017
@@ -1340,7 +1340,7 @@ MonoBehaviour:
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
-  m_ReverseArrangement: 0
+  m_ReverseArrangement: 1
 --- !u!114 &4713071823414851019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1367,20 +1367,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aada9ad139017f4a9672574cbdc5559, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shurikens:
-  - {fileID: 4713071822938539432}
-  - {fileID: 4713071822656729251}
-  - {fileID: 4713071823878346969}
-  - {fileID: 4713071823071206642}
-  - {fileID: 4713071822973817588}
-  - {fileID: 4713071823096309743}
-  - {fileID: 4713071822921514044}
-  - {fileID: 4713071822575266978}
-  - {fileID: 4713071823940420812}
+  shurikenImages:
   - {fileID: 4713071823185971991}
-  shurikenSprite: {fileID: -1229559136125187475, guid: 3b26b3225a9cf014aa92874f3e040001,
+  - {fileID: 4713071823940420812}
+  - {fileID: 4713071822575266978}
+  - {fileID: 4713071822921514044}
+  - {fileID: 4713071823096309743}
+  - {fileID: 4713071822973817588}
+  - {fileID: 4713071823071206642}
+  - {fileID: 4713071823878346969}
+  - {fileID: 4713071822656729251}
+  - {fileID: 4713071822938539432}
+  shurikenFullSprite: {fileID: -1229559136125187475, guid: 3b26b3225a9cf014aa92874f3e040001,
     type: 3}
-  shurikenBGSprite: {fileID: -6907917629755840059, guid: 825e1557a281ab34d8972ed93ab57164,
+  shurikenEmptySprite: {fileID: -6907917629755840059, guid: 825e1557a281ab34d8972ed93ab57164,
     type: 3}
 --- !u!1 &4713071823878346972
 GameObject:
@@ -1395,7 +1395,7 @@ GameObject:
   - component: {fileID: 4713071823878346969}
   - component: {fileID: 4713071823878346974}
   m_Layer: 5
-  m_Name: Shuriken (2)
+  m_Name: Shuriken (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1492,7 +1492,7 @@ GameObject:
   - component: {fileID: 4713071823940420812}
   - component: {fileID: 4713071823940420813}
   m_Layer: 5
-  m_Name: Shuriken (8)
+  m_Name: Shuriken (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
