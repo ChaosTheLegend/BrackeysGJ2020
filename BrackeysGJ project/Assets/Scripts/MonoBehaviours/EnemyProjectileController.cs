@@ -32,6 +32,11 @@ public class EnemyProjectileController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.CompareTag("Walls"))
+        {
+            Destroy(gameObject);
+            return;
+        }
         if (other.CompareTag("Player"))
         {
             player.TakeDamage(damage);

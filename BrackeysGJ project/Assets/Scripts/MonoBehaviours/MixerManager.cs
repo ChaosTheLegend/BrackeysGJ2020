@@ -11,7 +11,7 @@ namespace BrackeysGJ.MonoBehaviours
         [Header("Pause")]
         [SerializeField] private AudioMixerSnapshot paused;
         [SerializeField] private AudioMixerSnapshot unpaused;
-        [SerializeField] private bool pause;
+        private bool pause;
         [Header("Volume")] 
         [SerializeField] private AudioMixer mixer;
         public enum SoundType
@@ -20,11 +20,6 @@ namespace BrackeysGJ.MonoBehaviours
             Sfx=1,
             Ambient=2
         }
-        private void Update()
-        {
-            if(Input.GetKeyDown(KeyCode.Escape)) TogglePause();
-        }
-
         public void SetVolume(SoundType type, float volume)
         {
             switch (type)
@@ -43,16 +38,16 @@ namespace BrackeysGJ.MonoBehaviours
             }
         }
         
-        public void TogglePause()
+        public void TogglePause(bool toggle)
         {
-            pause = !pause;
+            pause = toggle;
             UpdateState();
         }
 
         private void UpdateState()
         {
             var trans = pause ? paused : unpaused;
-            trans.TransitionTo(0.01f);
+            trans.TransitionTo(0.2f);
         }
         
     }
