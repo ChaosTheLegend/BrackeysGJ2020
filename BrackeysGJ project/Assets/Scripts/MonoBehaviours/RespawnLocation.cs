@@ -7,7 +7,8 @@ namespace BrackeysGJ.MonoBehaviours
 {
     public class RespawnLocation : MonoBehaviour
     {
-        [SerializeField] private Transform cam; 
+        [SerializeField] private Transform cam;
+        [SerializeField] private string mainSceneName;
         private void Start()
         {
             var save = SaveSystem.Load();
@@ -19,7 +20,7 @@ namespace BrackeysGJ.MonoBehaviours
         #if UNITY_EDITOR
         private void Update()
         {
-            if(Input.GetKeyDown(KeyCode.R)) SceneManager.LoadScene("veggiebadscene2");
+            if(Input.GetKeyDown(KeyCode.R)) SceneManager.LoadScene(mainSceneName);
             if(Input.GetKeyDown(KeyCode.F1)) SaveSystem.DeleteSave();
         }
         #endif
