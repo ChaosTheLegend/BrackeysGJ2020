@@ -36,9 +36,5 @@ public class SmoothFollow : MonoBehaviour
         if (staticCamera) return;
         center = CenteralPosition();
         transform.position = Vector3.SmoothDamp(transform.position, center, ref velosity, moveTime);
-        if (transform.position.y < -3.3f)
-        {
-            transform.position = new  Vector3(transform.position.x, -3.3f,-200f);
-        }
     }
 }
