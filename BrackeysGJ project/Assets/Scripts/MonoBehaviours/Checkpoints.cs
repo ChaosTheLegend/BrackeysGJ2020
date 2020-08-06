@@ -9,9 +9,12 @@ public class Checkpoints : MonoBehaviour
 {
     private Transform _player;
     private Transform _camera;
-
+    private bool _active;
+    private Animator _anim;
+    
     private void Start()
     {
+        _anim = GetComponent<Animator>();
         _player = GameObject.FindGameObjectWithTag("Player").transform;
         _camera = Camera.main.transform;
     }
@@ -20,7 +23,8 @@ public class Checkpoints : MonoBehaviour
     {
         // Update current checkPoint location;
         if (!other.CompareTag("Player")) return;
-        var save = new SaveData(_player.position,_camera.position);
+        _anim.SetBool($"Active",true);
+        var save = new SaveData(transform.position,_camera.position);
         SaveSystem.Save(save);
     }
 }

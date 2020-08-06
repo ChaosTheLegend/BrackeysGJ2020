@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using BrackeysGJ.ClassFiles;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEditor;
@@ -8,7 +10,15 @@ using UnityEngine.Events;
 public class LevelLoader : MonoBehaviour
 {
     [SerializeField] private string sceneToLoad;
-    
+    [SerializeField] private string gameScene;
+    [SerializeField] private GameObject menuAudio;
+    private void Start()
+    {
+        if(GameObject.FindGameObjectsWithTag("AudioManager").Length > 0) return;
+        var target = Instantiate(menuAudio);
+        DontDestroyOnLoad(target);
+    }
+
     public void LoadCurrentScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -19,9 +29,21 @@ public class LevelLoader : MonoBehaviour
         SceneManager.LoadScene(sceneToLoad);
     }
 
+    
+    
+    //He did
+    public void LoadNewGame()
+    {
+        SaveSystem.DeleteSave();
+        Destroy(GameObject.FindGameObjectWithTag("AudioManager"));
+        SceneManager.LoadScene(gameScene);
+    }
+    
     public void LoadSavedGame()
     {
-        // Chaos will take of this hopefully :p
+        if(SaveSystem.Load() == null) return;
+        Destroy(GameObject.FindGameObjectWithTag("AudioManager"));
+        SceneManager.LoadScene(gameScene);
     }
 
     public void LoadOptionsScene()
