@@ -19,18 +19,28 @@ public class LevelLoader : MonoBehaviour
         SceneManager.LoadScene(sceneToLoad);
     }
 
-    public void ExitGame()
+    public void LoadSavedGame()
     {
-        //Checks if the game in editor or a build
-    #if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;    
-    #else
-        Application.Quit();
-    #endif
+        // Chaos will take of this hopefully :p
     }
 
     public void LoadOptionsScene()
     {
         SceneManager.LoadScene("OptionsScene");
+    }
+
+    public void LoadCreditsScene()
+    {
+        SceneManager.LoadScene("CreditsScene");
+    }
+    
+    public void ExitGame()
+    {
+        //Checks if the game in editor or a build
+        #if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;    
+        #else
+                Application.Quit();
+        #endif
     }
 }

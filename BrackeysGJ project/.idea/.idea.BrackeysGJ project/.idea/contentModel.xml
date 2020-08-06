@@ -84,6 +84,7 @@
             <e p="LevelLoader.cs" t="Include" />
             <e p="LevelManager.cs" t="Include" />
             <e p="MixerManager.cs" t="Include" />
+            <e p="Obsticals.cs" t="Include" />
             <e p="OptionsController.cs" t="Include" />
             <e p="PauseManager.cs" t="Include" />
             <e p="PlayerAnimationController.cs" t="Include" />
