@@ -53,7 +53,7 @@ MonoBehaviour:
   returnSpeed: 20
   maxDistanceFromPlayer: 20
   damageDealt: 40
-  maxCollisions: 2
+  maxCollisions: 3
   fadeAlpha: 0.4
 --- !u!50 &1446643230
 Rigidbody2D:
@@ -149,7 +149,7 @@ LineRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 803805773
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 1
   m_Positions:
   - {x: 0, y: 0, z: 0}
@@ -288,7 +288,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 803805773
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 2
   m_Sprite: {fileID: -834209781571106693, guid: d014ed89bc7e7a442a187243b67e68b5,
     type: 3}
@@ -370,7 +370,7 @@ MonoBehaviour:
   m_Color: {r: 0, g: 0.8967023, b: 1, a: 1}
   m_Intensity: 0.7
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 17eb344677c5a8874d1ae92f
+  m_ApplyToSortingLayers: 77c5a8874d1ae92f53e7a8dd
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
