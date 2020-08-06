@@ -31,8 +31,8 @@ public class PlayerHealth : MonoBehaviour
     {
         _controller = GetComponent<PlayerController>();
         initMaxHealth = maxHealth;
-        currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
+        healthBar.SetMaxHealth(initMaxHealth);
+        healthBar.SetHealth(currentHealth);
     }
 
     // Update is called once per frame
@@ -123,5 +123,10 @@ public class PlayerHealth : MonoBehaviour
     private void Die()
     {
         isDead = true;
+    }
+
+    public float health()
+    {
+        return currentHealth;
     }
 }
