@@ -21,9 +21,15 @@
   <component name="ChangeListManager">
     <list default="true" id="4c703d93-926a-4bd4-8794-fd95c5d5c718" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BrackeysGJ project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BrackeysGJ project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/veggiebadscene2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/veggiebadscene2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/EnemyController2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/EnemyController2.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/RespawnLocation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/RespawnLocation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ChaosUtils/Scripts/SmoothFollow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ChaosUtils/Scripts/SmoothFollow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/november SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/november SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/GUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/GUI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Final Scenes/MainGameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Final Scenes/MainGameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/OptionsScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/OptionsScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,10 +91,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/MixerManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/Checkpoints.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Serializable/SaveData.cs" />
-        <option value="$PROJECT_DIR$/Assets/ChaosUtils/Scripts/SmoothFollow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/EnemyController2.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/LevelLoader.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/RespawnLocation.cs" />
+        <option value="$PROJECT_DIR$/Assets/ChaosUtils/Scripts/SmoothFollow.cs" />
       </list>
     </option>
   </component>
