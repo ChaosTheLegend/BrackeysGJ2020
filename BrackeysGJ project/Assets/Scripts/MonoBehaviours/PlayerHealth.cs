@@ -26,6 +26,10 @@ public class PlayerHealth : MonoBehaviour
     /// </summary>
     private float healthPowerupTimer;
 
+
+    private PlayerSound sounds;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +37,13 @@ public class PlayerHealth : MonoBehaviour
         initMaxHealth = maxHealth;
         healthBar.SetMaxHealth(initMaxHealth);
         healthBar.SetHealth(currentHealth);
+
+        sounds = GetComponentInChildren<PlayerSound>();
+
+        if (sounds == null)
+        {
+            Debug.LogError("Error: PlayerSound.cs is missing on the " + gameObject.name + " gameObject.");
+        }
     }
 
     // Update is called once per frame
@@ -77,9 +88,13 @@ public class PlayerHealth : MonoBehaviour
         currentHealth -= damage;
         if(currentHealth <= 0)
         {
-            isDead = true;
-            _controller.Die();
             Die();
+            sounds.PlayDying();
+            _controller.Die();
+        }
+        else
+        {
+            sounds.PlayHit();
         }
     }
 

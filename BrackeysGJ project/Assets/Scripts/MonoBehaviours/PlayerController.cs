@@ -1,4 +1,5 @@
 ﻿using ChaosUtils.Scripts;
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -42,10 +43,31 @@ namespace BrackeysGJ.MonoBehaviours
         private bool _onLadder;
         private bool _nearLadder;
         private bool _dead;
+
+        private PlayerSound _sounds;
+
+        internal enum PlayerState
+        {
+            NoneOfTheAbove,
+            Running,
+            Sliding,
+            Climbing
+        }
+
+        // These are used for sound (I know it's messy but I'm trying to rush this and make it work)
+        internal PlayerState myPreviousState = PlayerState.Running;
+        internal PlayerState myCurrentState = PlayerState.Running;
+
         private void Start()
         {
             _advCol = GetComponent<AdvPlayerCollider>();
             _rb = GetComponent<Rigidbody2D>();
+            _sounds = GetComponentInChildren<PlayerSound>();
+
+            if(_sounds == null)
+            {
+                Debug.LogError("Error: PlayerSound.cs is missing on the " + gameObject.name + " gameObject.");
+            }
         }
 
         public bool OnLadder()
@@ -80,12 +102,19 @@ namespace BrackeysGJ.MonoBehaviours
         {
             return (_advCol.CheckCollision(AdvPlayerCollider.Side.Left) || _advCol.CheckCollision(AdvPlayerCollider.Side.Right));
         }
+
         private void Update()
         {
+            myPreviousState = myCurrentState;
+            SoundLoopLogic();
+
+
             if (_dead)
             {
                 return;
             }
+
+
             //Movement
             _rb.velocity = new Vector2(Input.GetAxis("Horizontal")*speed,_rb.velocity.y);
             if (_advCol.CheckCollision(AdvPlayerCollider.Side.Left))
@@ -147,32 +176,110 @@ namespace BrackeysGJ.MonoBehaviours
                 _canDoubleJump = true;
                 _canDash = true;
             }
-            
-            //Jumps
-            if (!Input.GetButtonDown("Jump")) return;
 
-            //Ground Jump
-            if (_advCol.IsGrounded())
+            //Jumps
+            if (Input.GetButtonDown("Jump"))
             {
-                onJump?.Invoke();
-                _rb.AddForce(Vector2.up * jumpForce);
+                myCurrentState = PlayerState.NoneOfTheAbove;
+
+                //Ground Jump
+                if (_advCol.IsGrounded())
+                {
+                    onJump?.Invoke();
+                    _rb.AddForce(Vector2.up * jumpForce);
+                    _sounds.PlayJumping();
+                }
+                else if (OnWall())
+                {
+                    //Wall Jump
+                    onWallJump?.Invoke();
+                    _reboundDir = _advCol.CheckCollision(AdvPlayerCollider.Side.Right) ? -1f : 1f;
+                    _rb.velocity = new Vector2(_rb.velocity.x, 0f);
+                    _rb.AddForce(Vector2.up * wallJumpForce);
+                    _reboundTm = reboundTime;
+
+                    _sounds.PlayJumping();
+                    _sounds.StopSounds();
+                }
+                else if (_canDoubleJump)
+                {
+                    //Double Jump
+                    onDoubleJump?.Invoke();
+                    _rb.velocity = new Vector2(_rb.velocity.x, 0f);
+                    _rb.AddForce(Vector2.up * doubleJumpForce);
+                    _canDoubleJump = false;
+
+                    _sounds.PlayDoubleJumping();
+                }
+            }
+
+            if(myPreviousState != myCurrentState)
+            {
+                _sounds.StopSounds();
+            }
+        }
+
+        /// <summary>
+        /// Checks which sounds need to be played in a loop and tells PlayerSounds.cs to play them.
+        /// </summary>
+        private void SoundLoopLogic()
+        {
+
+            if (_onLadder)
+            {
+                if (_rb.velocity.y != 0)
+                {
+                    myCurrentState = PlayerState.Climbing;
+                    Debug.Log("State set to climbing.");
+
+                }
+                else
+                {
+                    _sounds.StopSounds();
+                    myCurrentState = PlayerState.NoneOfTheAbove;
+                }
             }
             else if (OnWall())
             {
-                //Wall Jump
-                onWallJump?.Invoke();
-                _reboundDir = _advCol.CheckCollision(AdvPlayerCollider.Side.Right) ? -1f : 1f;
-                _rb.velocity = new Vector2(_rb.velocity.x,0f);
-                _rb.AddForce(Vector2.up*wallJumpForce);
-                _reboundTm = reboundTime;
+                if (_rb.velocity.y < 0)
+                {
+                    myCurrentState = PlayerState.Sliding;
+                    Debug.Log("State set to sliding.");
+                }
             }
-            else if (_canDoubleJump)
+            else if (_advCol.IsGrounded())
             {
-                //Double Jump
-                onDoubleJump?.Invoke();
-                _rb.velocity = new Vector2(_rb.velocity.x,0f);
-                _rb.AddForce(Vector2.up*doubleJumpForce);
-                _canDoubleJump = false;
+                if (_rb.velocity.x != 0)
+                {
+                    myCurrentState = PlayerState.Running;
+                }
+                else
+                {
+                    _sounds.StopSounds();
+                    myCurrentState = PlayerState.NoneOfTheAbove;
+                }
+            }
+            else
+            {
+                myCurrentState = PlayerState.NoneOfTheAbove;
+            }
+
+
+                switch (myCurrentState)
+            {
+                case PlayerState.NoneOfTheAbove:
+                    break;
+                case PlayerState.Running:
+                    _sounds.PlayRunning();
+                    break;
+                case PlayerState.Sliding:
+                    _sounds.PlayWallSlide();
+                    break;
+                case PlayerState.Climbing:
+                    _sounds.PlayClimbing();
+                    break;
+                default:
+                    break;
             }
         }
 

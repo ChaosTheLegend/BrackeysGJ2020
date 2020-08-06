@@ -22,6 +22,9 @@ namespace BrackeysGJ.MonoBehaviours
         private Rigidbody2D _rb;
         [HideInInspector]public bool canSee;
         private float _tm;
+
+        private EnemySound _sounds;
+
         private void Start()
         {
             _player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -32,6 +35,13 @@ namespace BrackeysGJ.MonoBehaviours
             _follower = GetComponent<PathFolower>();
             _follower.speed = speed;
             _follower.StartFollow();
+
+            _sounds = GetComponent<EnemySound>();
+
+            if(_sounds == null)
+            {
+                Debug.LogError("EnemySound.cs is missing on the " + gameObject.name + " gameObject!");
+            }
         }
         
         private void CheckEyesight()
@@ -53,16 +63,24 @@ namespace BrackeysGJ.MonoBehaviours
         {
             health -= damage;
             healthBar.SetHealth(health);
-            if (!(health <= 0)) return;
-            for(var i=0;i<sticker.childCount;i++)
+            if (!(health <= 0))
             {
-                sticker.GetChild(i).GetComponent<Shuriken>().Rewind();
+                _sounds.PlayHitSound();
+            }
+            else
+            {
+                _sounds.PlayDeathSound();
+                for (var i = 0; i < sticker.childCount; i++)
+                {
+                    sticker.GetChild(i).GetComponent<Shuriken>().Rewind();
+                }
             }
         }
         
         private void Shoot()
         {
             Instantiate(bullet, shootingPoint.position, shootingPoint.rotation);
+            _sounds.PlayShootSound();
         }
         private void Update()
         {
@@ -72,8 +90,13 @@ namespace BrackeysGJ.MonoBehaviours
             else canSee = false;
 
             if(!canSee){
+                _sounds.PlayRunSoundLoop();
                 _follower.speed = speed;
                 _follower.UpdateSpeed();
+            }
+            else
+            {
+                _sounds.StopRunSoundLoop();
             }
             
             if (health <= 0)
