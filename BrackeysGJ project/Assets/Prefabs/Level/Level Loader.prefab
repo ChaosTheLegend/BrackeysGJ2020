@@ -43,3 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ab3c6cc128a464aae13e516f995ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneToLoad: veggiebadscine2
+  menuAudio: {fileID: 6469948645935862002, guid: b4c016118bd2be74da71e2e78bd19e12,
+    type: 3}

@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CreditsScene.unity
     guid: c37255ebc04a65f47b79bb7fc6eaab36
+  - enabled: 1
+    path: Assets/Scenes/veggiebadscene2.unity
+    guid: 36d3607d5dc1b3245a72efc54fc4d0bd
   m_configObjects: {}
