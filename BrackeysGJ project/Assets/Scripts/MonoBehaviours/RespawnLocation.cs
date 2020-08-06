@@ -1,6 +1,7 @@
 ﻿using System;
 using BrackeysGJ.ClassFiles;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace BrackeysGJ.MonoBehaviours
 {
@@ -18,6 +19,7 @@ namespace BrackeysGJ.MonoBehaviours
         #if UNITY_EDITOR
         private void Update()
         {
+            if(Input.GetKeyDown(KeyCode.R)) SceneManager.LoadScene("veggiebadscene2");
             if(Input.GetKeyDown(KeyCode.F1)) SaveSystem.DeleteSave();
         }
         #endif
