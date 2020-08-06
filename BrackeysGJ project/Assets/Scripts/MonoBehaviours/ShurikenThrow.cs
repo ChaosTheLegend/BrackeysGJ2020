@@ -11,6 +11,15 @@ public class ShurikenThrow : MonoBehaviour
 
     [SerializeField] private int maxShuriken = 3;
 
+
+    public int MaxShuriken
+    {
+        get
+        {
+            return maxShuriken;
+        }
+    }
+
     // Number of shuriken that have been thrown
     private int shurikenCount = 0;
 
