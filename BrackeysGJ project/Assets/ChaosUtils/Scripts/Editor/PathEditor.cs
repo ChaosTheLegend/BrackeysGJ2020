@@ -33,6 +33,10 @@ public abstract class PathEditor : Editor
             if (i == 0 || i == path.ControllPoints.Count - 1) Handles.color = Color.blue;
             Vector2 point = path.ControllPoints[i];
             point = Handles.FreeMoveHandle(point, Quaternion.identity, HandleUtility.GetHandleSize(point) * 0.1f, Vector3.one, Handles.SphereHandleCap);
+            if (path.grid)
+            {
+                point = new Vector3((int) (point.x / 0.5f) * 0.5f, (int) (point.y / 0.5f) * 0.5f, 0f);
+            }
             if (point != path.ControllPoints[i]) path.OnMovePoint(i, point);
         }
     }

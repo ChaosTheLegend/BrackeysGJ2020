@@ -20,16 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c703d93-926a-4bd4-8794-fd95c5d5c718" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BrackeysGJ project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BrackeysGJ project/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BrackeysGJ project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BrackeysGJ project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ChaosUtils/Scripts/SmoothFollow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ChaosUtils/Scripts/SmoothFollow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/november SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/november SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/GUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/GUI.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Final Scenes/MainGameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Final Scenes/MainGameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/OptionsScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/OptionsScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ChaosUtils/Scripts/Editor/PathEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ChaosUtils/Scripts/Editor/PathEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ChaosUtils/Scripts/Paths/Path.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ChaosUtils/Scripts/Paths/Path.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy Projectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy Projectile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/EnemyTypes/EnemyGreen.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/EnemyTypes/EnemyGreen.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/EnemyTypes/EnemyYellow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/EnemyTypes/EnemyYellow.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/Shuriken.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/Shuriken.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/BackgorundMusicManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/BackgorundMusicManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,15 +51,20 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/Shuriken.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/LevelManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ChaosUtils/Scripts/Paths/Path.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ChaosUtils/Scripts/SmoothFollow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/OptionsController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ChaosUtils/Scripts/RadialLayoutGroup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ChaosUtils/Scripts/Paths/PathFolower.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/EnemyController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Serializable/SaveData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/AudioTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ClassFiles/SaveSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/EnemyProjectileController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ChaosUtils/Scripts/Paths/LinePath.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/MixerManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/BackgorundMusicManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ChaosUtils/Scripts/Editor/PathEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/ShurikenThrow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PlayerHealth.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/HealthBar.cs" root0="FORCE_HIGHLIGHTING" />
@@ -71,7 +75,6 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/EnemyController.cs" />
         <option value="$PROJECT_DIR$/Assets/EnemyAnimator.cs" />
-        <option value="$PROJECT_DIR$/Assets/ChaosUtils/Scripts/Paths/PathFolower.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PlayerAnimationController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/ShurikenThrow.cs" />
@@ -95,6 +98,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/LevelLoader.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/RespawnLocation.cs" />
         <option value="$PROJECT_DIR$/Assets/ChaosUtils/Scripts/SmoothFollow.cs" />
+        <option value="$PROJECT_DIR$/Assets/ChaosUtils/Scripts/Paths/Path.cs" />
+        <option value="$PROJECT_DIR$/Assets/ChaosUtils/Scripts/Editor/PathEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/ChaosUtils/Scripts/Paths/PathFolower.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/BackgorundMusicManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/AudioTrigger.cs" />
       </list>
     </option>
   </component>

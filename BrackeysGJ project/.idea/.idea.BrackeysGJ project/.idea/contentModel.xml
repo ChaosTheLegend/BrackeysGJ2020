@@ -43,6 +43,7 @@
             </e>
           </e>
         </e>
+        <e p="AudioTrigger.cs" t="Include" />
         <e p="ChaosUtils" t="Include">
           <e p="Scripts" t="Include">
             <e p="AdvPlayerCollider.cs" t="Include" />

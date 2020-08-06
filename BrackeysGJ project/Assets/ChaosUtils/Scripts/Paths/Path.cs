@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class Path : MonoBehaviour
 {
     // Start is called before the first frame update
+    public bool grid;
     public List<Vector2> ControllPoints = new List<Vector2> { Vector2.zero, Vector2.zero + Vector2.left * 1f, Vector2.zero + Vector2.left * 2f, Vector2.zero + Vector2.left * 3f };
     private void Awake() => OnAwake();
     public virtual void OnAwake() { }

@@ -6,7 +6,7 @@ using UnityEngine;
 public class BackgorundMusicManager : MonoBehaviour
 {
 
-    [SerializeField] private float fadeTime;
+    private float _fadeTime;
     private float _tm;
     private AudioSource _source;
     private AudioClip _newClip;
@@ -17,14 +17,15 @@ public class BackgorundMusicManager : MonoBehaviour
     private void Start()
     {
         _source = GetComponent<AudioSource>();
-        _tm = fadeTime;
+        _tm = _fadeTime;
     }
 
-    public void ChangeBackgroundMusic(AudioClip newClip)
+    public void ChangeBackgroundMusic(AudioClip newClip,float time)
     {
+        _fadeTime = time;
         _newClip = newClip;
         _changing = true;
-        _tm = fadeTime;
+        _tm = _fadeTime;
     }
 
     private void Update()
@@ -32,9 +33,9 @@ public class BackgorundMusicManager : MonoBehaviour
         _current = _source.clip;
         if(!_changing) return;
         _tm -= Time.deltaTime;
-        if (_tm > fadeTime/2f)
+        if (_tm > _fadeTime/2f)
         {
-            _source.volume = Mathf.Max(0f, _tm / fadeTime - fadeTime/2);
+            _source.volume = Mathf.Max(0f, _tm / _fadeTime - _fadeTime/2);
         }
         else if(_tm > 0f)
         {
@@ -44,7 +45,7 @@ public class BackgorundMusicManager : MonoBehaviour
                 _source.clip = _newClip;
                 _source.Play();
             }
-            _source.volume = Mathf.Min(1f, 1f - (_tm / (fadeTime / 2f)));
+            _source.volume = Mathf.Min(1f, 1f - (_tm / (_fadeTime / 2f)));
         }
         else
         {
