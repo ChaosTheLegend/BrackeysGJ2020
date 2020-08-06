@@ -21,16 +21,12 @@
   <component name="ChangeListManager">
     <list default="true" id="4c703d93-926a-4bd4-8794-fd95c5d5c718" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BrackeysGJ project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BrackeysGJ project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Music/mus_victory_oneshot.ogg" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Music/mus_victory_oneshot.ogg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Level/Level Loader.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Level/Level Loader.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CreditsScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CreditsScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Mixers/SceneMixer.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/Mixers/SceneMixer.mixer" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/OptionsScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/OptionsScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/LevelLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/LevelLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/tileset 2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/tileset 3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/veggiebadscene2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/veggiebadscene2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/Checkpoints.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/Checkpoints.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Serializable/SaveData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Serializable/SaveData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Save Point.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Save Point.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,20 +76,20 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/EnemyController2.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/HealthBar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ClassFiles/SaveSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Serializable/SaveData.cs" />
         <option value="$PROJECT_DIR$/Assets/BackgorundMusicManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/LastCheckpointLocation.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/Checkpoints.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/RespawnLocation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/EnemyProjectileController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PauseManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PlayerPrefsController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/MixerManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/OptionsController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/ShurikenUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PlayerHealth.cs" />
         <option value="$PROJECT_DIR$/Assets/Obsticals.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/LevelLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/OptionsController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/MixerManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Serializable/SaveData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/Checkpoints.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/RespawnLocation.cs" />
       </list>
     </option>
   </component>
@@ -164,9 +160,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="824" y="383" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1596314342352" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1596626169854">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1596718067750">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1596626169854" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1596718067750" />
   </component>
 </project>

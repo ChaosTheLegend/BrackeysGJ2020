@@ -8,7 +8,6 @@ namespace BrackeysGJ.Serializable
     {
         private float[] _position;
         private float[] _camPosition;
-
         public SaveData(Vector2 playerPos, Vector2 camPos)
         {
             _position = new[]{playerPos.x, playerPos.y};
