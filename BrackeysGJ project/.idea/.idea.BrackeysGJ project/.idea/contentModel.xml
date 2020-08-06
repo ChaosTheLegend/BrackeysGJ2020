@@ -68,7 +68,6 @@
             <e p="SmoothFollow.cs" t="Include" />
           </e>
         </e>
-        <e p="Obsticals.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="ClassFiles" t="Include">
             <e p="SaveSystem.cs" t="Include" />
@@ -85,6 +84,7 @@
             <e p="LevelLoader.cs" t="Include" />
             <e p="LevelManager.cs" t="Include" />
             <e p="MixerManager.cs" t="Include" />
+            <e p="Obsticals.cs" t="Include" />
             <e p="OptionsController.cs" t="Include" />
             <e p="PauseManager.cs" t="Include" />
             <e p="PlayerAnimationController.cs" t="Include" />
