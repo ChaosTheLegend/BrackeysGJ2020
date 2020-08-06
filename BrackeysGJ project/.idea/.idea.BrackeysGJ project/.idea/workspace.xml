@@ -21,11 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4c703d93-926a-4bd4-8794-fd95c5d5c718" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BrackeysGJ project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BrackeysGJ project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/OptionsScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/OptionsScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editors.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/veggiebadscene2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/veggiebadscene2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Save Point.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Save Point.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/tileset 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/tileset 3.png.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +48,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/LevelLoader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ChaosUtils/Scripts/RadialLayoutGroup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ChaosUtils/Scripts/SmoothFollow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/Obsticals.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ChaosUtils/Scripts/AdvPlayerCollider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ClassFiles/SaveSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/HealthBar.cs" root0="FORCE_HIGHLIGHTING" />
@@ -130,7 +130,7 @@
       <updated>1596530974680</updated>
       <workItem from="1596531219405" duration="11205000" />
       <workItem from="1596553635218" duration="2525000" />
-      <workItem from="1596683984727" duration="8471000" />
+      <workItem from="1596683984727" duration="9876000" />
     </task>
     <servers />
   </component>
