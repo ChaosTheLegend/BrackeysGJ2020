@@ -35,9 +35,18 @@ public class Shuriken : MonoBehaviour
     private bool Stuck = false;
     [SerializeField] private float fadeAlpha = 0.5f;
 
+    private ShurikenSound sounds;
+
     // Start is called before the first frame update
     void Start()
     {
+        sounds = GetComponentInChildren<ShurikenSound>();
+
+        if (sounds == null)
+        {
+            Debug.LogError("Error: ShurikenSound.cs is missing on the " + gameObject.name + " gameObject.");
+        }
+
         // Get a reference to the player
         playerShurikenScript = GameObject.FindObjectOfType<ShurikenThrow>();
 
@@ -88,7 +97,15 @@ public class Shuriken : MonoBehaviour
             //Chaos has been here
             //and changed to smoothDamp instead of MoveTowards  
             //transform.position =  Vector2.SmoothDamp(transform.position, playerShurikenScript.transform.position, ref velocity,returnTime);
-            if((transform.position - playerShurikenScript.transform.position).sqrMagnitude < 0.7f*0.7f) ReturnToPlayer();
+            if ((transform.position - playerShurikenScript.transform.position).sqrMagnitude < 0.7f * 0.7f)
+            {
+                sounds.StopRewindLoop();
+                ReturnToPlayer();
+            }
+            else
+            {
+                sounds.PlayRewindLoop();
+            }
             //rbody.velocity = speed * (rbody.velocity.normalized) * Time.fixedDeltaTime;
         }
 
@@ -132,7 +149,11 @@ public class Shuriken : MonoBehaviour
             Stuck = true;
             rbody.velocity = Vector2.zero;
             rbody.simulated = false;
-
+            sounds.PlayStuck();
+        }
+        else
+        {
+            sounds.PlayBounce();
         }
             
             
