@@ -6,21 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/ChaosTestingScene.unity
-    guid: d536fc2808ed4544e95a7ef912c42f65
-  - enabled: 1
     path: Assets/Scenes/Final Scenes/StartScene.unity
     guid: e4acd194fead4aa4899c384638841be3
   - enabled: 1
-    path: Assets/Scenes/veggiebad scene/Level1.unity
-    guid: caf27c344da57354bb2ba11320fcbc91
+    path: Assets/Scenes/Final Scenes/MainGameScene.unity
+    guid: 36d3607d5dc1b3245a72efc54fc4d0bd
+  - enabled: 1
+    path: Assets/Scenes/ControlsScene.unity
+    guid: 45c2360dbac5e9d4ba6b5fd2f906f35f
   - enabled: 1
     path: Assets/Scenes/Final Scenes/OptionsScene.unity
     guid: 3def99c07cf108244ae58ad1441af64b
   - enabled: 1
-    path: Assets/Scenes/CreditsScene.unity
+    path: Assets/Scenes/Final Scenes/CreditsScene.unity
     guid: c37255ebc04a65f47b79bb7fc6eaab36
   - enabled: 1
-    path: Assets/Scenes/Final Scenes/MainGameScene.unity
-    guid: 36d3607d5dc1b3245a72efc54fc4d0bd
+    path: Assets/Scenes/veggiebad scene/Level1.unity
+    guid: caf27c344da57354bb2ba11320fcbc91
+  - enabled: 1
+    path: Assets/Scenes/ChaosTestingScene.unity
+    guid: d536fc2808ed4544e95a7ef912c42f65
   m_configObjects: {}

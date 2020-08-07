@@ -55,7 +55,12 @@ public class LevelLoader : MonoBehaviour
     {
         SceneManager.LoadScene("CreditsScene");
     }
-    
+
+    public void LoadControlsScene()
+    {
+        SceneManager.LoadScene("ControlsScene");
+    }
+
     public void ExitGame()
     {
         //Checks if the game in editor or a build
