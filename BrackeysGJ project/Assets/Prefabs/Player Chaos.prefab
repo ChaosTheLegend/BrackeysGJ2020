@@ -221,6 +221,7 @@ GameObject:
   - component: {fileID: 275880}
   - component: {fileID: 32987075}
   - component: {fileID: 32987085}
+  - component: {fileID: 1838870902}
   m_Layer: 10
   m_Name: Player Chaos
   m_TagString: Player
@@ -283,7 +284,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 803805773
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 10
   m_Sprite: {fileID: -8806581375237917728, guid: 0c35490f5f44d3a4e9d10101d160b57a,
     type: 3}
@@ -333,7 +334,7 @@ MonoBehaviour:
   castPoints:
   - {x: 0.51148033, y: 0.34676695, z: 0}
   - {x: 0.51148033, y: -0.20549703, z: 0}
-  - {x: -0.44910574, y: 0.44963956, z: 0}
+  - {x: -0.44910526, y: 0.44963956, z: 0}
   - {x: 0.46836948, y: 0.44963956, z: 0}
   - {x: -0.5109825, y: 0.33376908, z: 0}
   - {x: -0.5109825, y: -0.23123717, z: 0}
@@ -347,7 +348,7 @@ MonoBehaviour:
   pointSize:
   - {x: 0, y: 0.34676695, z: 0}
   - {x: 0, y: -0.20549703, z: 0}
-  - {x: -0.44910574, y: 0, z: 0}
+  - {x: -0.44910526, y: 0, z: 0}
   - {x: 0.46836948, y: 0, z: 0}
   - {x: 0, y: 0.33376908, z: 0}
   - {x: 0, y: -0.23123717, z: 0}
@@ -541,6 +542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
+  mainSceneName: 
 --- !u!82 &32987075
 AudioSource:
   m_ObjectHideFlags: 0
@@ -652,14 +654,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootSound: {fileID: 8300000, guid: 6128b5df23f86b44390a9276e2e8a550, type: 3}
   runSound: {fileID: 8300000, guid: a6ccc87cea94f2040ae8d7512c91cf0a, type: 3}
-  jumpSound: {fileID: 8300000, guid: 98c0d939c80fb2043a7de94adb6b9f3f, type: 3}
+  jumpSound: {fileID: 8300000, guid: 3841d78627e7ab24d8c2567122d85852, type: 3}
   wallSlideSound: {fileID: 8300000, guid: 0f48d1bd1b8d3d94d83c3c6a727f5412, type: 3}
-  doubleJumpSound: {fileID: 8300000, guid: 4ecd36fb76d69da48b0b385588cadf68, type: 3}
-  ladderClimbSound: {fileID: 8300000, guid: a577cac8c17f3194289c6f8f2b7a16b4, type: 3}
-  hitSound: {fileID: 8300000, guid: 3d75f2f5060c58d43af1f3e63eb46962, type: 3}
-  dyingSound: {fileID: 8300000, guid: 96d14433062a0c245aa024234d057702, type: 3}
+  doubleJumpSound: {fileID: 8300000, guid: 786ad4edc6836e54aace00f71398149d, type: 3}
+  ladderClimbSound: {fileID: 8300000, guid: a0019385a70bb15488dbe7d05447daa7, type: 3}
+  hitSound: {fileID: 8300000, guid: 5a767c89435da5d468a145b52acda8a4, type: 3}
+  dyingSound: {fileID: 8300000, guid: 4b742de875e7e94408e218afeed8f925, type: 3}
   srcLoop: {fileID: 32987075}
   srcOneShot: {fileID: 1980561461}
+--- !u!114 &1838870902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7099022288327960567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25e342332b91485449ecd21c61da0925, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  mainSceneName: MainGameScene
 --- !u!1 &7099022288713862404
 GameObject:
   m_ObjectHideFlags: 0
