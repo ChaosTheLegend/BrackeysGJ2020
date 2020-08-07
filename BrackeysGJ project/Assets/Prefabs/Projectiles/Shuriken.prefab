@@ -233,11 +233,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbadea450f8c1624e93639a54cd806e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stuckInWallSound: {fileID: 8300000, guid: 72981443924a78c4ea02b4a84cfdf50c, type: 3}
-  bounceWallSound: {fileID: 8300000, guid: 0b13a9b78e561e44f9e407efcae8a134, type: 3}
-  rewindSound: {fileID: 8300000, guid: 03a1228ebcfa26d4299e6ef8ab528d7b, type: 3}
+  stuckInWallSounds:
+  - {fileID: 8300000, guid: 72981443924a78c4ea02b4a84cfdf50c, type: 3}
+  - {fileID: 8300000, guid: ac04018f690d8424698ba6c8a10cb74c, type: 3}
+  - {fileID: 8300000, guid: 3622a12af81d0e94bb5ca83c7afdaa95, type: 3}
+  - {fileID: 8300000, guid: c230c4514c503a44c9962162a286b7c2, type: 3}
+  bounceWallSounds:
+  - {fileID: 8300000, guid: 0b13a9b78e561e44f9e407efcae8a134, type: 3}
+  - {fileID: 8300000, guid: 400816fdb0895e64291fd9d8f2812046, type: 3}
+  - {fileID: 8300000, guid: 251af90a6d83f2c4eb689e628fd83181, type: 3}
+  - {fileID: 8300000, guid: 5c811371329762844a20486c813d7cfa, type: 3}
+  rewindSounds:
+  - {fileID: 8300000, guid: 03a1228ebcfa26d4299e6ef8ab528d7b, type: 3}
+  - {fileID: 8300000, guid: 738c013c05c5aca4e8816edc4d0499cc, type: 3}
+  - {fileID: 8300000, guid: 0eef39cbaed7fd4409cc028bccf93d32, type: 3}
+  - {fileID: 8300000, guid: 3efcc48824b4d954599bb346922592ce, type: 3}
   srcOneShot: {fileID: 1831672310343813409}
   srcLoop: {fileID: 4643999419137486030}
+  rewindIntervalSeconds: 0.2
 --- !u!82 &4643999419137486030
 AudioSource:
   m_ObjectHideFlags: 0
