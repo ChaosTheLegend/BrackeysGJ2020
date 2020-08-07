@@ -232,7 +232,7 @@ namespace BrackeysGJ.MonoBehaviours
                 if (_rb.velocity.y != 0)
                 {
                     myCurrentState = PlayerState.Climbing;
-                    Debug.Log("State set to climbing.");
+                    //Debug.Log("State set to climbing.");
 
                 }
                 else
@@ -246,7 +246,7 @@ namespace BrackeysGJ.MonoBehaviours
                 if (_rb.velocity.y < 0)
                 {
                     myCurrentState = PlayerState.Sliding;
-                    Debug.Log("State set to sliding.");
+                    //Debug.Log("State set to sliding.");
                 }
             }
             else if (_advCol.IsGrounded())
