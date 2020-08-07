@@ -138,6 +138,7 @@ GameObject:
   - component: {fileID: 1580002095149743604}
   - component: {fileID: 1580002095149743602}
   - component: {fileID: 8132175439113079418}
+  - component: {fileID: 237949757464570491}
   m_Layer: 11
   m_Name: EnemyRed
   m_TagString: Enemy
@@ -202,7 +203,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 803805773
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 2731795287329381114, guid: 2b9c9c14a801bfa46bc4f5dadaaef0bb,
     type: 3}
@@ -394,7 +395,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -434,6 +435,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &237949757464570491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5968679251253982968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb4b67c7bf74d4447a2088d84a3108b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootSound: {fileID: 8300000, guid: db0c8e9a905725445bfb9b04426e24b2, type: 3}
+  runSound: {fileID: 8300000, guid: dbf381600372e734fab01d0138a5f606, type: 3}
+  hitSound: {fileID: 8300000, guid: 13465505edb297c4eaff5a5d2908b5b8, type: 3}
+  deathSound: {fileID: 8300000, guid: d74800b44572b5242abf94390b7b97d1, type: 3}
+  srcOneShot: {fileID: 8132175439113079418}
+  srcLoop: {fileID: 582626359875290772}
 --- !u!1 &6612562699267219817
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,7 +541,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
