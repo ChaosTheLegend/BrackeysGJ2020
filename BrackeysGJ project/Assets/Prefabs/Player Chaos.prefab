@@ -218,6 +218,7 @@ GameObject:
   - component: {fileID: 7099022288327960572}
   - component: {fileID: 120105183}
   - component: {fileID: 8232987222771530644}
+  - component: {fileID: 275880}
   - component: {fileID: 32987075}
   - component: {fileID: 32987085}
   - component: {fileID: 1838870902}
@@ -331,11 +332,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   castPoints:
-  - {x: 0.51148033, y: 0.41636539, z: -0.000061035156}
+  - {x: 0.51148033, y: 0.34676695, z: 0}
   - {x: 0.51148033, y: -0.20549703, z: 0}
-  - {x: -0.48390484, y: 0.44963956, z: -0.000061035156}
-  - {x: 0.4922943, y: 0.44963956, z: -0.000061035156}
-  - {x: -0.5109825, y: 0.42076683, z: -0.000061035156}
+  - {x: -0.44910526, y: 0.44963956, z: 0}
+  - {x: 0.46836948, y: 0.44963956, z: 0}
+  - {x: -0.5109825, y: 0.33376908, z: 0}
   - {x: -0.5109825, y: -0.23123717, z: 0}
   - {x: 0.4641447, y: -0.51166606, z: 0}
   - {x: -0.4606619, y: -0.51166606, z: 0}
@@ -345,11 +346,11 @@ MonoBehaviour:
   - {x: -0.5109825, y: 0, z: 0}
   - {x: 0, y: -0.51166606, z: 0}
   pointSize:
-  - {x: 0, y: 0.41636539, z: -0.000061035156}
+  - {x: 0, y: 0.34676695, z: 0}
   - {x: 0, y: -0.20549703, z: 0}
-  - {x: -0.48390484, y: 0, z: -0.000061035156}
-  - {x: 0.4922943, y: 0, z: -0.000061035156}
-  - {x: 0, y: 0.42076683, z: -0.000061035156}
+  - {x: -0.44910526, y: 0, z: 0}
+  - {x: 0.46836948, y: 0, z: 0}
+  - {x: 0, y: 0.33376908, z: 0}
   - {x: 0, y: -0.23123717, z: 0}
   - {x: 0.4641447, y: 0, z: 0}
   - {x: -0.4606619, y: 0, z: 0}
@@ -520,14 +521,28 @@ PolygonCollider2D:
     m_Paths:
     - - {x: -0.32452703, y: -0.46794176}
       - {x: 0.23238099, y: -0.4679674}
-      - {x: 0.43034244, y: -0.28745472}
-      - {x: 0.43082052, y: 0.4296766}
+      - {x: 0.49185157, y: -0.2856456}
+      - {x: 0.49052054, y: 0.4314857}
       - {x: 0.40545213, y: 0.4314102}
-      - {x: -0.4341523, y: 0.430618}
-      - {x: -0.43449438, y: -0.28383648}
+      - {x: -0.48661584, y: 0.430618}
+      - {x: -0.48876607, y: -0.2856456}
     - - {x: -0.06389165, y: -0.19936848}
       - {x: -0.06389165, y: -0.19936848}
       - {x: -0.06389165, y: -0.19936848}
+--- !u!114 &275880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7099022288327960567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25e342332b91485449ecd21c61da0925, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  mainSceneName: 
 --- !u!82 &32987075
 AudioSource:
   m_ObjectHideFlags: 0
@@ -637,16 +652,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6152a927f3ea44844a8aadb996244859, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootSound: {fileID: 8300000, guid: 6128b5df23f86b44390a9276e2e8a550, type: 3}
-  runSound: {fileID: 8300000, guid: a6ccc87cea94f2040ae8d7512c91cf0a, type: 3}
-  jumpSound: {fileID: 8300000, guid: 98c0d939c80fb2043a7de94adb6b9f3f, type: 3}
-  wallSlideSound: {fileID: 8300000, guid: 0f48d1bd1b8d3d94d83c3c6a727f5412, type: 3}
-  doubleJumpSound: {fileID: 8300000, guid: 4ecd36fb76d69da48b0b385588cadf68, type: 3}
-  ladderClimbSound: {fileID: 8300000, guid: a577cac8c17f3194289c6f8f2b7a16b4, type: 3}
-  hitSound: {fileID: 8300000, guid: 3d75f2f5060c58d43af1f3e63eb46962, type: 3}
-  dyingSound: {fileID: 8300000, guid: 96d14433062a0c245aa024234d057702, type: 3}
+  shootSounds:
+  - {fileID: 8300000, guid: a022c2fc7a2b7ef42ba004b22b8e44d1, type: 3}
+  - {fileID: 8300000, guid: bd9aea7121210fb4bb04d0b8fc4f1ffc, type: 3}
+  - {fileID: 8300000, guid: 7e2c45e887679bf4991cb620fe6acf1d, type: 3}
+  - {fileID: 8300000, guid: d7466603b93d8654c9ec28c0944070d2, type: 3}
+  runSounds:
+  - {fileID: 8300000, guid: c4ad3417187766b41b10c1e8e16ab665, type: 3}
+  - {fileID: 8300000, guid: 032d1e2e07d15154cbb37e8de7b49b3c, type: 3}
+  - {fileID: 8300000, guid: 16d105835cdde314faafb9e041adb613, type: 3}
+  - {fileID: 8300000, guid: 21a1ec9535e030b4c893befa3b67219a, type: 3}
+  - {fileID: 8300000, guid: aa9986de54f867b45ac761d42b0907bc, type: 3}
+  - {fileID: 8300000, guid: 0fcf876b573397a479548e5907c8a83d, type: 3}
+  - {fileID: 8300000, guid: a2e5449db44e88941a070fa78257cbba, type: 3}
+  - {fileID: 8300000, guid: a6d4d19494833c94aade8a53d8ea80e7, type: 3}
+  jumpSounds:
+  - {fileID: 8300000, guid: 3841d78627e7ab24d8c2567122d85852, type: 3}
+  - {fileID: 8300000, guid: 7a7722a9762c98e49a01b8564ff6b258, type: 3}
+  - {fileID: 8300000, guid: 9f34ed46412bdbb4b9bbd1201761e1da, type: 3}
+  - {fileID: 8300000, guid: 1f7d8395e74325c4eadf2f5261118d9e, type: 3}
+  doubleJumpSounds:
+  - {fileID: 8300000, guid: d1a6fec4c94923d40b189361673a6a34, type: 3}
+  ladderClimbSounds:
+  - {fileID: 8300000, guid: a0019385a70bb15488dbe7d05447daa7, type: 3}
+  - {fileID: 8300000, guid: 86ead9ba4d74b334791c914b6f83a1c1, type: 3}
+  - {fileID: 8300000, guid: d5b12e6fca3f4094caea6f32b07ecd30, type: 3}
+  - {fileID: 8300000, guid: afb115c9850e34948a2e234f3616d055, type: 3}
+  - {fileID: 8300000, guid: 7a2ed71e8d10a8848b321b5065a2942b, type: 3}
+  - {fileID: 8300000, guid: 985099c541f8f3a4490959f066c77b18, type: 3}
+  hitSounds:
+  - {fileID: 8300000, guid: 0dc0de50f25a27b4ab376e718ab75b52, type: 3}
+  - {fileID: 8300000, guid: 5a767c89435da5d468a145b52acda8a4, type: 3}
+  - {fileID: 8300000, guid: 6c0dfdb4d765d4a41b140abc1105aa4d, type: 3}
+  wallSlideSound: {fileID: 8300000, guid: a3dedb649cb8e73428baa292d931a754, type: 3}
+  dyingSound: {fileID: 8300000, guid: 4b742de875e7e94408e218afeed8f925, type: 3}
   srcLoop: {fileID: 32987075}
   srcOneShot: {fileID: 1980561461}
+  runIntervalSeconds: 0.2
+  ladderClimbIntervalSeconds: 0.15
+  wallSlideIntervalSeconds: 0
 --- !u!114 &1838870902
 MonoBehaviour:
   m_ObjectHideFlags: 0
