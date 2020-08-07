@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Final Scenes/MainGameScene.unity
     guid: 36d3607d5dc1b3245a72efc54fc4d0bd
   - enabled: 1
-    path: Assets/Scenes/ControlsScene.unity
+    path: Assets/Scenes/Final Scenes/ControlsScene.unity
     guid: 45c2360dbac5e9d4ba6b5fd2f906f35f
   - enabled: 1
     path: Assets/Scenes/Final Scenes/OptionsScene.unity
