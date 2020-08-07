@@ -105,6 +105,8 @@ namespace BrackeysGJ.MonoBehaviours
 
         private void Update()
         {
+            
+            if(PauseManager.Paused) return;
             myPreviousState = myCurrentState;
             SoundLoopLogic();
 

@@ -7,27 +7,27 @@ namespace BrackeysGJ.MonoBehaviours
     {
         [SerializeField] private MixerManager mixer;
         [SerializeField] private GameObject pausePanel;
-        private bool _paused;
+        public static bool Paused;
         // Update is called once per frame
         private void Update()
         {
             if (Input.GetButtonDown("Cancel"))
             {
-                _paused = !_paused;
-                mixer.TogglePause(_paused);
+                Paused = !Paused;
+                mixer.TogglePause(Paused);
             }
             
-            pausePanel.SetActive(_paused);
-            Time.timeScale = _paused ? 0f : 1f;
+            pausePanel.SetActive(Paused);
+            Time.timeScale = Paused ? 0f : 1f;
         }
 
         public void OnClickingResumeButton()
         {
-            _paused = !_paused;
-            mixer.TogglePause(_paused);
+            Paused = !Paused;
+            mixer.TogglePause(Paused);
             
-            pausePanel.SetActive(_paused);
-            Time.timeScale = _paused ? 0f : 1f;
+            pausePanel.SetActive(Paused);
+            Time.timeScale = Paused ? 0f : 1f;
         }
 
         public void OnClickingExitButton()

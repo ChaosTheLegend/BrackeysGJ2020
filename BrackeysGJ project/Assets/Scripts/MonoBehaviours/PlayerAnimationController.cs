@@ -44,6 +44,7 @@ namespace BrackeysGJ.MonoBehaviours
         
         private void Update()
         {
+            if(PauseManager.Paused) return;
             var move = Mathf.Abs(Input.GetAxis("Horizontal")) > 0.5f;
 
             if (!_playerController.IsDead())
