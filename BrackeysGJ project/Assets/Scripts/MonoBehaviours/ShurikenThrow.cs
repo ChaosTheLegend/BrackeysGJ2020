@@ -11,6 +11,8 @@ public class ShurikenThrow : MonoBehaviour
 
     [SerializeField] private int maxShuriken = 3;
 
+    private PlayerSound sounds;
+
 
     public int MaxShuriken
     {
@@ -44,6 +46,13 @@ public class ShurikenThrow : MonoBehaviour
         _health = GetComponent<PlayerHealth>();
         shurikenInstances = new List<Shuriken>();
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        sounds = GetComponentInChildren<PlayerSound>();
+
+        if (sounds == null)
+        {
+            Debug.LogError("Error: PlayerSound.cs is missing on the " + gameObject.name + " gameObject.");
+        }
     }
 
     // Update is called once per frame
@@ -80,8 +89,10 @@ public class ShurikenThrow : MonoBehaviour
         if(_health.CheckIfDead()) return;
         Shuriken shuriken = Instantiate(shurikenPrefab, shurikenSpawnPoint.transform.position, Quaternion.identity).GetComponent<Shuriken>();
         shurikenInstances.Add(shuriken);
-
         shurikenCount++;
+
+        sounds.PlayShoot();
+
         onShoot?.Invoke();
     }
     
