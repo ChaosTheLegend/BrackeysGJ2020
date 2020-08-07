@@ -8,6 +8,8 @@ public class FadeManager : MonoBehaviour
 {
     public UnityEvent onFadeIn;
     public UnityEvent onFadeOut;
+    [SerializeField] private float fadeInDelay;
+    [SerializeField] private float fadeOutDelay;
 
     private Animator _anim;
 
@@ -18,13 +20,22 @@ public class FadeManager : MonoBehaviour
 
     public void FadeIn()
     {
+        Invoke($"TrueFadeIn",fadeInDelay);
+    }
+
+    private void TrueFadeIn()
+    {
         _anim.SetTrigger("FadeIn");
     }
     
-    
-    public void FadeOut()
+    private void TrueFadeOut()
     {
         _anim.SetTrigger("FadeOut");
+    }
+
+    public void FadeOut()
+    {
+        Invoke($"TrueFadeOut",fadeOutDelay);
     }
 
     public void OnFadeOutFinish()

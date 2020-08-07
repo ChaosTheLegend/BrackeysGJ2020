@@ -20,18 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c703d93-926a-4bd4-8794-fd95c5d5c718" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BrackeysGJ project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BrackeysGJ project/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BrackeysGJ project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BrackeysGJ project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player Chaos.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player Chaos.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/GUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/GUI.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Final Scenes/ControlsScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Final Scenes/ControlsScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Final Scenes/MainGameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Final Scenes/MainGameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Final Scenes/StartScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Final Scenes/StartScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/LevelLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/LevelLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PauseManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PauseManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PlayerHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PlayerHealth.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/RespawnLocation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/RespawnLocation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/AudioTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/AudioTrigger.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +92,6 @@
         <option value="$PROJECT_DIR$/Assets/LoadChecker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/EnemyAnimator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/BackgorundMusicManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/AudioTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/DoggoController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PlayerAnimationController.cs" />
@@ -114,6 +102,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PauseManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/RespawnLocation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PlayerHealth.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/AudioTrigger.cs" />
       </list>
     </option>
   </component>
