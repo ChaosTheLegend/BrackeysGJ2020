@@ -51,8 +51,12 @@ namespace BrackeysGJ.MonoBehaviours
                 canSee = false;
                 return;
             }
-            var cast = Physics2D.Linecast(transform.position, _player.position, wallLayer);
-            if (cast) return;
+            var cast = Physics2D.Linecast(new Vector2(transform.position.x,transform.position.y), new Vector2(_player.position.x,_player.position.y), wallLayer);
+            if (cast)
+            {
+                canSee = false;
+                return;
+            }
             canSee = true;
             _follower.speed = 0f;
             _follower.UpdateSpeed();

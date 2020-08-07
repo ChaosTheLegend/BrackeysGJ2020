@@ -43,6 +43,12 @@
             </e>
           </e>
         </e>
+        <e p="Audio" t="Include">
+          <e p="SFX" t="Include">
+            <e p="!readme.txt" t="Include" />
+          </e>
+        </e>
+        <e p="AudioTrigger.cs" t="Include" />
         <e p="ChaosUtils" t="Include">
           <e p="Scripts" t="Include">
             <e p="AdvPlayerCollider.cs" t="Include" />
@@ -68,6 +74,8 @@
             <e p="SmoothFollow.cs" t="Include" />
           </e>
         </e>
+        <e p="EnemySound.cs" t="Include" />
+        <e p="PlayerSound.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="ClassFiles" t="Include">
             <e p="SaveSystem.cs" t="Include" />
@@ -84,6 +92,7 @@
             <e p="LevelLoader.cs" t="Include" />
             <e p="LevelManager.cs" t="Include" />
             <e p="MixerManager.cs" t="Include" />
+            <e p="Obsticals.cs" t="Include" />
             <e p="OptionsController.cs" t="Include" />
             <e p="PauseManager.cs" t="Include" />
             <e p="PlayerAnimationController.cs" t="Include" />
@@ -98,6 +107,7 @@
             <e p="SaveData.cs" t="Include" />
           </e>
         </e>
+        <e p="ShurikenSound.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
             <e p="LiberationSans - OFL.txt" t="Include" />

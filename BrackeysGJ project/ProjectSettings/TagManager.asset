@@ -22,7 +22,7 @@ TagManager:
   - Shuriken
   - Player
   - Enemies
-  - 
+  - Obsticals
   - 
   - 
   - 
@@ -48,6 +48,12 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 1177873175
+    locked: 0
+  - name: BackgroundWalls
+    uniqueID: 3718834003
+    locked: 0
+  - name: Decor
+    uniqueID: 68209989
     locked: 0
   - name: Middle
     uniqueID: 2275984759

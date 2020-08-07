@@ -144,4 +144,10 @@ public class PlayerHealth : MonoBehaviour
     {
         return currentHealth;
     }
+    
+    // On Colliding with Obsticals;
+    public void PlayerDied() 
+    {
+        TakeDamage(currentHealth);
+    }
 }
