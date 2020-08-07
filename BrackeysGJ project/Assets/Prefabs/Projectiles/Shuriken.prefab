@@ -233,9 +233,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbadea450f8c1624e93639a54cd806e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stuckInWallSound: {fileID: 8300000, guid: d2cc82dc7e99e5d4da182b40037df38b, type: 3}
-  bounceWallSound: {fileID: 8300000, guid: 1653cd7bb6662404f860ea6071df2710, type: 3}
-  rewindSound: {fileID: 8300000, guid: 823fbfa9ca8d1294fb2ccfd6253b3eff, type: 3}
+  stuckInWallSound: {fileID: 8300000, guid: 72981443924a78c4ea02b4a84cfdf50c, type: 3}
+  bounceWallSound: {fileID: 8300000, guid: 0b13a9b78e561e44f9e407efcae8a134, type: 3}
+  rewindSound: {fileID: 8300000, guid: 03a1228ebcfa26d4299e6ef8ab528d7b, type: 3}
   srcOneShot: {fileID: 1831672310343813409}
   srcLoop: {fileID: 4643999419137486030}
 --- !u!82 &4643999419137486030

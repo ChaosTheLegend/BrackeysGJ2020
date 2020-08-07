@@ -73,6 +73,7 @@ namespace BrackeysGJ.MonoBehaviours
             }
             else
             {
+                _sounds.StopRunSoundLoop();
                 _sounds.PlayDeathSound();
                 for (var i = 0; i < sticker.childCount; i++)
                 {
