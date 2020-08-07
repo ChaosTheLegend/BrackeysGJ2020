@@ -313,8 +313,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65efb2dfdcc1d1b4d8a932d0e0c25fc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionRadius: 5
-  speed: 0.2
+  detectionRadius: 10
+  speed: 1
   wallLayer:
     serializedVersion: 2
     m_Bits: 256
@@ -350,12 +350,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb4b67c7bf74d4447a2088d84a3108b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootSound: {fileID: 8300000, guid: db0c8e9a905725445bfb9b04426e24b2, type: 3}
-  runSound: {fileID: 8300000, guid: dbf381600372e734fab01d0138a5f606, type: 3}
-  hitSound: {fileID: 8300000, guid: 13465505edb297c4eaff5a5d2908b5b8, type: 3}
-  deathSound: {fileID: 8300000, guid: d74800b44572b5242abf94390b7b97d1, type: 3}
+  shootSounds:
+  - {fileID: 8300000, guid: db0c8e9a905725445bfb9b04426e24b2, type: 3}
+  - {fileID: 8300000, guid: 29af78633b5450d40ba83a07e4c09e5f, type: 3}
+  - {fileID: 8300000, guid: 802142b7889f89d44a0ee62a695809db, type: 3}
+  - {fileID: 8300000, guid: 126e48a76269cd84e911d8f6b0d6a74c, type: 3}
+  runSounds:
+  - {fileID: 8300000, guid: dbf381600372e734fab01d0138a5f606, type: 3}
+  - {fileID: 8300000, guid: 793301f4ddba9de4c80e6ee469237a0e, type: 3}
+  - {fileID: 8300000, guid: 440398cfc7d31bc4ca17bce9758cb2a7, type: 3}
+  - {fileID: 8300000, guid: e56d2f673df91874db845bfb3a558800, type: 3}
+  hitSounds:
+  - {fileID: 8300000, guid: 13465505edb297c4eaff5a5d2908b5b8, type: 3}
+  - {fileID: 8300000, guid: 45408dfc016d7c14186538aff5f34a69, type: 3}
+  - {fileID: 8300000, guid: a206f01d9e5edb24b8057c8e184c40a8, type: 3}
+  deathSounds:
+  - {fileID: 8300000, guid: d74800b44572b5242abf94390b7b97d1, type: 3}
+  - {fileID: 8300000, guid: 819de4e6cb55e51489f1a6f0f7a496c7, type: 3}
+  - {fileID: 8300000, guid: 962a88d42b12d6c43a1a99342f9d81ce, type: 3}
   srcOneShot: {fileID: 535131620963683041}
   srcLoop: {fileID: 1719691098718967894}
+  runIntervalSeconds: 0.3
 --- !u!82 &1719691098718967894
 AudioSource:
   m_ObjectHideFlags: 0
@@ -378,9 +393,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 18
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -388,23 +403,23 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
+      time: 0.06666667
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     - serializedVersion: 3
       time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
+      value: 0.103775024
+      inSlope: -0.36504728
+      outSlope: -0.36504728
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 1
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
