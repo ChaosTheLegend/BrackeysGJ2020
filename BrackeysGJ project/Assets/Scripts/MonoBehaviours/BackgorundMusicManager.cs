@@ -20,6 +20,10 @@ public class BackgorundMusicManager : MonoBehaviour
         _tm = _fadeTime;
     }
 
+    public void setLoop(bool toset)
+    {
+        _source.loop = toset;
+    }
     public void ChangeBackgroundMusic(AudioClip newClip,float time)
     {
         _fadeTime = time;

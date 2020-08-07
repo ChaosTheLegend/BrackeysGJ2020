@@ -60,6 +60,7 @@ public class ShurikenThrow : MonoBehaviour
     void Update()
     {
         if(PauseManager.Paused) return;
+        if(DoggoController.win) return;
         if(Input.GetKeyDown(rewindButton) &&
            shurikenCount != 0)
         {
