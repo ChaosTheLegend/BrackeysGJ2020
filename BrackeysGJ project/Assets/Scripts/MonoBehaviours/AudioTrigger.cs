@@ -10,10 +10,13 @@ public class AudioTrigger : MonoBehaviour
     [SerializeField] private AudioClip newClip;
 
     [SerializeField] private float fadeTime;
+
+    [SerializeField] private bool oneShot;
     // Start is called before the first frame update
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         manager.ChangeBackgroundMusic(newClip,fadeTime);
+        manager.setLoop(!oneShot);
     }
 }

@@ -73,6 +73,7 @@
             <e p="SmoothFollow.cs" t="Include" />
           </e>
         </e>
+        <e p="DoggoController.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="ClassFiles" t="Include">
             <e p="SaveSystem.cs" t="Include" />

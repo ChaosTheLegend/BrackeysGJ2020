@@ -107,6 +107,8 @@ namespace BrackeysGJ.MonoBehaviours
         {
             
             if(PauseManager.Paused) return;
+            if (DoggoController.win) return;
+
             myPreviousState = myCurrentState;
             SoundLoopLogic();
 
