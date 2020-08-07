@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using BrackeysGJ.MonoBehaviours;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class PlayerHealth : MonoBehaviour
     /// </summary>
     [SerializeField] private bool isDead = false;
 
+    public UnityEvent onDeath;
+    
     private PlayerController _controller;
 
     private bool hasHealthPowerup = false;
@@ -51,31 +54,29 @@ public class PlayerHealth : MonoBehaviour
     void Update()
     {
         healthBar.SetHealth(currentHealth);
+        if(isDead) return;
         // If for some reason the player has no health but isn't dead yet
         if (currentHealth <= 0)
         {
             Die();
         }
 
-        if (!isDead)
+        if (hasHealthPowerup)
         {
-            if (hasHealthPowerup)
+            healthPowerupTimer -= Time.deltaTime;
+
+            if (healthPowerupTimer <= 0)
             {
-                healthPowerupTimer -= Time.deltaTime;
+                // Reset the player's max health
+                maxHealth = initMaxHealth;
 
-                if (healthPowerupTimer <= 0)
+                if(currentHealth > maxHealth)
                 {
-                    // Reset the player's max health
-                    maxHealth = initMaxHealth;
-
-                    if(currentHealth > maxHealth)
-                    {
-                        currentHealth = maxHealth;
-                    }
-
-                    // Should we heal the player back to maxHealth if their currentHealth is 
-                    // bellow max health when the powerup ends? I don't think we should.
+                    currentHealth = maxHealth;
                 }
+
+                // Should we heal the player back to maxHealth if their currentHealth is 
+                // bellow max health when the powerup ends? I don't think we should.
             }
         }
     }
@@ -86,6 +87,7 @@ public class PlayerHealth : MonoBehaviour
     /// <param name="damage"></param>
     public void TakeDamage(float damage)
     {
+        if(isDead) return;
         currentHealth -= damage;
         if(currentHealth <= 0)
         {
@@ -139,6 +141,7 @@ public class PlayerHealth : MonoBehaviour
     private void Die()
     {
         isDead = true;
+        onDeath?.Invoke();
     }
 
     public float health()

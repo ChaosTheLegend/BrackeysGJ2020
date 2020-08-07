@@ -7,10 +7,28 @@ namespace BrackeysGJ.MonoBehaviours
     {
         [SerializeField] private MixerManager mixer;
         [SerializeField] private GameObject pausePanel;
+        [SerializeField] private GameObject healthbar;
+        [SerializeField] private GameObject shurikenGui;
+        [SerializeField] private GameObject label;
+        [SerializeField] private FadeManager fader;
         public static bool Paused;
         // Update is called once per frame
+        private void Start()
+        {
+            fader.FadeOut();
+        }
+
         private void Update()
         {
+            if (DoggoController.win)
+            {
+                healthbar.SetActive(false);
+                shurikenGui.SetActive(false);
+                pausePanel.SetActive(false);
+                label.SetActive(false);
+                return;
+            }
+            
             if (Input.GetButtonDown("Cancel"))
             {
                 Paused = !Paused;

@@ -32,20 +32,18 @@ public class LevelLoader : MonoBehaviour
     
     
     //He did
-    public void LoadNewGame()
+    public void DeleteSave()
+    {
+        SaveSystem.DeleteSave();
+    }
+    
+    public void LoadGame()
     {
         SaveSystem.DeleteSave();
         Destroy(GameObject.FindGameObjectWithTag("AudioManager"));
         SceneManager.LoadScene(gameScene);
     }
     
-    public void LoadSavedGame()
-    {
-        if(SaveSystem.Load() == null) return;
-        Destroy(GameObject.FindGameObjectWithTag("AudioManager"));
-        SceneManager.LoadScene(gameScene);
-    }
-
     public void LoadOptionsScene()
     {
         SceneManager.LoadScene("OptionsScene");

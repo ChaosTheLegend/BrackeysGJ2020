@@ -221,7 +221,6 @@ GameObject:
   - component: {fileID: 275880}
   - component: {fileID: 32987075}
   - component: {fileID: 32987085}
-  - component: {fileID: 1838870902}
   m_Layer: 10
   m_Name: Player Chaos
   m_TagString: Player
@@ -338,8 +337,8 @@ MonoBehaviour:
   - {x: 0.47447395, y: 0.44963956, z: 0.000061035156}
   - {x: -0.5109825, y: 0.41312265, z: 0.00012207031}
   - {x: -0.5109825, y: -0.23123717, z: 0}
-  - {x: 0.4641447, y: -0.51166606, z: 0}
-  - {x: -0.4606619, y: -0.51166606, z: 0}
+  - {x: 0.39539623, y: -0.51166606, z: 0}
+  - {x: -0.40858078, y: -0.51166606, z: 0}
   pointExtents:
   - {x: 0.51148033, y: 0, z: 0}
   - {x: 0, y: 0.44963956, z: 0}
@@ -352,9 +351,9 @@ MonoBehaviour:
   - {x: 0.47447395, y: 0, z: 0.000061035156}
   - {x: 0, y: 0.41312265, z: 0.00012207031}
   - {x: 0, y: -0.23123717, z: 0}
-  - {x: 0.4641447, y: 0, z: 0}
-  - {x: -0.4606619, y: 0, z: 0}
-  edit: 1
+  - {x: 0.39539623, y: 0, z: 0}
+  - {x: -0.40858078, y: 0, z: 0}
+  edit: 0
   showLabels: 0
   showCollision: 0
   castLayer:
@@ -691,20 +690,6 @@ MonoBehaviour:
   runIntervalSeconds: 0.2
   ladderClimbIntervalSeconds: 0.15
   wallSlideIntervalSeconds: 0
---- !u!114 &1838870902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7099022288327960567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25e342332b91485449ecd21c61da0925, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  mainSceneName: MainGameScene
 --- !u!1 &7099022288713862404
 GameObject:
   m_ObjectHideFlags: 0
