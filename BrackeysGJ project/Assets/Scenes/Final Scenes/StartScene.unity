@@ -1891,12 +1891,12 @@ PrefabInstance:
     - target: {fileID: 5251493860631713926, guid: 421f7af5377943045b9414b252aa40f2,
         type: 3}
       propertyPath: sceneToLoad
-      value: veggiebadscene2
+      value: MainGameScene
       objectReference: {fileID: 0}
     - target: {fileID: 5251493860631713926, guid: 421f7af5377943045b9414b252aa40f2,
         type: 3}
       propertyPath: gameScene
-      value: veggiebadscene2
+      value: MainGameScene
       objectReference: {fileID: 0}
     - target: {fileID: 5251493860631713927, guid: 421f7af5377943045b9414b252aa40f2,
         type: 3}
