@@ -439,7 +439,20 @@ MonoBehaviour:
         m_CallState: 2
   onDash:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7099022288327960575}
+        m_TargetAssemblyTypeName: BrackeysGJ.MonoBehaviours.PlayerAnimationController,
+          Assembly-CSharp
+        m_MethodName: Dash
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &7099022288327960574
 Animator:
   serializedVersion: 3
@@ -485,7 +498,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootButton: 323
   rewindButton: 324
-  maxShuriken: 10
+  maxShuriken: 6
   shurikenPrefab: {fileID: 887548515493171774, guid: 4d52016a81949f74ebca759a3b67f785,
     type: 3}
   shurikenSpawnPoint: {fileID: 7099022288713862404}
@@ -520,7 +533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdf77e27c76778545a241e9fa966215f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 200
+  maxHealth: 300
   healthBar: {fileID: 0}
   currentHealth: 100
   isDead: 0
