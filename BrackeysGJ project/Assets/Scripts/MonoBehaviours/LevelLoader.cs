@@ -39,6 +39,7 @@ public class LevelLoader : MonoBehaviour
     
     public void LoadGame()
     {
+        DoggoController.win = false;
         Destroy(GameObject.FindGameObjectWithTag("AudioManager"));
         SceneManager.LoadScene(gameScene);
     }
