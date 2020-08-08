@@ -9,7 +9,7 @@ public class Checkpoints : MonoBehaviour
 {
     private Transform _player;
     private Transform _camera;
-    private bool _active;
+    private bool _active = false;
     private Animator _anim;
     
     private void Start()
@@ -24,6 +24,8 @@ public class Checkpoints : MonoBehaviour
         // Update current checkPoint location;
         if (!other.CompareTag("Player")) return;
         _anim.SetBool($"Active",true);
+        if(!_active) _player.GetComponent<PlayerHealth>().GiveHealth(10000f);
+        _active = true;
         var save = new SaveData(transform.position,_camera.position);
         SaveSystem.Save(save);
     }
