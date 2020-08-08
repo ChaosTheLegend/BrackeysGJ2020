@@ -39,6 +39,10 @@ namespace BrackeysGJ.MonoBehaviours
             Invoke($"ResetShot",0.3f);
         }
 
+        public void Dash()
+        {
+            _anim.SetTrigger($"Dash");
+        }
         private void ResetDoubleJump() => _anim.SetBool($"DoubleJump",false);
         private void ResetShot() => _shooting = false;
         
