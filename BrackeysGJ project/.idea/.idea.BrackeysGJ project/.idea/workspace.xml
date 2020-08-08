@@ -79,7 +79,6 @@
         <option value="$PROJECT_DIR$/Assets/Obsticals.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/OptionsController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/MixerManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/Checkpoints.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Serializable/SaveData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/EnemyController2.cs" />
         <option value="$PROJECT_DIR$/Assets/ChaosUtils/Scripts/SmoothFollow.cs" />
@@ -102,6 +101,7 @@
         <option value="$PROJECT_DIR$/Assets/WinManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/PauseManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/LevelLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviours/Checkpoints.cs" />
       </list>
     </option>
   </component>
