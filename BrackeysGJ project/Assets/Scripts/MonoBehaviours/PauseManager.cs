@@ -50,6 +50,9 @@ namespace BrackeysGJ.MonoBehaviours
 
         public void OnClickingExitButton()
         {
+            Paused = !Paused;
+            Time.timeScale = 1f;
+            mixer.TogglePause(false);
             FindObjectOfType<LevelLoader>().LoadNextScene();
         }
     }

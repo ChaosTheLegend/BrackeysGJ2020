@@ -39,7 +39,6 @@ public class LevelLoader : MonoBehaviour
     
     public void LoadGame()
     {
-        SaveSystem.DeleteSave();
         Destroy(GameObject.FindGameObjectWithTag("AudioManager"));
         SceneManager.LoadScene(gameScene);
     }

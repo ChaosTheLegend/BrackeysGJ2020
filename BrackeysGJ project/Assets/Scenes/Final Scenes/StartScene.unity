@@ -901,8 +901,8 @@ RectTransform:
   - {fileID: 911216386}
   - {fileID: 782249318}
   - {fileID: 1287734403}
-  - {fileID: 472815546}
   - {fileID: 1172516938}
+  - {fileID: 472815546}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1503,12 +1503,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 795966641}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 226.4, y: -62.5}
-  m_SizeDelta: {x: 334.18088, y: 79.5954}
+  m_AnchoredPosition: {x: 223.2, y: -73.61}
+  m_SizeDelta: {x: 408.7971, y: 101.82149}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1172516939
 MonoBehaviour:
@@ -1530,7 +1530,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 838b1d64b258d59479e8efd8868a77d3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 03e5fd8978613994a81622be599aa881, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2744,7 +2744,7 @@ PrefabInstance:
     - target: {fileID: 1306077480680975203, guid: 154a7fe33c8117e4cab2d29b50e955a6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1306077480680975203, guid: 154a7fe33c8117e4cab2d29b50e955a6,
         type: 3}
