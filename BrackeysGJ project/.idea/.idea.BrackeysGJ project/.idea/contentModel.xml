@@ -139,6 +139,7 @@
             <e p="EmojiOne Attribution.txt" t="Include" />
           </e>
         </e>
+        <e p="WinManager.cs" t="Include" />
       </e>
       <e p="BrackeysGJ project.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />
