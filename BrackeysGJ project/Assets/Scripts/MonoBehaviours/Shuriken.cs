@@ -90,7 +90,7 @@ public class Shuriken : MonoBehaviour
         }
         else
         {
-            rbody.simulated = false;
+            collider.isTrigger = true;
             transform.SetParent(null);
             transform.position = Vector2.MoveTowards(transform.position, playerShurikenScript.transform.position, (returnSpeed) * Time.deltaTime);
             rbody.velocity = Vector2.zero;
@@ -120,6 +120,15 @@ public class Shuriken : MonoBehaviour
         _line.SetPosition(1,playerShurikenScript.transform.position);
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+           EnemyController2 enemy = other.gameObject.GetComponent<EnemyController2>();
+           enemy.TakeDamage(damageDealt);
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //-Chaos
@@ -127,11 +136,12 @@ public class Shuriken : MonoBehaviour
         //Why not just disable shuriken-player collisions?
         //if (collision.gameObject.tag != "Player")
         //{
-        if (isRewinding) return;
         if(Stuck) return;
+        if(isRewinding) return;
         
         collisionCount++;
-
+        
+        
         if (collision.gameObject.CompareTag("Enemy"))
         {
             collisionCount = maxCollisions;
@@ -148,7 +158,8 @@ public class Shuriken : MonoBehaviour
         {
             Stuck = true;
             rbody.velocity = Vector2.zero;
-            rbody.simulated = false;
+            collider.isTrigger = true;
+            //rbody.simulated = false;
             sounds.PlayStuck();
         }
         else
