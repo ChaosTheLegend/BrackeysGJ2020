@@ -55,7 +55,7 @@ MonoBehaviour:
   throwSpeed: 700
   returnSpeed: 20
   maxDistanceFromPlayer: 20
-  damageDealt: 40
+  damageDealt: 35
   maxCollisions: 3
   fadeAlpha: 0.4
 --- !u!50 &1446643230
