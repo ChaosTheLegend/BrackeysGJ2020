@@ -32,20 +32,18 @@ public class LevelLoader : MonoBehaviour
     
     
     //He did
-    public void LoadNewGame()
+    public void DeleteSave()
     {
         SaveSystem.DeleteSave();
+    }
+    
+    public void LoadGame()
+    {
+        DoggoController.win = false;
         Destroy(GameObject.FindGameObjectWithTag("AudioManager"));
         SceneManager.LoadScene(gameScene);
     }
     
-    public void LoadSavedGame()
-    {
-        if(SaveSystem.Load() == null) return;
-        Destroy(GameObject.FindGameObjectWithTag("AudioManager"));
-        SceneManager.LoadScene(gameScene);
-    }
-
     public void LoadOptionsScene()
     {
         SceneManager.LoadScene("OptionsScene");
@@ -55,7 +53,12 @@ public class LevelLoader : MonoBehaviour
     {
         SceneManager.LoadScene("CreditsScene");
     }
-    
+
+    public void LoadControlsScene()
+    {
+        SceneManager.LoadScene("ControlsScene");
+    }
+
     public void ExitGame()
     {
         //Checks if the game in editor or a build

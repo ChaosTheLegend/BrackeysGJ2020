@@ -17,10 +17,14 @@ namespace BrackeysGJ.MonoBehaviours
             cam.position = save.GetCameraPosition();
         }
 
+        public void Respawn()
+        {
+            SceneManager.LoadScene(mainSceneName);
+        }
         #if UNITY_EDITOR
         private void Update()
         {
-            if(Input.GetKeyDown(KeyCode.R)) SceneManager.LoadScene(mainSceneName);
+            if(Input.GetKeyDown(KeyCode.R)) Respawn();
             if(Input.GetKeyDown(KeyCode.F1)) SaveSystem.DeleteSave();
         }
         #endif

@@ -48,7 +48,6 @@
             <e p="!readme.txt" t="Include" />
           </e>
         </e>
-        <e p="AudioTrigger.cs" t="Include" />
         <e p="ChaosUtils" t="Include">
           <e p="Scripts" t="Include">
             <e p="AdvPlayerCollider.cs" t="Include" />
@@ -74,23 +73,26 @@
             <e p="SmoothFollow.cs" t="Include" />
           </e>
         </e>
-        <e p="EnemySound.cs" t="Include" />
-        <e p="PlayerSound.cs" t="Include" />
+        <e p="DoggoController.cs" t="Include" />
+        <e p="FadeManager.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="ClassFiles" t="Include">
             <e p="SaveSystem.cs" t="Include" />
           </e>
           <e p="MonoBehaviours" t="Include">
+            <e p="AudioTrigger.cs" t="Include" />
             <e p="BackgorundMusicManager.cs" t="Include" />
             <e p="Checkpoints.cs" t="Include" />
             <e p="EnemyAnimator.cs" t="Include" />
             <e p="EnemyController.cs" t="Include" />
             <e p="EnemyController2.cs" t="Include" />
             <e p="EnemyProjectileController.cs" t="Include" />
+            <e p="EnemySound.cs" t="Include" />
             <e p="HealthBar.cs" t="Include" />
             <e p="LastCheckpointLocation.cs" t="Include" />
             <e p="LevelLoader.cs" t="Include" />
             <e p="LevelManager.cs" t="Include" />
+            <e p="LoadChecker.cs" t="Include" />
             <e p="MixerManager.cs" t="Include" />
             <e p="Obsticals.cs" t="Include" />
             <e p="OptionsController.cs" t="Include" />
@@ -98,8 +100,10 @@
             <e p="PlayerAnimationController.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
             <e p="PlayerHealth.cs" t="Include" />
+            <e p="PlayerSound.cs" t="Include" />
             <e p="RespawnLocation.cs" t="Include" />
             <e p="Shuriken.cs" t="Include" />
+            <e p="ShurikenSound.cs" t="Include" />
             <e p="ShurikenThrow.cs" t="Include" />
             <e p="ShurikenUI.cs" t="Include" />
           </e>
@@ -107,7 +111,6 @@
             <e p="SaveData.cs" t="Include" />
           </e>
         </e>
-        <e p="ShurikenSound.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
             <e p="LiberationSans - OFL.txt" t="Include" />
@@ -136,6 +139,7 @@
             <e p="EmojiOne Attribution.txt" t="Include" />
           </e>
         </e>
+        <e p="WinManager.cs" t="Include" />
       </e>
       <e p="BrackeysGJ project.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />

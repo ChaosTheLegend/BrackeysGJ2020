@@ -7,31 +7,52 @@ namespace BrackeysGJ.MonoBehaviours
     {
         [SerializeField] private MixerManager mixer;
         [SerializeField] private GameObject pausePanel;
-        private bool _paused;
+        [SerializeField] private GameObject healthbar;
+        [SerializeField] private GameObject shurikenGui;
+        [SerializeField] private GameObject label;
+        [SerializeField] private FadeManager fader;
+        public static bool Paused;
         // Update is called once per frame
+        private void Start()
+        {
+            fader.FadeOut();
+        }
+
         private void Update()
         {
-            if (Input.GetButtonDown("Cancel"))
+            if (DoggoController.win)
             {
-                _paused = !_paused;
-                mixer.TogglePause(_paused);
+                healthbar.SetActive(false);
+                shurikenGui.SetActive(false);
+                pausePanel.SetActive(false);
+                label.SetActive(false);
+                return;
             }
             
-            pausePanel.SetActive(_paused);
-            Time.timeScale = _paused ? 0f : 1f;
+            if (Input.GetButtonDown("Cancel"))
+            {
+                Paused = !Paused;
+                mixer.TogglePause(Paused);
+            }
+            
+            pausePanel.SetActive(Paused);
+            Time.timeScale = Paused ? 0f : 1f;
         }
 
         public void OnClickingResumeButton()
         {
-            _paused = !_paused;
-            mixer.TogglePause(_paused);
+            Paused = !Paused;
+            mixer.TogglePause(Paused);
             
-            pausePanel.SetActive(_paused);
-            Time.timeScale = _paused ? 0f : 1f;
+            pausePanel.SetActive(Paused);
+            Time.timeScale = Paused ? 0f : 1f;
         }
 
         public void OnClickingExitButton()
         {
+            Paused = !Paused;
+            Time.timeScale = 1f;
+            mixer.TogglePause(false);
             FindObjectOfType<LevelLoader>().LoadNextScene();
         }
     }

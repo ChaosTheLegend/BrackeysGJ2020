@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using BrackeysGJ.MonoBehaviours;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -58,8 +59,10 @@ public class ShurikenThrow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(PauseManager.Paused) return;
+        if(DoggoController.win) return;
         if(Input.GetKeyDown(rewindButton) &&
-            shurikenCount != 0)
+           shurikenCount != 0)
         {
             RewindShuriken();
         }

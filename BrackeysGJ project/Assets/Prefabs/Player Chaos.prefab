@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &364675954
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 364675955}
+  m_Layer: 10
+  m_Name: CameraPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &364675955
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364675954}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.87, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7099022288327960568}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &665395524
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,7 +251,6 @@ GameObject:
   - component: {fileID: 275880}
   - component: {fileID: 32987075}
   - component: {fileID: 32987085}
-  - component: {fileID: 1838870902}
   m_Layer: 10
   m_Name: Player Chaos
   m_TagString: Player
@@ -243,6 +272,7 @@ Transform:
   - {fileID: 7099022289117629937}
   - {fileID: 665395525}
   - {fileID: 1980561462}
+  - {fileID: 364675955}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -286,7 +316,7 @@ SpriteRenderer:
   m_SortingLayerID: 803805773
   m_SortingLayer: 5
   m_SortingOrder: 10
-  m_Sprite: {fileID: -8806581375237917728, guid: 0c35490f5f44d3a4e9d10101d160b57a,
+  m_Sprite: {fileID: 6493317653493158245, guid: 0c35490f5f44d3a4e9d10101d160b57a,
     type: 3}
   m_Color: {r: 1, g: 0.95496154, b: 1, a: 1}
   m_FlipX: 0
@@ -332,28 +362,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   castPoints:
-  - {x: 0.51148033, y: 0.34676695, z: 0}
-  - {x: 0.51148033, y: -0.20549703, z: 0}
-  - {x: -0.44910526, y: 0.44963956, z: 0}
-  - {x: 0.46836948, y: 0.44963956, z: 0}
-  - {x: -0.5109825, y: 0.33376908, z: 0}
-  - {x: -0.5109825, y: -0.23123717, z: 0}
-  - {x: 0.4641447, y: -0.51166606, z: 0}
-  - {x: -0.4606619, y: -0.51166606, z: 0}
+  - {x: 0.51148033, y: 0.41798162, z: 0.000061035156}
+  - {x: 0.51148033, y: -0.27645612, z: 0}
+  - {x: -0.48166084, y: 0.44963956, z: 0.00012207031}
+  - {x: 0.47447395, y: 0.44963956, z: 0.000061035156}
+  - {x: -0.5109825, y: 0.41312265, z: 0.00012207031}
+  - {x: -0.5109825, y: -0.27600932, z: 0}
+  - {x: 0.39539623, y: -0.5176368, z: 0}
+  - {x: -0.40858078, y: -0.5176368, z: 0}
   pointExtents:
   - {x: 0.51148033, y: 0, z: 0}
   - {x: 0, y: 0.44963956, z: 0}
   - {x: -0.5109825, y: 0, z: 0}
-  - {x: 0, y: -0.51166606, z: 0}
+  - {x: 0, y: -0.5176368, z: 0}
   pointSize:
-  - {x: 0, y: 0.34676695, z: 0}
-  - {x: 0, y: -0.20549703, z: 0}
-  - {x: -0.44910526, y: 0, z: 0}
-  - {x: 0.46836948, y: 0, z: 0}
-  - {x: 0, y: 0.33376908, z: 0}
-  - {x: 0, y: -0.23123717, z: 0}
-  - {x: 0.4641447, y: 0, z: 0}
-  - {x: -0.4606619, y: 0, z: 0}
+  - {x: 0, y: 0.41798162, z: 0.000061035156}
+  - {x: 0, y: -0.27645612, z: 0}
+  - {x: -0.48166084, y: 0, z: 0.00012207031}
+  - {x: 0.47447395, y: 0, z: 0.000061035156}
+  - {x: 0, y: 0.41312265, z: 0.00012207031}
+  - {x: 0, y: -0.27600932, z: 0}
+  - {x: 0.39539623, y: 0, z: 0}
+  - {x: -0.40858078, y: 0, z: 0}
   edit: 1
   showLabels: 0
   showCollision: 0
@@ -409,7 +439,20 @@ MonoBehaviour:
         m_CallState: 2
   onDash:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7099022288327960575}
+        m_TargetAssemblyTypeName: BrackeysGJ.MonoBehaviours.PlayerAnimationController,
+          Assembly-CSharp
+        m_MethodName: Dash
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &7099022288327960574
 Animator:
   serializedVersion: 3
@@ -455,7 +498,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootButton: 323
   rewindButton: 324
-  maxShuriken: 10
+  maxShuriken: 6
   shurikenPrefab: {fileID: 887548515493171774, guid: 4d52016a81949f74ebca759a3b67f785,
     type: 3}
   shurikenSpawnPoint: {fileID: 7099022288713862404}
@@ -490,10 +533,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdf77e27c76778545a241e9fa966215f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 200
+  maxHealth: 300
   healthBar: {fileID: 0}
   currentHealth: 100
   isDead: 0
+  onDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: FadeManager, Assembly-CSharp
+        m_MethodName: FadeIn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: AudioTrigger, Assembly-CSharp
+        m_MethodName: ChangeMusic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!60 &8232987222771530644
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -511,7 +581,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 0.93333334}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -519,13 +589,13 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.32452703, y: -0.46794176}
-      - {x: 0.23238099, y: -0.4679674}
-      - {x: 0.49185157, y: -0.2856456}
-      - {x: 0.49052054, y: 0.4314857}
+    - - {x: -0.32452703, y: -0.452569}
+      - {x: 0.27551758, y: -0.44798267}
+      - {x: 0.4335401, y: -0.28116024}
+      - {x: 0.4351998, y: 0.4314857}
       - {x: 0.40545213, y: 0.4314102}
-      - {x: -0.48661584, y: 0.430618}
-      - {x: -0.48876607, y: -0.2856456}
+      - {x: -0.43727463, y: 0.430618}
+      - {x: -0.43643606, y: -0.2901312}
     - - {x: -0.06389165, y: -0.19936848}
       - {x: -0.06389165, y: -0.19936848}
       - {x: -0.06389165, y: -0.19936848}
@@ -542,7 +612,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
-  mainSceneName: 
+  mainSceneName: MainGameScene
 --- !u!82 &32987075
 AudioSource:
   m_ObjectHideFlags: 0
@@ -691,20 +761,6 @@ MonoBehaviour:
   runIntervalSeconds: 0.2
   ladderClimbIntervalSeconds: 0.15
   wallSlideIntervalSeconds: 0
---- !u!114 &1838870902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7099022288327960567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25e342332b91485449ecd21c61da0925, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  mainSceneName: MainGameScene
 --- !u!1 &7099022288713862404
 GameObject:
   m_ObjectHideFlags: 0

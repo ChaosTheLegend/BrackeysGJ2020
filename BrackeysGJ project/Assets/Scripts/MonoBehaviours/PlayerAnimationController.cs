@@ -39,11 +39,21 @@ namespace BrackeysGJ.MonoBehaviours
             Invoke($"ResetShot",0.3f);
         }
 
+        public void Dash()
+        {
+            _anim.SetTrigger($"Dash");
+        }
         private void ResetDoubleJump() => _anim.SetBool($"DoubleJump",false);
         private void ResetShot() => _shooting = false;
         
         private void Update()
         {
+            if(PauseManager.Paused) return;
+            if (DoggoController.win)
+            {
+                _renderer.enabled = false;
+                return;
+            }
             var move = Mathf.Abs(Input.GetAxis("Horizontal")) > 0.5f;
 
             if (!_playerController.IsDead())
