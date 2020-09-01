@@ -5113,7 +5113,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.56332874, y: 0.8830781}
+  m_Size: {x: 0.36753172, y: 0.8830781}
   m_EdgeRadius: 0
 --- !u!50 &5968679251253982966
 Rigidbody2D:
@@ -5190,12 +5190,11 @@ MonoBehaviour:
   wallLayer:
     serializedVersion: 2
     m_Bits: 256
-  shootDelay: 1
+  shootDelay: 1.5
   bullet: {fileID: 1113736297171602677, guid: 73e024968b87bd04485d49d7f0389a53, type: 3}
   shootingPoint: {fileID: 1580002094881458426}
   shotFlipper: {fileID: 1580002095056213421}
   healthBar: {fileID: 9013611012497005592}
-  health: 100
   sticker: {fileID: 1580002094520286557}
   canSee: 0
 --- !u!114 &1580002095149743602

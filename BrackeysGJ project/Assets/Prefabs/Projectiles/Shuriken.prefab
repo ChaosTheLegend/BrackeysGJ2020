@@ -56,6 +56,7 @@ MonoBehaviour:
   returnSpeed: 20
   maxDistanceFromPlayer: 20
   damageDealt: 35
+  damageDealtRewind: 35
   maxCollisions: 3
   fadeAlpha: 0.4
 --- !u!50 &1446643230
@@ -94,7 +95,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.050184242
 --- !u!95 &6757665468104362840
 Animator:
   serializedVersion: 3

@@ -24,7 +24,7 @@ public class ShurikenThrow : MonoBehaviour
     }
 
     // Number of shuriken that have been thrown
-    private int shurikenCount = 0;
+    private int shurikenThrown = 0;
 
     [SerializeField] private GameObject shurikenPrefab;
     [SerializeField] private GameObject shurikenSpawnPoint;
@@ -62,14 +62,14 @@ public class ShurikenThrow : MonoBehaviour
         if(PauseManager.Paused) return;
         if(DoggoController.win) return;
         if(Input.GetKeyDown(rewindButton) &&
-           shurikenCount != 0)
+           shurikenThrown != 0)
         {
             RewindShuriken();
         }
 
         // Shuriken Throw check
         if (Input.GetKeyDown(shootButton) && 
-            shurikenCount < maxShuriken)
+            shurikenThrown < maxShuriken)
         {
             ThrowShuriken();
         }
@@ -92,7 +92,7 @@ public class ShurikenThrow : MonoBehaviour
         if(_health.CheckIfDead()) return;
         Shuriken shuriken = Instantiate(shurikenPrefab, shurikenSpawnPoint.transform.position, Quaternion.identity).GetComponent<Shuriken>();
         shurikenInstances.Add(shuriken);
-        shurikenCount++;
+        shurikenThrown++;
 
         sounds.PlayShoot();
 
@@ -111,17 +111,18 @@ public class ShurikenThrow : MonoBehaviour
     }
 
     /// <summary>
-    /// Gives the player +1 shuriken(duh)
+    /// Gives the player +1 shuriken
     /// </summary>
-    public void ReturnShuriken(Shuriken shuriken)
+    /// <param name="shurikenToReturn">The shuriken to be removed from the scene.</param>
+    public void ReturnShuriken(Shuriken shurikenToReturn)
     {
         // Remove one shuriken from the scene
-        shurikenCount--;
-        shurikenInstances.Remove(shuriken);
+        shurikenThrown--;
+        shurikenInstances.Remove(shurikenToReturn);
     }
 
     public int GetAmmoLeft()
     {
-        return maxShuriken - shurikenCount;
+        return maxShuriken - shurikenThrown;
     }
 }

@@ -23,7 +23,7 @@ namespace BrackeysGJ
         private void Update()
         {
             _anim.SetBool($"Shooting",_controller.canSee);
-            if (_controller.health <= 0 && !_dead)
+            if (_controller.Health <= 0 && !_dead)
             {
                 deathParticle.Play();
                 deathLight.SetActive(true);

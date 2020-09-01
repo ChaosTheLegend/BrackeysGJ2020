@@ -13,7 +13,7 @@ namespace BrackeysGJ.MonoBehaviours
         [SerializeField] private Transform shootingPoint;
         [SerializeField] private Transform shotFlipper;
         [SerializeField] private HealthBar healthBar;
-        public float health = 100f;
+        private float health = 100f;
         public Transform sticker;
         private SpriteRenderer _sprite;
         private PathFolower _follower;
@@ -24,6 +24,11 @@ namespace BrackeysGJ.MonoBehaviours
         private float _tm;
 
         private EnemySound _sounds;
+
+        public float Health
+        {
+            get { return health; }
+        }
 
         private void Start()
         {

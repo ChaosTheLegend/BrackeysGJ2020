@@ -12,12 +12,15 @@ public class Shuriken : MonoBehaviour
     private Vector2 mousePosWorld;
     private Vector2 velocity;
     private Animator _anim;
-    
+
     [SerializeField] private float throwSpeed = 300f;
     [SerializeField] private float returnSpeed = 300f;
     [SerializeField] private float maxDistanceFromPlayer = 1f;
 
-    [SerializeField] private float damageDealt = 10f;
+    [SerializeField] private float damageDealt = 35f;
+    [SerializeField] private float damageDealtRewind = 35f;
+
+    private List<EnemyController2> enemiesAlreadyDamaged = new List<EnemyController2>();
 
     private Rigidbody2D rbody;
 
@@ -66,7 +69,7 @@ public class Shuriken : MonoBehaviour
         // Set initial velocity
         rbody.velocity = moveDirection * throwSpeed * Time.fixedDeltaTime;
         velocity = Vector2.one;
-     
+
         //Line effect
         _line = GetComponent<LineRenderer>();
         //Animation
@@ -76,6 +79,7 @@ public class Shuriken : MonoBehaviour
     private void FixedUpdate()
     {
         var currentVelocity = rbody.velocity;
+
         if (!isRewinding)
         {
             if (collisionCount < maxCollisions)
@@ -85,13 +89,19 @@ public class Shuriken : MonoBehaviour
             }
             else
             {
-                _anim.SetInteger($"State",1);
+                _anim.SetInteger($"State", 1);
             }
         }
         else
         {
-            rbody.simulated = false;
-            transform.SetParent(null);
+            // rbody.simulated = false;
+            // Dark - Needs to be simulated for collision detection during rewind
+            // so that enemies can be damaged during rewind. Had to turn collider into trigger
+            // instead so that it can still go through walls.
+            rbody.simulated = true;
+            collider.isTrigger = true;
+
+
             transform.position = Vector2.MoveTowards(transform.position, playerShurikenScript.transform.position, (returnSpeed) * Time.deltaTime);
             rbody.velocity = Vector2.zero;
             //Chaos has been here
@@ -106,75 +116,96 @@ public class Shuriken : MonoBehaviour
             {
                 sounds.PlayRewindLoop();
             }
-            //rbody.velocity = speed * (rbody.velocity.normalized) * Time.fixedDeltaTime;
         }
 
+        // Rewind the shuriken if it gets too far away from the player
         if ((transform.position - playerShurikenScript.transform.position).sqrMagnitude >
             maxDistanceFromPlayer * maxDistanceFromPlayer && !Stuck) isRewinding = true;
     }
 
     private void Update()
     {
+        // Show the rewind line if we're rewinding
         _line.enabled = isRewinding;
-        _line.SetPosition(0,transform.position);
-        _line.SetPosition(1,playerShurikenScript.transform.position);
+        _line.SetPosition(0, transform.position);
+        _line.SetPosition(1, playerShurikenScript.transform.position);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //-Chaos
-        //What a hell is this?
-        //Why not just disable shuriken-player collisions?
-        //if (collision.gameObject.tag != "Player")
-        //{
-        if (isRewinding) return;
-        if(Stuck) return;
-        
         collisionCount++;
 
+        // If shuriken hits an enemy
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            collisionCount = maxCollisions;
             EnemyController2 enemy = collision.gameObject.GetComponent<EnemyController2>();
-            transform.SetParent(enemy.sticker,true);
-            enemy.TakeDamage(damageDealt);
+
+            // If this enemy wasn't already hit by this shuriken
+            if (!enemiesAlreadyDamaged.Contains(enemy))
+            {
+                // Attach the shuriken to the enemy
+                transform.SetParent(enemy.sticker, true);
+
+                // Shuriken is now stuck
+                StickShuriken();
+
+                // Enemy takes damage
+                enemy.TakeDamage(damageDealt);
+
+                // This enemy has now taken damage from this shuriken
+                enemiesAlreadyDamaged.Add(enemy);
+
+            }
         }
-        
-        //-Chaos
-        //This is done to stop shuriken immediately after collision
-        //and prevent visual glitches
-        //they still exist though :(
+
+        // Stops shuriken movement after collision
         if (collisionCount >= maxCollisions)
         {
-            Stuck = true;
-            rbody.velocity = Vector2.zero;
-            rbody.simulated = false;
-            sounds.PlayStuck();
+            StickShuriken();
         }
         else
         {
             sounds.PlayBounce();
         }
-            
-            
-        
-        //}
     }
 
-    
-    //-Chaos
-    //Since collision with player is disabled, this is useless
-    /*
+    // Collision detection during rewind
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if (isRewinding)
         {
-            playerShurikenScript.ReturnShuriken();
-            Destroy(gameObject);
+            if (collision.gameObject.CompareTag("Enemy"))
+            {
+                EnemyController2 enemy = collision.gameObject.GetComponent<EnemyController2>();
+
+                // If this enemy hasn't already taken damage from this shuriken
+                if (!enemiesAlreadyDamaged.Contains(enemy))
+                {
+                    // Enemy takes damage
+                    enemy.TakeDamage(damageDealtRewind);
+
+                    // This enemy has now taken damage from this shuriken
+                    enemiesAlreadyDamaged.Add(enemy);
+                }
+            }
         }
     }
-    */
-    //I moved it to another function
+
+    /// <summary>
+    /// Stops all shuriken movement
+    /// </summary>
+    private void StickShuriken()
+    {
+        collisionCount = maxCollisions;
+        Stuck = true;
+        rbody.velocity = Vector2.zero;
+        rbody.simulated = false;
+        sounds.PlayStuck();
+    }
+
+    /// <summary>
+    /// Tell the shuriken to return to the players ammo
+    /// </summary>
     private void ReturnToPlayer()
     {
         playerShurikenScript.ReturnShuriken(this);
@@ -184,22 +215,12 @@ public class Shuriken : MonoBehaviour
     public void Rewind()
     {
         // Tell code we're rewinding
-        Stuck = true;
+        Stuck = false;
         isRewinding = true;
 
         //-Chaos
         //We will use animator for this
-        _anim.SetInteger($"State",2);
-        
-        // Fade the shuriken's alpha
-        
-        //Fade(fadeAlpha);
-
-        // Make the collider a trigger so it can pass through walls
-
-        // Tell the shuriken to move towards the player
-        //moveDirection = (Vector2)playerShurikenScript.transform.position - (Vector2)transform.position;
-        //rbody.velocity = moveDirection * speed * Time.fixedDeltaTime;
+        _anim.SetInteger($"State", 2);
     }
 
     private void Fade(float alphaValue)
