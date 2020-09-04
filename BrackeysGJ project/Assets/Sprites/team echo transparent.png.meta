@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 83fc2284b34a5e04fa421383bd8c38cf
+=======
+guid: 84c0bd5ea58d2d740a3812f9610a280f
+>>>>>>> Veggiebad
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -37,7 +41,11 @@ TextureImporter:
     mipBias: -100
     wrapU: 1
     wrapV: 1
+<<<<<<< HEAD
     wrapW: -1
+=======
+    wrapW: 1
+>>>>>>> Veggiebad
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -59,13 +67,18 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
+<<<<<<< HEAD
   applyGammaDecoding: 1
+=======
+  applyGammaDecoding: 0
+>>>>>>> Veggiebad
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
+<<<<<<< HEAD
     textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
@@ -79,6 +92,9 @@ TextureImporter:
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
+=======
+    textureCompression: 1
+>>>>>>> Veggiebad
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
