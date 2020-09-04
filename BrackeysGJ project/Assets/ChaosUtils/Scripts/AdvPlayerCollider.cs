@@ -43,6 +43,10 @@ namespace ChaosUtils.Scripts
             Right=0
         }
 
+        public LayerMask getLayer()
+        {
+            return castLayer;
+        }
         public RaycastHit2D CheckCollision(Side side)
         {
             var position = transform.position;

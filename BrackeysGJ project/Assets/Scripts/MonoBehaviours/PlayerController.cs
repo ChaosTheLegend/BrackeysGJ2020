@@ -26,7 +26,8 @@ namespace BrackeysGJ.MonoBehaviours
         [Header("Dash")] 
         [SerializeField] private float dashTime = 1f;
         [SerializeField] private float dashForce = 1f;
-
+        [Header("Slopes")] 
+        [SerializeField] private float slopeThreshold;
         [Header("Events")] 
         public UnityEvent onJump;
         public UnityEvent onWallJump;
@@ -98,11 +99,70 @@ namespace BrackeysGJ.MonoBehaviours
             _nearLadder = false;
         }
 
+        public bool CollisionLeft()
+        {
+            var left = _advCol.CheckCollision(AdvPlayerCollider.Side.Left);
+
+            if (left)
+            {
+                float angle = Mathf.Atan2(left.normal.y, left.normal.x) * Mathf.Rad2Deg - 90f;
+                if (!(angle < 45f && angle > -45f))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+            
+        public bool CollisionRight()
+        {
+            var right = _advCol.CheckCollision(AdvPlayerCollider.Side.Right);
+            if (right)
+            {
+                float angle = Mathf.Atan2(right.normal.y, right.normal.x) * Mathf.Rad2Deg - 90f;
+                if (!(angle < 45f && angle > -45f))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+        
         public bool OnWall()
         {
-            return (_advCol.CheckCollision(AdvPlayerCollider.Side.Left) || _advCol.CheckCollision(AdvPlayerCollider.Side.Right));
+            return (CollisionLeft() || CollisionRight());
         }
+        
+        
+        //The time has come
+        //to do what must be done
+        //I have to fix the slopes
+        //Or die trying...
+        //-ChaosTheLeg 4AM
 
+        /// <summary>
+        /// Casts a line from player position to the point of collision on surface
+        /// this is done to correctly calculate angle of the normal
+        /// </summary>
+        private RaycastHit2D DirectCast(RaycastHit2D surface)
+        {
+            return Physics2D.Linecast(transform.position, surface.point,_advCol.getLayer());
+        }
+        
+        /// <summary>
+        /// Checks if the surface is supposed to be considered as "ground" or not 
+        /// </summary>
+        private bool IsGround(RaycastHit2D surface)
+        {
+            RaycastHit2D trueSurface = DirectCast(surface);
+            Vector2 norm = trueSurface.normal;
+            float angle = Mathf.Atan2(norm.y, norm.x) * Mathf.Rad2Deg - 90;
+            return angle > -45 && angle < 45;
+        }
+        
+        
         private void Update()
         {
             
@@ -111,19 +171,28 @@ namespace BrackeysGJ.MonoBehaviours
 
             myPreviousState = myCurrentState;
             SoundLoopLogic();
-
-
-            if (_dead)
-            {
-                return;
-            }
+            
+            if (_dead) return;
+            
 
 
             //Movement
-            _rb.velocity = new Vector2(Input.GetAxis("Horizontal")*speed,_rb.velocity.y);
-            if (_advCol.CheckCollision(AdvPlayerCollider.Side.Left))
+            var ground = _advCol.CheckCollision(AdvPlayerCollider.Side.Down);
+            if (IsGround(ground))
+            {
+                var norm = DirectCast(ground).normal;
+                var dir = (Quaternion.Euler(0f, 0f, -90f) * norm).normalized;
+                _rb.velocity = Input.GetAxis("Horizontal") * speed * dir;
+
+            }
+            else
+            {
+                _rb.velocity = new Vector2(Input.GetAxis("Horizontal")*speed,_rb.velocity.y);
+            }
+
+            if (CollisionLeft())
                 _rb.velocity = new Vector2(Mathf.Max(0f, _rb.velocity.x), _rb.velocity.y);
-            if (_advCol.CheckCollision(AdvPlayerCollider.Side.Right))
+            if (CollisionRight())
                 _rb.velocity = new Vector2(Mathf.Min(0f, _rb.velocity.x), _rb.velocity.y);
             
             //Wall rebound;
@@ -223,6 +292,7 @@ namespace BrackeysGJ.MonoBehaviours
             }
         }
 
+        
         /// <summary>
         /// Checks which sounds need to be played in a loop and tells PlayerSounds.cs to play them.
         /// </summary>
@@ -284,6 +354,28 @@ namespace BrackeysGJ.MonoBehaviours
                     break;
                 default:
                     break;
+            }
+        }
+        
+        private void OnDrawGizmos()
+        {
+            if (!Application.isPlaying) return;
+            Gizmos.color = Color.red;
+            var ground1 = _advCol.CheckCollision(AdvPlayerCollider.Side.Down);
+            
+            if (ground1)
+            {
+                
+                var ground = Physics2D.Linecast(transform.position, ground1.point,_advCol.getLayer());
+
+                Gizmos.DrawSphere(ground.point,0.1f);
+                Gizmos.color = IsGround(ground1) ? Color.green : Color.yellow;
+                float angle = Mathf.Atan2(ground.normal.y, ground.normal.x) * Mathf.Rad2Deg;
+                print(ground.normal+" "+angle);
+                
+                var dir = Quaternion.Euler(0f, 0f, angle) * Vector3.right;
+                Gizmos.DrawLine(transform.position,transform.position + dir);
+
             }
         }
 
