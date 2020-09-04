@@ -1,5 +1,4 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: 2af805c73f6cfd049aa784c256ca2ca9
 TextureImporter:
   internalIDToNameTable:
@@ -24,11 +23,6 @@ TextureImporter:
   - first:
       213: 488105793293081150
     second: goal_6
-=======
-guid: 3a823dc27b923294c8d885af52002335
-TextureImporter:
-  internalIDToNameTable: []
->>>>>>> Veggiebad
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -59,11 +53,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-<<<<<<< HEAD
     filterMode: 0
-=======
-    filterMode: -1
->>>>>>> Veggiebad
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -72,20 +62,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-<<<<<<< HEAD
   spriteMode: 2
-=======
-  spriteMode: 1
->>>>>>> Veggiebad
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
   spritePixelsToUnits: 60
-=======
-  spritePixelsToUnits: 100
->>>>>>> Veggiebad
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,7 +87,6 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-<<<<<<< HEAD
     textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
@@ -143,9 +124,6 @@ TextureImporter:
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
-=======
-    textureCompression: 1
->>>>>>> Veggiebad
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -154,7 +132,6 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-<<<<<<< HEAD
     sprites:
     - serializedVersion: 2
       name: goal_0
@@ -303,9 +280,6 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-=======
-    sprites: []
->>>>>>> Veggiebad
     outline: []
     physicsShape: []
     bones: []
